@@ -1,794 +1,1085 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Progress Tracking - Virtual OPEX - Sodexo</title>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
-    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
-    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
-    <link rel="stylesheet" href="assets/css/app.css">
-    <link rel="stylesheet" href="assets/css/progres.css">
-    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/vendors/iconly/bold.css" />
+    <link
+      rel="stylesheet"
+      href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/vendors/bootstrap-icons/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="assets/css/app.css" />
+    <link rel="stylesheet" href="assets/css/progres.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.svg"
+      type="image/x-icon"
+    />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div id="app">
-        <div id="sidebar" class="active">
-            <div class="sidebar-wrapper active">
-                <div class="sidebar-header">
-                    <div class="d-flex justify-content-between">
-                        <div class="logo">
-                            <a href="index.html"><img src="assets/images/logo/logo.png" alt="Sodexo Logo" srcset=""></a>
-                        </div>
-                        <div class="toggler">
-                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="sidebar-menu">
-                    <ul class="menu">
-                        <li class="sidebar-title">Virtual OPEX</li>
-
-                        <li class="sidebar-item">
-                            <a href="dasboard.html" class='sidebar-link'>
-                                <i class="bi bi-grid-fill"></i>
-                                <span>Dashboard</span>
-                            </a>
-                        </li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-graph-up"></i>
-                                <span>Commercial <br> Excellence</span>
-                            </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
-                                    <a href="commercial-bid-analysis.html">Bid Analysis</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="contract-risk.html">Contract Risk Screening</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="pricing-optimization.html">Pricing Optimization</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="sidebar-item  has-sub active">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-building"></i>
-                                <span>Site <br> Mobilization</span>
-                            </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
-                                    <a href="mobilization-dashboard.html">Mobilization Dashboard</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="checklist-management.html">Checklist Management</a>
-                                </li>
-                                <li class="submenu-item active">
-                                    <a href="progress-tracking.html">Progress Tracking</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-gear-fill"></i>
-                                <span>Operational <br> Excellence</span>
-                            </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
-                                    <a href="performance-monitoring.html">Performance Monitoring</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="account-recovery.html">Account Recovery</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="kpi-analytics.html">KPI Analytics</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="sidebar-title">Tools & Analytics</li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-bar-chart-fill"></i>
-                                <span>Reports</span>
-                            </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
-                                    <a href="financial-performance.html">Financial Performance</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="operational-metrics.html">Operational Metrics</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="client-retention.html">Client Retention</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="sidebar-item  ">
-                            <a href="ai-assistants.html" class='sidebar-link'>
-                                <i class="bi bi-robot"></i>
-                                <span>AI Assistants</span>
-                            </a>
-                        </li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-sliders"></i>
-                                <span>Settings</span>
-                            </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
-                                    <a href="user-management.html">User Management</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="system-configuration.html">System Configuration</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+      <div id="sidebar" class="active">
+        <div class="sidebar-wrapper active">
+          <div class="sidebar-header">
+            <div class="d-flex justify-content-between">
+              <div class="logo">
+                <a href="index.html"
+                  ><img
+                    src="assets/images/logo/logo.png"
+                    alt="Sodexo Logo"
+                    srcset=""
+                /></a>
+              </div>
+              <div class="toggler">
+                <a href="#" class="sidebar-hide d-xl-none d-block"
+                  ><i class="bi bi-x bi-middle"></i
+                ></a>
+              </div>
             </div>
-        </div>
-        <div id="main">
-            <header class="mb-3">
-                <a href="#" class="burger-btn d-block d-xl-none">
-                    <i class="bi bi-justify fs-3"></i>
+          </div>
+          <div class="sidebar-menu">
+            <ul class="menu">
+              <li class="sidebar-title">Virtual OPEX</li>
+
+              <li class="sidebar-item">
+                <a href="dasboard.html" class="sidebar-link">
+                  <i class="bi bi-grid-fill"></i>
+                  <span>Dashboard</span>
                 </a>
-            </header>
+              </li>
 
-            <div class="page-heading">
-                <div class="row">
-                    <div class="col-8">
-                        <h3>Progress Tracking</h3>
-                        <p class="text-subtitle text-muted">Real-time mobilization progress and performance analytics</p>
-                    </div>
-                    <div class="col-4 text-end">
-                        <button class="btn btn-primary">
-                            <i class="bi bi-graph-up"></i> Generate Report
-                        </button>
-                    </div>
-                </div>
+              <li class="sidebar-item has-sub">
+                <a href="#" class="sidebar-link">
+                  <i class="bi bi-graph-up"></i>
+                  <span
+                    >Commercial <br />
+                    Excellence</span
+                  >
+                </a>
+                <ul class="submenu">
+                  <li class="submenu-item">
+                    <a href="commercial-bid-analysis.html">Bid Analysis</a>
+                  </li>
+                  <li class="submenu-item">
+                    <a href="contract-risk.html">Contract Risk Screening</a>
+                  </li>
+                  <li class="submenu-item">
+                    <a href="pricing-optimization.html">Pricing Optimization</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="sidebar-item has-sub active">
+                <a href="#" class="sidebar-link">
+                  <i class="bi bi-building"></i>
+                  <span
+                    >Site <br />
+                    Mobilization</span
+                  >
+                </a>
+                <ul class="submenu">
+                  <li class="submenu-item">
+                    <a href="mobilization-dashboard.html"
+                      >Mobilization Dashboard</a
+                    >
+                  </li>
+                  <li class="submenu-item">
+                    <a href="checklist-management.html">Checklist Management</a>
+                  </li>
+                  <li class="submenu-item active">
+                    <a href="progress-tracking.html">Progress Tracking</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="sidebar-item has-sub">
+                <a href="#" class="sidebar-link">
+                  <i class="bi bi-gear-fill"></i>
+                  <span
+                    >Operational <br />
+                    Excellence</span
+                  >
+                </a>
+                <ul class="submenu">
+                  <li class="submenu-item">
+                    <a href="performance-monitoring.html"
+                      >Performance Monitoring</a
+                    >
+                  </li>
+                  <li class="submenu-item">
+                    <a href="account-recovery.html">Account Recovery</a>
+                  </li>
+                  <li class="submenu-item">
+                    <a href="kpi-analytics.html">KPI Analytics</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="sidebar-title">Tools & Analytics</li>
+
+              <li class="sidebar-item has-sub">
+                <a href="#" class="sidebar-link">
+                  <i class="bi bi-bar-chart-fill"></i>
+                  <span>Reports</span>
+                </a>
+                <ul class="submenu">
+                  <li class="submenu-item">
+                    <a href="financial-performance.html"
+                      >Financial Performance</a
+                    >
+                  </li>
+                  <li class="submenu-item">
+                    <a href="operational-metrics.html">Operational Metrics</a>
+                  </li>
+                  <li class="submenu-item">
+                    <a href="client-retention.html">Client Retention</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="sidebar-item">
+                <a href="ai-assistants.html" class="sidebar-link">
+                  <i class="bi bi-robot"></i>
+                  <span>AI Assistants</span>
+                </a>
+              </li>
+
+              <li class="sidebar-item has-sub">
+                <a href="#" class="sidebar-link">
+                  <i class="bi bi-sliders"></i>
+                  <span>Settings</span>
+                </a>
+                <ul class="submenu">
+                  <li class="submenu-item">
+                    <a href="user-management.html">User Management</a>
+                  </li>
+                  <li class="submenu-item">
+                    <a href="system-configuration.html">System Configuration</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <button class="sidebar-toggler btn x">
+            <i data-feather="x"></i>
+          </button>
+        </div>
+      </div>
+      <div id="main">
+        <header class="mb-3">
+          <a href="#" class="burger-btn d-block d-xl-none">
+            <i class="bi bi-justify fs-3"></i>
+          </a>
+        </header>
+
+        <div class="page-heading">
+          <div class="row">
+            <div class="col-8">
+              <h3>Progress Tracking</h3>
+              <p class="text-subtitle text-muted">
+                Real-time mobilization progress and performance analytics
+              </p>
             </div>
+            <div class="col-4 text-end">
+              <button class="btn btn-primary">
+                <i class="bi bi-graph-up"></i> Generate Report
+              </button>
+            </div>
+          </div>
+        </div>
 
-            <div class="page-content">
-                <section class="row">
-                    <!-- Main Content Area -->
-                    <div class="col-12 col-lg-8">
-                        <!-- Progress Gantt Chart -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>Mobilization Timeline - All Active Sites</h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="gantt-chart">
-                                    <div class="gantt-header">
-                                        <div class="gantt-site-name">Site Name</div>
-                                        <div class="gantt-timeline">
-                                            <div class="gantt-period">Nov 15</div>
-                                            <div class="gantt-period">Nov 22</div>
-                                            <div class="gantt-period">Nov 29</div>
-                                            <div class="gantt-period">Dec 6</div>
-                                            <div class="gantt-period">Dec 13</div>
-                                            <div class="gantt-period">Dec 20</div>
-                                        </div>
-                                    </div>
-                                    <div class="gantt-row">
-                                        <div class="gantt-site-name">Tech Campus West</div>
-                                        <div class="gantt-bar">
-                                            <div class="gantt-progress bg-success" style="width: 85%; left: 0%;">
-                                                <span class="gantt-label">85%</span>
-                                            </div>
-                                            <div class="gantt-milestone" style="left: 85%;">
-                                                <i class="bi bi-flag"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="gantt-row">
-                                        <div class="gantt-site-name">Metro Hospital</div>
-                                        <div class="gantt-bar">
-                                            <div class="gantt-progress bg-warning" style="width: 45%; left: 10%;">
-                                                <span class="gantt-label">45%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="gantt-row">
-                                        <div class="gantt-site-name">University Dining</div>
-                                        <div class="gantt-bar">
-                                            <div class="gantt-progress bg-danger" style="width: 30%; left: 5%;">
-                                                <span class="gantt-label">30%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="gantt-row">
-                                        <div class="gantt-site-name">Corporate Plaza</div>
-                                        <div class="gantt-bar">
-                                            <div class="gantt-progress bg-success" style="width: 92%; left: 0%;">
-                                                <span class="gantt-label">92%</span>
-                                            </div>
-                                            <div class="gantt-milestone pulse-animation" style="left: 92%;">
-                                                <i class="bi bi-flag"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Detailed Progress Analytics -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>Progress Analytics - Tech Campus West</h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <h6>Progress by Category</h6>
-                                        <div class="progress-stats">
-                                            <div class="progress-item mb-3">
-                                                <div class="d-flex justify-content-between mb-1">
-                                                    <span>Equipment & Supplies</span>
-                                                    <span class="fw-bold">83%</span>
-                                                </div>
-                                                <div class="progress" style="height: 8px;">
-                                                    <div class="progress-bar bg-success" style="width: 83%"></div>
-                                                </div>
-                                            </div>
-                                            <div class="progress-item mb-3">
-                                                <div class="d-flex justify-content-between mb-1">
-                                                    <span>Staffing</span>
-                                                    <span class="fw-bold">80%</span>
-                                                </div>
-                                                <div class="progress" style="height: 8px;">
-                                                    <div class="progress-bar bg-info" style="width: 80%"></div>
-                                                </div>
-                                            </div>
-                                            <div class="progress-item mb-3">
-                                                <div class="d-flex justify-content-between mb-1">
-                                                    <span>IT & Systems</span>
-                                                    <span class="fw-bold">50%</span>
-                                                </div>
-                                                <div class="progress" style="height: 8px;">
-                                                    <div class="progress-bar bg-warning" style="width: 50%"></div>
-                                                </div>
-                                            </div>
-                                            <div class="progress-item">
-                                                <div class="d-flex justify-content-between mb-1">
-                                                    <span>Site Readiness</span>
-                                                    <span class="fw-bold">62%</span>
-                                                </div>
-                                                <div class="progress" style="height: 8px;">
-                                                    <div class="progress-bar bg-primary" style="width: 62%"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <h6>Performance Metrics</h6>
-                                        <div class="performance-metrics">
-                                            <div class="metric-card p-3 border rounded mb-3">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <span>Days Until Go-Live</span>
-                                                    <span class="badge bg-success">12</span>
-                                                </div>
-                                            </div>
-                                            <div class="metric-card p-3 border rounded mb-3">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <span>Budget Utilization</span>
-                                                    <span class="badge bg-info">78%</span>
-                                                </div>
-                                            </div>
-                                            <div class="metric-card p-3 border rounded mb-3">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <span>Critical Path Delay</span>
-                                                    <span class="badge bg-warning">2 days</span>
-                                                </div>
-                                            </div>
-                                            <div class="metric-card p-3 border rounded">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <span>Team Productivity</span>
-                                                    <span class="badge bg-success">94%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Progress History & Trends -->
-<div class="card">
-    <div class="card-header d-flex justify-content-between align-items-center">
-        <h4 class="mb-0"><i class="bi bi-graph-up-arrow me-2"></i>Progress Trends & Forecast</h4>
-        <span class="badge bg-primary">Live Tracking</span>
-    </div>
-    <div class="card-body">
-        <div class="progress-trends">
-            <!-- Weekly Progress Rate - Mejorado -->
-            <div class="trend-item mb-4">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h5 class="mb-0">Weekly Progress Rate</h5>
-                    <div class="trend-stats">
-                        <span class="badge bg-success">+12% This Week</span>
-                    </div>
+        <div class="page-content">
+          <section class="row">
+            <!-- Main Content Area -->
+            <div class="col-12 col-lg-8">
+              <!-- Progress Gantt Chart -->
+              <div class="card">
+                <div class="card-header">
+                  <h4>Mobilization Timeline - All Active Sites</h4>
                 </div>
-                <div class="trend-bars-container">
-                    <div class="trend-bars d-flex align-items-end justify-content-between" style="height: 180px;">
-                        <div class="trend-bar-wrapper text-center mx-2">
-                            <div class="trend-bar mb-2 position-relative" style="height: 150px; width: 60px;">
-                                <div class="trend-background" style="height: 100%; background: linear-gradient(to top, #e9ecef, #f8f9fa); border-radius: 8px 8px 0 0;"></div>
-                                <div class="trend-fill position-absolute bottom-0 start-0 end-0 bg-success" 
-                                     style="height: 40%; border-radius: 8px 8px 0 0; transition: all 0.5s ease;">
-                                    <div class="trend-value position-absolute top-0 start-50 translate-middle-x text-white fw-bold" style="font-size: 0.75rem;">
-                                        40%
-                                    </div>
+                <div class="card-body">
+                  <div class="gantt-chart">
+                    <div class="gantt-header">
+                      <div class="gantt-site-name">Site Name</div>
+                      <div class="gantt-timeline">
+                        <div class="gantt-period">Nov 15</div>
+                        <div class="gantt-period">Nov 22</div>
+                        <div class="gantt-period">Nov 29</div>
+                        <div class="gantt-period">Dec 6</div>
+                        <div class="gantt-period">Dec 13</div>
+                        <div class="gantt-period">Dec 20</div>
+                      </div>
+                    </div>
+                    <div class="gantt-row">
+                      <div class="gantt-site-name">Tech Campus West</div>
+                      <div class="gantt-bar">
+                        <div
+                          class="gantt-progress bg-success"
+                          style="width: 85%; left: 0%"
+                        >
+                          <span class="gantt-label">85%</span>
+                        </div>
+                        <div class="gantt-milestone" style="left: 85%">
+                          <i class="bi bi-flag"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="gantt-row">
+                      <div class="gantt-site-name">Metro Hospital</div>
+                      <div class="gantt-bar">
+                        <div
+                          class="gantt-progress bg-warning"
+                          style="width: 45%; left: 10%"
+                        >
+                          <span class="gantt-label">45%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="gantt-row">
+                      <div class="gantt-site-name">University Dining</div>
+                      <div class="gantt-bar">
+                        <div
+                          class="gantt-progress bg-danger"
+                          style="width: 30%; left: 5%"
+                        >
+                          <span class="gantt-label">30%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="gantt-row">
+                      <div class="gantt-site-name">Corporate Plaza</div>
+                      <div class="gantt-bar">
+                        <div
+                          class="gantt-progress bg-success"
+                          style="width: 92%; left: 0%"
+                        >
+                          <span class="gantt-label">92%</span>
+                        </div>
+                        <div
+                          class="gantt-milestone pulse-animation"
+                          style="left: 92%"
+                        >
+                          <i class="bi bi-flag"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Detailed Progress Analytics -->
+              <div class="card">
+                <div class="card-header">
+                  <h4>Progress Analytics - Tech Campus West</h4>
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h6>Progress by Category</h6>
+                      <div class="progress-stats">
+                        <div class="progress-item mb-3">
+                          <div class="d-flex justify-content-between mb-1">
+                            <span>Equipment & Supplies</span>
+                            <span class="fw-bold">83%</span>
+                          </div>
+                          <div class="progress" style="height: 8px">
+                            <div
+                              class="progress-bar bg-success"
+                              style="width: 83%"
+                            ></div>
+                          </div>
+                        </div>
+                        <div class="progress-item mb-3">
+                          <div class="d-flex justify-content-between mb-1">
+                            <span>Staffing</span>
+                            <span class="fw-bold">80%</span>
+                          </div>
+                          <div class="progress" style="height: 8px">
+                            <div
+                              class="progress-bar bg-info"
+                              style="width: 80%"
+                            ></div>
+                          </div>
+                        </div>
+                        <div class="progress-item mb-3">
+                          <div class="d-flex justify-content-between mb-1">
+                            <span>IT & Systems</span>
+                            <span class="fw-bold">50%</span>
+                          </div>
+                          <div class="progress" style="height: 8px">
+                            <div
+                              class="progress-bar bg-warning"
+                              style="width: 50%"
+                            ></div>
+                          </div>
+                        </div>
+                        <div class="progress-item">
+                          <div class="d-flex justify-content-between mb-1">
+                            <span>Site Readiness</span>
+                            <span class="fw-bold">62%</span>
+                          </div>
+                          <div class="progress" style="height: 8px">
+                            <div
+                              class="progress-bar bg-primary"
+                              style="width: 62%"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <h6>Performance Metrics</h6>
+                      <div class="performance-metrics">
+                        <div class="metric-card p-3 border rounded mb-3">
+                          <div
+                            class="d-flex justify-content-between align-items-center"
+                          >
+                            <span>Days Until Go-Live</span>
+                            <span class="badge bg-success">12</span>
+                          </div>
+                        </div>
+                        <div class="metric-card p-3 border rounded mb-3">
+                          <div
+                            class="d-flex justify-content-between align-items-center"
+                          >
+                            <span>Budget Utilization</span>
+                            <span class="badge bg-info">78%</span>
+                          </div>
+                        </div>
+                        <div class="metric-card p-3 border rounded mb-3">
+                          <div
+                            class="d-flex justify-content-between align-items-center"
+                          >
+                            <span>Critical Path Delay</span>
+                            <span class="badge bg-warning">2 days</span>
+                          </div>
+                        </div>
+                        <div class="metric-card p-3 border rounded">
+                          <div
+                            class="d-flex justify-content-between align-items-center"
+                          >
+                            <span>Team Productivity</span>
+                            <span class="badge bg-success">94%</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Progress History & Trends -->
+              <div class="card">
+                <div
+                  class="card-header d-flex justify-content-between align-items-center"
+                >
+                  <h4 class="mb-0">
+                    <i class="bi bi-graph-up-arrow me-2"></i>Progress Trends &
+                    Forecast
+                  </h4>
+                  <span class="badge bg-primary">Live Tracking</span>
+                </div>
+
+                <div class="card-body">
+                  <div class="progress-trends">
+                    <!-- Weekly Progress Rate - Mejorado -->
+                    <div class="trend-item mb-4">
+                      <div
+                        class="d-flex justify-content-between align-items-center mb-3"
+                      >
+                        <h5 class="mb-0">Weekly Progress Rate</h5>
+                                        <br><br><br><br><br>
+                        <div class="trend-stats">
+                          <span class="badge bg-success">+12% This Week</span>
+                        </div>
+                      </div>
+                      <div class="trend-bars-container">
+                        <div
+                          class="trend-bars d-flex align-items-end justify-content-between"
+                          style="height: 180px"
+                        >
+                          <div class="trend-bar-wrapper text-center mx-2">
+                            <div
+                              class="trend-bar mb-2 position-relative"
+                              style="height: 150px; width: 60px"
+                            >
+                              <div
+                                class="trend-background"
+                                style="
+                                  height: 100%;
+                                  background: linear-gradient(
+                                    to top,
+                                    #e9ecef,
+                                    #f8f9fa
+                                  );
+                                  border-radius: 8px 8px 0 0;
+                                "
+                              ></div>
+                              <div
+                                class="trend-fill position-absolute bottom-0 start-0 end-0 bg-success"
+                                style="
+                                  height: 40%;
+                                  border-radius: 8px 8px 0 0;
+                                  transition: all 0.5s ease;
+                                "
+                              >
+                                <div
+                                  class="trend-value position-absolute top-0 start-50 translate-middle-x text-white fw-bold"
+                                  style="font-size: 0.75rem"
+                                >
+                                  40%
                                 </div>
+                              </div>
                             </div>
                             <small class="text-muted fw-semibold">Week 1</small>
                             <div class="trend-label mt-1">
-                                <small class="text-success">On Track</small>
+                              <small class="text-success">On Track</small>
                             </div>
-                        </div>
-                        
-                        <div class="trend-bar-wrapper text-center mx-2">
-                            <div class="trend-bar mb-2 position-relative" style="height: 150px; width: 60px;">
-                                <div class="trend-background" style="height: 100%; background: linear-gradient(to top, #e9ecef, #f8f9fa); border-radius: 8px 8px 0 0;"></div>
-                                <div class="trend-fill position-absolute bottom-0 start-0 end-0 bg-success" 
-                                     style="height: 55%; border-radius: 8px 8px 0 0; transition: all 0.5s ease;">
-                                    <div class="trend-value position-absolute top-0 start-50 translate-middle-x text-white fw-bold" style="font-size: 0.75rem;">
-                                        55%
-                                    </div>
+                          </div>
+
+                          <div class="trend-bar-wrapper text-center mx-2">
+                            <div
+                              class="trend-bar mb-2 position-relative"
+                              style="height: 150px; width: 60px"
+                            >
+                              <div
+                                class="trend-background"
+                                style="
+                                  height: 100%;
+                                  background: linear-gradient(
+                                    to top,
+                                    #e9ecef,
+                                    #f8f9fa
+                                  );
+                                  border-radius: 8px 8px 0 0;
+                                "
+                              ></div>
+                              <div
+                                class="trend-fill position-absolute bottom-0 start-0 end-0 bg-success"
+                                style="
+                                  height: 55%;
+                                  border-radius: 8px 8px 0 0;
+                                  transition: all 0.5s ease;
+                                "
+                              >
+                                <div
+                                  class="trend-value position-absolute top-0 start-50 translate-middle-x text-white fw-bold"
+                                  style="font-size: 0.75rem"
+                                >
+                                  55%
                                 </div>
+                              </div>
                             </div>
                             <small class="text-muted fw-semibold">Week 2</small>
                             <div class="trend-label mt-1">
-                                <small class="text-success">Excellent</small>
+                              <small class="text-success">Excellent</small>
                             </div>
-                        </div>
-                        
-                        <div class="trend-bar-wrapper text-center mx-2">
-                            <div class="trend-bar mb-2 position-relative" style="height: 150px; width: 60px;">
-                                <div class="trend-background" style="height: 100%; background: linear-gradient(to top, #e9ecef, #f8f9fa); border-radius: 8px 8px 0 0;"></div>
-                                <div class="trend-fill position-absolute bottom-0 start-0 end-0 bg-warning" 
-                                     style="height: 35%; border-radius: 8px 8px 0 0; transition: all 0.5s ease;">
-                                    <div class="trend-value position-absolute top-0 start-50 translate-middle-x text-dark fw-bold" style="font-size: 0.75rem;">
-                                        35%
-                                    </div>
+                          </div>
+
+                          <div class="trend-bar-wrapper text-center mx-2">
+                            <div
+                              class="trend-bar mb-2 position-relative"
+                              style="height: 150px; width: 60px"
+                            >
+                              <div
+                                class="trend-background"
+                                style="
+                                  height: 100%;
+                                  background: linear-gradient(
+                                    to top,
+                                    #e9ecef,
+                                    #f8f9fa
+                                  );
+                                  border-radius: 8px 8px 0 0;
+                                "
+                              ></div>
+                              <div
+                                class="trend-fill position-absolute bottom-0 start-0 end-0 bg-warning"
+                                style="
+                                  height: 35%;
+                                  border-radius: 8px 8px 0 0;
+                                  transition: all 0.5s ease;
+                                "
+                              >
+                                <div
+                                  class="trend-value position-absolute top-0 start-50 translate-middle-x text-dark fw-bold"
+                                  style="font-size: 0.75rem"
+                                >
+                                  35%
                                 </div>
+                              </div>
                             </div>
                             <small class="text-muted fw-semibold">Week 3</small>
                             <div class="trend-label mt-1">
-                                <small class="text-warning">Delayed</small>
+                              <small class="text-warning">Delayed</small>
                             </div>
-                        </div>
-                        
-                        <div class="trend-bar-wrapper text-center mx-2">
-                            <div class="trend-bar mb-2 position-relative" style="height: 150px; width: 60px;">
-                                <div class="trend-background" style="height: 100%; background: linear-gradient(to top, #e9ecef, #f8f9fa); border-radius: 8px 8px 0 0;"></div>
-                                <div class="trend-fill position-absolute bottom-0 start-0 end-0 bg-success" 
-                                     style="height: 65%; border-radius: 8px 8px 0 0; transition: all 0.5s ease;">
-                                    <div class="trend-value position-absolute top-0 start-50 translate-middle-x text-white fw-bold" style="font-size: 0.75rem;">
-                                        65%
-                                    </div>
+                          </div>
+
+                          <div class="trend-bar-wrapper text-center mx-2">
+                            <div
+                              class="trend-bar mb-2 position-relative"
+                              style="height: 150px; width: 60px"
+                            >
+                              <div
+                                class="trend-background"
+                                style="
+                                  height: 100%;
+                                  background: linear-gradient(
+                                    to top,
+                                    #e9ecef,
+                                    #f8f9fa
+                                  );
+                                  border-radius: 8px 8px 0 0;
+                                "
+                              ></div>
+                              <div
+                                class="trend-fill position-absolute bottom-0 start-0 end-0 bg-success"
+                                style="
+                                  height: 65%;
+                                  border-radius: 8px 8px 0 0;
+                                  transition: all 0.5s ease;
+                                "
+                              >
+                                <div
+                                  class="trend-value position-absolute top-0 start-50 translate-middle-x text-white fw-bold"
+                                  style="font-size: 0.75rem"
+                                >
+                                  65%
                                 </div>
+                              </div>
                             </div>
                             <small class="text-muted fw-semibold">Week 4</small>
                             <div class="trend-label mt-1">
-                                <small class="text-success">Recovered</small>
+                              <small class="text-success">Recovered</small>
                             </div>
-                        </div>
-                        
-                        <div class="trend-bar-wrapper text-center mx-2">
-                            <div class="trend-bar mb-2 position-relative" style="height: 150px; width: 60px;">
-                                <div class="trend-background" style="height: 100%; background: linear-gradient(to top, #e9ecef, #f8f9fa); border-radius: 8px 8px 0 0;"></div>
-                                <div class="trend-fill position-absolute bottom-0 start-0 end-0 bg-info" 
-                                     style="height: 45%; border-radius: 8px 8px 0 0; transition: all 0.5s ease;">
-                                    <div class="trend-value position-absolute top-0 start-50 translate-middle-x text-white fw-bold" style="font-size: 0.75rem;">
-                                        45%
-                                    </div>
+                          </div>
+
+                          <div class="trend-bar-wrapper text-center mx-2">
+                            <div
+                              class="trend-bar mb-2 position-relative"
+                              style="height: 150px; width: 60px"
+                            >
+                              <div
+                                class="trend-background"
+                                style="
+                                  height: 100%;
+                                  background: linear-gradient(
+                                    to top,
+                                    #e9ecef,
+                                    #f8f9fa
+                                  );
+                                  border-radius: 8px 8px 0 0;
+                                "
+                              ></div>
+                              <div
+                                class="trend-fill position-absolute bottom-0 start-0 end-0 bg-info"
+                                style="
+                                  height: 45%;
+                                  border-radius: 8px 8px 0 0;
+                                  transition: all 0.5s ease;
+                                "
+                              >
+                                <div
+                                  class="trend-value position-absolute top-0 start-50 translate-middle-x text-white fw-bold"
+                                  style="font-size: 0.75rem"
+                                >
+                                  45%
                                 </div>
+                              </div>
                             </div>
                             <small class="text-muted fw-semibold">Week 5</small>
                             <div class="trend-label mt-1">
-                                <small class="text-info">Current</small>
+                              <small class="text-info">Current</small>
                             </div>
-                        </div>
-                        
-                        <div class="trend-bar-wrapper text-center mx-2">
-                            <div class="trend-bar mb-2 position-relative" style="height: 150px; width: 60px;">
-                                <div class="trend-background" style="height: 100%; background: linear-gradient(to top, #e9ecef, #f8f9fa); border-radius: 8px 8px 0 0;"></div>
-                                <div class="trend-fill position-absolute bottom-0 start-0 end-0 bg-primary opacity-25" 
-                                     style="height: 70%; border-radius: 8px 8px 0 0; transition: all 0.5s ease;">
-                                    <div class="trend-value position-absolute top-0 start-50 translate-middle-x text-muted fw-bold" style="font-size: 0.75rem;">
-                                        70%
-                                    </div>
+                          </div>
+
+                          <div class="trend-bar-wrapper text-center mx-2">
+                            <div
+                              class="trend-bar mb-2 position-relative"
+                              style="height: 150px; width: 60px"
+                            >
+                              <div
+                                class="trend-background"
+                                style="
+                                  height: 100%;
+                                  background: linear-gradient(
+                                    to top,
+                                    #e9ecef,
+                                    #f8f9fa
+                                  );
+                                  border-radius: 8px 8px 0 0;
+                                "
+                              ></div>
+                              <div
+                                class="trend-fill position-absolute bottom-0 start-0 end-0 bg-primary opacity-25"
+                                style="
+                                  height: 70%;
+                                  border-radius: 8px 8px 0 0;
+                                  transition: all 0.5s ease;
+                                "
+                              >
+                                <div
+                                  class="trend-value position-absolute top-0 start-50 translate-middle-x text-muted fw-bold"
+                                  style="font-size: 0.75rem"
+                                >
+                                  70%
                                 </div>
-                                <div class="position-absolute top-0 start-0 end-0 text-center">
-                                    <small class="text-muted">Forecast</small>
-                                </div>
+                              </div>
+                              <div
+                                class="position-absolute top-0 start-0 end-0 text-center"
+                              >
+                                <small class="text-muted">Forecast</small>
+                              </div>
                             </div>
                             <small class="text-muted fw-semibold">Week 6</small>
                             <div class="trend-label mt-1">
-                                <small class="text-primary">Projected</small>
+                              <small class="text-primary">Projected</small>
                             </div>
+                          </div>
                         </div>
+                      </div>
+
+                      <!-- Trend Summary -->
+                      <div class="trend-summary mt-4 p-3 bg-light rounded">
+                        <div class="row text-center">
+                          <div class="col-md-3">
+                            <div class="summary-item">
+                              <h6 class="text-success mb-1">Best Week</h6>
+                              <p class="mb-0 fw-bold">Week 4 (65%)</p>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="summary-item">
+                              <h6 class="text-warning mb-1">Lowest Week</h6>
+                              <p class="mb-0 fw-bold">Week 3 (35%)</p>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="summary-item">
+                              <h6 class="text-info mb-1">Average</h6>
+                              <p class="mb-0 fw-bold">48%</p>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="summary-item">
+                              <h6 class="text-primary mb-1">Trend</h6>
+                              <p class="mb-0 fw-bold text-success">
+                                ↑ Improving
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                </div>
-                
-                <!-- Trend Summary -->
-                <div class="trend-summary mt-4 p-3 bg-light rounded">
-                    <div class="row text-center">
-                        <div class="col-md-3">
-                            <div class="summary-item">
-                                <h6 class="text-success mb-1">Best Week</h6>
-                                <p class="mb-0 fw-bold">Week 4 (65%)</p>
-                            </div>
+
+                    <!-- Completion Forecast - Mejorado -->
+                    <div class="trend-forecast">
+                      <div
+                        class="d-flex justify-content-between align-items-center mb-3"
+                      >
+                        <h5 class="mb-0">Completion Forecast</h5>
+                        <div class="forecast-badge">
+                          <span class="badge bg-success"
+                            >Ahead of Schedule</span
+                          >
                         </div>
-                        <div class="col-md-3">
-                            <div class="summary-item">
-                                <h6 class="text-warning mb-1">Lowest Week</h6>
-                                <p class="mb-0 fw-bold">Week 3 (35%)</p>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="summary-item">
-                                <h6 class="text-info mb-1">Average</h6>
-                                <p class="mb-0 fw-bold">48%</p>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="summary-item">
-                                <h6 class="text-primary mb-1">Trend</h6>
-                                <p class="mb-0 fw-bold text-success">↑ Improving</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Completion Forecast - Mejorado -->
-            <div class="trend-forecast">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h5 class="mb-0">Completion Forecast</h5>
-                    <div class="forecast-badge">
-                        <span class="badge bg-success">Ahead of Schedule</span>
-                    </div>
-                </div>
-                <div class="forecast-card">
-                    <div class="row">
-                        <div class="col-md-8">
+                      </div>
+                      <div class="forecast-card">
+                        <div class="row">
+                          <div class="col-md-8">
                             <div class="forecast-details">
-                                <div class="alert alert-success border-0">
-                                    <div class="d-flex">
-                                        <div class="flex-shrink-0">
-                                            <i class="bi bi-graph-up-arrow fs-4 text-success"></i>
-                                        </div>
-                                        <div class="flex-grow-1 ms-3">
-                                            <h6 class="alert-heading text-success mb-1">Project Ahead of Schedule! 🎉</h6>
-                                            <p class="mb-0">
-                                                Based on current progress trends, the project is forecasted to complete on 
-                                                <strong class="text-success">December 14, 2025</strong> - 
-                                                <strong class="text-success">1 day ahead</strong> of the scheduled deadline.
-                                            </p>
-                                        </div>
-                                    </div>
+                              <div class="alert alert-success border-0">
+                                <div class="d-flex">
+                                  <div class="flex-shrink-0">
+                                    <i
+                                      class="bi bi-graph-up-arrow fs-4 text-success"
+                                    ></i>
+                                  </div>
+                                  <div class="flex-grow-1 ms-3">
+                                    <h6 class="alert-heading text-success mb-1">
+                                      Project Ahead of Schedule! 🎉
+                                    </h6>
+                                    <p class="mb-0">
+                                      Based on current progress trends, the
+                                      project is forecasted to complete on
+                                      <strong class="text-success"
+                                        >December 14, 2025</strong
+                                      >
+                                      -
+                                      <strong class="text-success"
+                                        >1 day ahead</strong
+                                      >
+                                      of the scheduled deadline.
+                                    </p>
+                                  </div>
                                 </div>
+                              </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
+                          </div>
+                          <div class="col-md-4">
                             <div class="forecast-metrics text-center">
-                                <div class="metric-item p-3 bg-success text-white rounded">
-                                    <h4 class="mb-0">+1 Day</h4>
-                                    <small>Buffer Available</small>
-                                </div>
-                                <div class="mt-2">
-                                    <small class="text-muted">Confidence Level: 85%</small>
-                                </div>
+                              <div
+                                class="metric-item p-3 bg-success text-white rounded"
+                              >
+                                <h4 class="mb-0">+1 Day</h4>
+                                <small>Buffer Available</small>
+                              </div>
+                              <div class="mt-2">
+                                <small class="text-muted"
+                                  >Confidence Level: 85%</small
+                                >
+                              </div>
                             </div>
+                          </div>
                         </div>
-                    </div>
-                    
-                    <!-- Progress Timeline -->
-                    <div class="progress-timeline mt-3">
-                        <div class="timeline-item d-flex justify-content-between align-items-center p-2">
+
+                        <!-- Progress Timeline -->
+                        <div class="progress-timeline mt-3">
+                          <div
+                            class="timeline-item d-flex justify-content-between align-items-center p-2"
+                          >
                             <span class="text-muted">Current Date</span>
                             <span class="fw-bold">Dec 1, 2025</span>
-                        </div>
-                        <div class="timeline-item d-flex justify-content-between align-items-center p-2 bg-light">
-                            <span class="text-success">Forecast Completion</span>
-                            <span class="fw-bold text-success">Dec 14, 2025</span>
-                        </div>
-                        <div class="timeline-item d-flex justify-content-between align-items-center p-2">
+                          </div>
+                          <div
+                            class="timeline-item d-flex justify-content-between align-items-center p-2 bg-light"
+                          >
+                            <span class="text-success"
+                              >Forecast Completion</span
+                            >
+                            <span class="fw-bold text-success"
+                              >Dec 14, 2025</span
+                            >
+                          </div>
+                          <div
+                            class="timeline-item d-flex justify-content-between align-items-center p-2"
+                          >
                             <span class="text-muted">Scheduled Completion</span>
                             <span class="fw-bold">Dec 15, 2025</span>
+                          </div>
                         </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-                    </div>
-
-                    <!-- Sidebar - Alerts & Actions -->
-                    <div class="col-12 col-lg-4">
-                        <!-- Critical Alerts -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>Critical Path Alerts</h4>
-                            </div>
-                            <div class="card-content pb-4">
-                                <div class="critical-alert d-flex px-4 py-3 border-bottom">
-                                    <div class="alert-icon me-3">
-                                        <i class="bi bi-exclamation-triangle-fill text-danger"></i>
-                                    </div>
-                                    <div class="alert-light">
-                                        <h6 class="mb-1">IT Infrastructure Delay</h6>
-                                        <p class="text-muted mb-0">Network setup blocking 12 dependent tasks</p>
-                                        <small class="text-muted">Impact: High</small>
-                                    </div>
-                                </div>
-                                <div class="critical-alert d-flex px-4 py-3 border-bottom">
-                                    <div class="alert-icon me-3">
-                                        <i class="bi bi-exclamation-triangle-fill text-warning"></i>
-                                    </div>
-                                    <div class="alert-light">
-                                        <h6 class="mb-1">Equipment Delivery</h6>
-                                        <p class="text-muted mb-0">Specialty oven delivery delayed by vendor</p>
-                                        <small class="text-muted">Impact: Medium</small>
-                                    </div>
-                                </div>
-                                <div class="critical-alert d-flex px-4 py-3">
-                                    <div class="alert-icon me-3">
-                                        <i class="bi bi-exclamation-triangle-fill text-warning"></i>
-                                    </div>
-                                    <div class="alert-light">
-                                        <h6 class="mb-1">Staffing Shortage</h6>
-                                        <p class="text-muted mb-0">3 key positions still open</p>
-                                        <small class="text-muted">Impact: Medium</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Progress Actions -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>Progress Actions</h4>
-                            </div>
-                            <div class="card-body">
-                                <button class="btn btn-outline-primary w-100 mb-2 btn-action">
-                                    <i class="bi bi-arrow-clockwise"></i> Update Progress
-                                </button>
-                                <button class="btn btn-outline-success w-100 mb-2 btn-action">
-                                    <i class="bi bi-check-circle"></i> Mark Milestone
-                                </button>
-                                <button class="btn btn-outline-warning w-100 mb-2 btn-action">
-                                    <i class="bi bi-flag"></i> Set Critical Path
-                                </button>
-                                <button class="btn btn-outline-info w-100 btn-action">
-                                    <i class="bi bi-graph-up"></i> View Analytics
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Milestone Tracker -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>Upcoming Milestones</h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="milestone-tracker">
-                                    <div class="milestone-item mb-3 p-3 border rounded">
-                                        <div class="d-flex justify-content-between align-items-start mb-1">
-                                            <h6 class="text-success mb-0">Equipment Installation</h6>
-                                            <span class="badge bg-success">Dec 5</span>
-                                        </div>
-                                        <p class="text-muted mb-0 small">Final kitchen equipment setup</p>
-                                        <div class="progress mt-2" style="height: 6px;">
-                                            <div class="progress-bar bg-success" style="width: 90%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="milestone-item mb-3 p-3 border rounded">
-                                        <div class="d-flex justify-content-between align-items-start mb-1">
-                                            <h6 class="text-warning mb-0">Staff Training</h6>
-                                            <span class="badge bg-warning">Dec 8</span>
-                                        </div>
-                                        <p class="text-muted mb-0 small">Complete team onboarding</p>
-                                        <div class="progress mt-2" style="height: 6px;">
-                                            <div class="progress-bar bg-warning" style="width: 60%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="milestone-item p-3 border rounded">
-                                        <div class="d-flex justify-content-between align-items-start mb-1">
-                                            <h6 class="text-info mb-0">System Go-Live</h6>
-                                            <span class="badge bg-info">Dec 15</span>
-                                        </div>
-                                        <p class="text-muted mb-0 small">Full operational launch</p>
-                                        <div class="progress mt-2" style="height: 6px;">
-                                            <div class="progress-bar bg-info" style="width: 85%"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Performance Scorecard -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>Performance Scorecard</h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="scorecard">
-                                    <div class="score-item d-flex justify-content-between mb-2">
-                                        <span>Schedule Adherence</span>
-                                        <span class="fw-bold text-success">88%</span>
-                                    </div>
-                                    <div class="score-item d-flex justify-content-between mb-2">
-                                        <span>Budget Compliance</span>
-                                        <span class="fw-bold text-warning">92%</span>
-                                    </div>
-                                    <div class="score-item d-flex justify-content-between mb-2">
-                                        <span>Quality Metrics</span>
-                                        <span class="fw-bold text-success">95%</span>
-                                    </div>
-                                    <div class="score-item d-flex justify-content-between">
-                                        <span>Risk Management</span>
-                                        <span class="fw-bold text-info">78%</span>
-                                    </div>
-                                </div>
-                                <div class="text-center mt-3 p-3 bg-light rounded">
-                                    <h3 class="text-primary mb-0">88%</h3>
-                                    <small class="text-muted">Overall Performance Score</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+              </div>
             </div>
 
-            <footer>
-                <div class="footer clearfix mb-0 text-muted">
-                    <div class="float-start">
-                        <p>2025 &copy; Virtual OPEX - Sodexo</p>
-                    </div>
-                    <div class="float-end">
-                        <p>Powered by <span class="text-danger"><i class="bi bi-heart"></i></span> <a
-                                href="http://thirdwishfs.com" target="_blank">Thirdwish Food Services</a></p>
-                    </div>
+            <!-- Sidebar - Alerts & Actions -->
+            <div class="col-12 col-lg-4">
+              <!-- Critical Alerts -->
+              <div class="card">
+                <div class="card-header">
+                  <h4>Critical Path Alerts</h4>
                 </div>
-            </footer>
+                <div class="card-content pb-4">
+                  <div class="critical-alert d-flex px-4 py-3 border-bottom">
+                    <div class="alert-icon me-3">
+                      <i
+                        class="bi bi-exclamation-triangle-fill text-danger"
+                      ></i>
+                    </div>
+                    <div class="alert-light">
+                      <h6 class="mb-1">IT Infrastructure Delay</h6>
+                      <p class="text-muted mb-0">
+                        Network setup blocking 12 dependent tasks
+                      </p>
+                      <small class="text-muted">Impact: High</small>
+                    </div>
+                  </div>
+                  <div class="critical-alert d-flex px-4 py-3 border-bottom">
+                    <div class="alert-icon me-3">
+                      <i
+                        class="bi bi-exclamation-triangle-fill text-warning"
+                      ></i>
+                    </div>
+                    <div class="alert-light">
+                      <h6 class="mb-1">Equipment Delivery</h6>
+                      <p class="text-muted mb-0">
+                        Specialty oven delivery delayed by vendor
+                      </p>
+                      <small class="text-muted">Impact: Medium</small>
+                    </div>
+                  </div>
+                  <div class="critical-alert d-flex px-4 py-3">
+                    <div class="alert-icon me-3">
+                      <i
+                        class="bi bi-exclamation-triangle-fill text-warning"
+                      ></i>
+                    </div>
+                    <div class="alert-light">
+                      <h6 class="mb-1">Staffing Shortage</h6>
+                      <p class="text-muted mb-0">3 key positions still open</p>
+                      <small class="text-muted">Impact: Medium</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Progress Actions -->
+              <div class="card">
+                <div class="card-header">
+                  <h4>Progress Actions</h4>
+                </div>
+                <div class="card-body">
+                  <button class="btn btn-outline-primary w-100 mb-2 btn-action">
+                    <i class="bi bi-arrow-clockwise"></i> Update Progress
+                  </button>
+                  <button class="btn btn-outline-success w-100 mb-2 btn-action">
+                    <i class="bi bi-check-circle"></i> Mark Milestone
+                  </button>
+                  <button class="btn btn-outline-warning w-100 mb-2 btn-action">
+                    <i class="bi bi-flag"></i> Set Critical Path
+                  </button>
+                  <button class="btn btn-outline-info w-100 btn-action">
+                    <i class="bi bi-graph-up"></i> View Analytics
+                  </button>
+                </div>
+              </div>
+
+              <!-- Milestone Tracker -->
+              <div class="card">
+                <div class="card-header">
+                  <h4>Upcoming Milestones</h4>
+                </div>
+                <div class="card-body">
+                  <div class="milestone-tracker">
+                    <div class="milestone-item mb-3 p-3 border rounded">
+                      <div
+                        class="d-flex justify-content-between align-items-start mb-1"
+                      >
+                        <h6 class="text-success mb-0">
+                          Equipment Installation
+                        </h6>
+                        <span class="badge bg-success">Dec 5</span>
+                      </div>
+                      <p class="text-muted mb-0 small">
+                        Final kitchen equipment setup
+                      </p>
+                      <div class="progress mt-2" style="height: 6px">
+                        <div
+                          class="progress-bar bg-success"
+                          style="width: 90%"
+                        ></div>
+                      </div>
+                    </div>
+                    <div class="milestone-item mb-3 p-3 border rounded">
+                      <div
+                        class="d-flex justify-content-between align-items-start mb-1"
+                      >
+                        <h6 class="text-warning mb-0">Staff Training</h6>
+                        <span class="badge bg-warning">Dec 8</span>
+                      </div>
+                      <p class="text-muted mb-0 small">
+                        Complete team onboarding
+                      </p>
+                      <div class="progress mt-2" style="height: 6px">
+                        <div
+                          class="progress-bar bg-warning"
+                          style="width: 60%"
+                        ></div>
+                      </div>
+                    </div>
+                    <div class="milestone-item p-3 border rounded">
+                      <div
+                        class="d-flex justify-content-between align-items-start mb-1"
+                      >
+                        <h6 class="text-info mb-0">System Go-Live</h6>
+                        <span class="badge bg-info">Dec 15</span>
+                      </div>
+                      <p class="text-muted mb-0 small">
+                        Full operational launch
+                      </p>
+                      <div class="progress mt-2" style="height: 6px">
+                        <div
+                          class="progress-bar bg-info"
+                          style="width: 85%"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Performance Scorecard -->
+              <div class="card">
+                <div class="card-header">
+                  <h4>Performance Scorecard</h4>
+                </div>
+                <div class="card-body">
+                  <div class="scorecard">
+                    <div class="score-item d-flex justify-content-between mb-2">
+                      <span>Schedule Adherence</span>
+                      <span class="fw-bold text-success">88%</span>
+                    </div>
+                    <div class="score-item d-flex justify-content-between mb-2">
+                      <span>Budget Compliance</span>
+                      <span class="fw-bold text-warning">92%</span>
+                    </div>
+                    <div class="score-item d-flex justify-content-between mb-2">
+                      <span>Quality Metrics</span>
+                      <span class="fw-bold text-success">95%</span>
+                    </div>
+                    <div class="score-item d-flex justify-content-between">
+                      <span>Risk Management</span>
+                      <span class="fw-bold text-info">78%</span>
+                    </div>
+                  </div>
+                  <div class="text-center mt-3 p-3 bg-light rounded">
+                    <h3 class="text-primary mb-0">88%</h3>
+                    <small class="text-muted">Overall Performance Score</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
+
+        <footer>
+          <div class="footer clearfix mb-0 text-muted">
+            <div class="float-start">
+              <p>2025 &copy; Virtual OPEX - Sodexo</p>
+            </div>
+            <div class="float-end">
+              <p>
+                Powered by
+                <span class="text-danger"><i class="bi bi-heart"></i></span>
+                <a href="http://thirdwishfs.com" target="_blank"
+                  >Thirdwish Food Services</a
+                >
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
     <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendors/apexcharts/apexcharts.js"></script>
     <script src="assets/js/main.js"></script>
-    
+
     <script>
-        // Funcionalidad interactiva para Progress Tracking
-        document.addEventListener('DOMContentLoaded', function() {
-            // Animación para barras de progreso
-            const progressBars = document.querySelectorAll('.gantt-progress');
-            progressBars.forEach(bar => {
-                const width = bar.style.width;
-                bar.style.width = '0%';
-                setTimeout(() => {
-                    bar.style.width = width;
-                }, 300);
-            });
-            
-            // Interactividad para métricas
-            const metricCards = document.querySelectorAll('.metric-card');
-            metricCards.forEach(card => {
-                card.addEventListener('click', function() {
-                    const badge = this.querySelector('.badge');
-                    badge.classList.toggle('pulse-animation');
-                    setTimeout(() => {
-                        badge.classList.remove('pulse-animation');
-                    }, 2000);
-                });
-            });
-            
-            // Interactividad para hitos
-            const milestoneItems = document.querySelectorAll('.milestone-item');
-            milestoneItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    const progressBar = this.querySelector('.progress-bar');
-                    const currentWidth = parseInt(progressBar.style.width);
-                    if (currentWidth < 100) {
-                        progressBar.style.width = (currentWidth + 5) + '%';
-                        if (currentWidth + 5 >= 100) {
-                            this.querySelector('.badge').classList.add('bg-success');
-                        }
-                    }
-                });
-            });
-            
-            // Funcionalidad para botones de acción
-            const actionButtons = document.querySelectorAll('.btn-action');
-            actionButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const originalText = this.innerHTML;
-                    this.innerHTML = '<i class="bi bi-check"></i> Processing...';
-                    this.disabled = true;
-                    
-                    setTimeout(() => {
-                        this.innerHTML = originalText;
-                        this.disabled = false;
-                    }, 1500);
-                });
-            });
-            
-            // Actualización en tiempo real de estadísticas (simulación)
-            function updateLiveStats() {
-                const overallScore = document.querySelector('.overall-score h3');
-                let currentScore = parseInt(overallScore.textContent);
-                
-                // Simular cambio pequeño en el score
-                const change = Math.random() > 0.5 ? 1 : -1;
-                currentScore = Math.max(70, Math.min(99, currentScore + change));
-                overallScore.textContent = currentScore + '%';
-                
-                // Actualizar colores basados en el score
-                if (currentScore >= 90) {
-                    overallScore.className = 'text-success mb-0';
-                } else if (currentScore >= 80) {
-                    overallScore.className = 'text-primary mb-0';
-                } else if (currentScore >= 70) {
-                    overallScore.className = 'text-warning mb-0';
-                } else {
-                    overallScore.className = 'text-danger mb-0';
-                }
-            }
-            
-            // Actualizar estadísticas cada 10 segundos
-            setInterval(updateLiveStats, 10000);
+      // Funcionalidad interactiva para Progress Tracking
+      document.addEventListener("DOMContentLoaded", function () {
+        // Animación para barras de progreso
+        const progressBars = document.querySelectorAll(".gantt-progress");
+        progressBars.forEach((bar) => {
+          const width = bar.style.width;
+          bar.style.width = "0%";
+          setTimeout(() => {
+            bar.style.width = width;
+          }, 300);
         });
+
+        // Interactividad para métricas
+        const metricCards = document.querySelectorAll(".metric-card");
+        metricCards.forEach((card) => {
+          card.addEventListener("click", function () {
+            const badge = this.querySelector(".badge");
+            badge.classList.toggle("pulse-animation");
+            setTimeout(() => {
+              badge.classList.remove("pulse-animation");
+            }, 2000);
+          });
+        });
+
+        // Interactividad para hitos
+        const milestoneItems = document.querySelectorAll(".milestone-item");
+        milestoneItems.forEach((item) => {
+          item.addEventListener("click", function () {
+            const progressBar = this.querySelector(".progress-bar");
+            const currentWidth = parseInt(progressBar.style.width);
+            if (currentWidth < 100) {
+              progressBar.style.width = currentWidth + 5 + "%";
+              if (currentWidth + 5 >= 100) {
+                this.querySelector(".badge").classList.add("bg-success");
+              }
+            }
+          });
+        });
+
+        // Funcionalidad para botones de acción
+        const actionButtons = document.querySelectorAll(".btn-action");
+        actionButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const originalText = this.innerHTML;
+            this.innerHTML = '<i class="bi bi-check"></i> Processing...';
+            this.disabled = true;
+
+            setTimeout(() => {
+              this.innerHTML = originalText;
+              this.disabled = false;
+            }, 1500);
+          });
+        });
+
+        // Actualización en tiempo real de estadísticas (simulación)
+        function updateLiveStats() {
+          const overallScore = document.querySelector(".overall-score h3");
+          let currentScore = parseInt(overallScore.textContent);
+
+          // Simular cambio pequeño en el score
+          const change = Math.random() > 0.5 ? 1 : -1;
+          currentScore = Math.max(70, Math.min(99, currentScore + change));
+          overallScore.textContent = currentScore + "%";
+
+          // Actualizar colores basados en el score
+          if (currentScore >= 90) {
+            overallScore.className = "text-success mb-0";
+          } else if (currentScore >= 80) {
+            overallScore.className = "text-primary mb-0";
+          } else if (currentScore >= 70) {
+            overallScore.className = "text-warning mb-0";
+          } else {
+            overallScore.className = "text-danger mb-0";
+          }
+        }
+
+        // Actualizar estadísticas cada 10 segundos
+        setInterval(updateLiveStats, 10000);
+      });
     </script>
     <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Animación para las barras de tendencia
-    const trendFills = document.querySelectorAll('.trend-fill');
-    trendFills.forEach(fill => {
-        const originalHeight = fill.style.height;
-        fill.style.height = '0%';
-        
-        setTimeout(() => {
-            fill.style.height = originalHeight;
-        }, 300);
-    });
-    
-    // Interactividad para las barras
-    const trendWrappers = document.querySelectorAll('.trend-bar-wrapper');
-    trendWrappers.forEach(wrapper => {
-        wrapper.addEventListener('click', function() {
-            const week = this.querySelector('small').textContent;
-            const percentage = this.querySelector('.trend-value').textContent;
-            const status = this.querySelector('.trend-label small').textContent;
-            
-            // Mostrar tooltip o información detallada
-            console.log(`Week: ${week}, Progress: ${percentage}, Status: ${status}`);
-        });
-    });
-});
-</script>
-</body>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Animación para las barras de tendencia
+        const trendFills = document.querySelectorAll(".trend-fill");
+        trendFills.forEach((fill) => {
+          const originalHeight = fill.style.height;
+          fill.style.height = "0%";
 
+          setTimeout(() => {
+            fill.style.height = originalHeight;
+          }, 300);
+        });
+
+        // Interactividad para las barras
+        const trendWrappers = document.querySelectorAll(".trend-bar-wrapper");
+        trendWrappers.forEach((wrapper) => {
+          wrapper.addEventListener("click", function () {
+            const week = this.querySelector("small").textContent;
+            const percentage = this.querySelector(".trend-value").textContent;
+            const status = this.querySelector(".trend-label small").textContent;
+
+            // Mostrar tooltip o información detallada
+            console.log(
+              `Week: ${week}, Progress: ${percentage}, Status: ${status}`
+            );
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
