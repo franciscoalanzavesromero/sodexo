@@ -151,8 +151,8 @@
             <div class="page-heading">
                 <div class="row">
                     <div class="col-8">
-                        <h3>Real-Time Bid Analysis</h3>
-                        <p class="text-subtitle text-muted">AI-powered commercial offer evaluation and risk detection</p>
+                        <h3>Virtual OPEX Bid Analysis</h3>
+                        <p class="text-subtitle text-muted">AI-powered commercial offer evaluation and margin protection</p>
                     </div>
                     <div class="col-4 text-end">
                         <button class="btn btn-primary">
@@ -170,56 +170,94 @@
                         <!-- Current Bid Analysis -->
                         <div class="card">
                             <div class="card-header">
-                                <h4>Current Bid Analysis - Healthcare Campus RFP</h4>
-                                <div class="badge bg-warning">High Priority</div>
+                                <div class="row">
+                                    <div class="col-8">
+                                        <h4>Healthcare Campus RFP Analysis</h4>
+                                        <p class="text-muted mb-0">Metro Healthcare System | $8.5M (3 years)</p>
+                                    </div>
+                                    <div class="col-4 text-end">
+                                        <div class="badge bg-danger">High Risk</div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="card-body">
-                                <div class="row">
+                                <!-- Virtual OPEX Impact Alert -->
+                                <div class="row mb-4">
                                     <div class="col-12">
-                                        <div class="alert alert-warning">
+                                        <div class="alert alert-danger">
                                             <i class="bi bi-exclamation-triangle-fill"></i>
-                                            <strong>Risk Detected:</strong> Labor assumptions 15% below historical benchmarks
+                                            <strong>Virtual OPEX Alert:</strong> Potential margin erosion of $425K detected
                                         </div>
                                     </div>
                                 </div>
 
+                                <!-- Key Metrics Cards -->
                                 <div class="row mb-4">
-                                    <div class="col-md-6">
-                                        <h6>Bid Overview</h6>
-                                        <table class="table table-sm">
-                                            <tr>
-                                                <td><strong>Client:</strong></td>
-                                                <td>Metro Healthcare System</td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Contract Value:</strong></td>
-                                                <td>$8.5M (3 years)</td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Proposed Margin:</strong></td>
-                                                <td>14.2%</td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>AI Risk Score:</strong></td>
-                                                <td><span class="badge bg-danger">72/100</span></td>
-                                            </tr>
-                                        </table>
+                                    <div class="col-md-4">
+                                        <div class="card bg-light">
+                                            <div class="card-body text-center py-3">
+                                                <h6 class="text-muted">Current Margin</h6>
+                                                <h3 class="text-danger">14.2%</h3>
+                                                <small class="text-danger">4.1% below target</small>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <h6>Key Metrics</h6>
-                                        <div class="progress mb-2">
-                                            <div class="progress-bar bg-success" role="progressbar" style="width: 85%">
-                                                Labor Cost Accuracy: 85%
+                                    <div class="col-md-4">
+                                        <div class="card bg-light">
+                                            <div class="card-body text-center py-3">
+                                                <h6 class="text-muted">Potential Erosion</h6>
+                                                <h3 class="text-warning">$425K</h3>
+                                                <small class="text-warning">Over contract term</small>
                                             </div>
                                         </div>
-                                        <div class="progress mb-2">
-                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 65%">
-                                                Scope Alignment: 65%
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card bg-light">
+                                            <div class="card-body text-center py-3">
+                                                <h6 class="text-muted">AI Confidence</h6>
+                                                <h3 class="text-primary">92%</h3>
+                                                <small class="text-primary">Based on 245 similar bids</small>
                                             </div>
                                         </div>
-                                        <div class="progress mb-2">
-                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 45%">
-                                                Risk Coverage: 45%
+                                    </div>
+                                </div>
+
+                                <!-- Risk Details -->
+                                <div class="row mb-4">
+                                    <div class="col-12">
+                                        <h6>Primary Risk Factors</h6>
+                                        <div class="card bg-light">
+                                            <div class="card-body">
+                                                <div class="risk-detail mb-3">
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <div>
+                                                            <i class="bi bi-people-fill text-danger me-2"></i>
+                                                            <strong>Labor Assumptions:</strong> 15% below historical benchmarks
+                                                        </div>
+                                                        <span class="badge bg-danger">High Impact</span>
+                                                    </div>
+                                                    <p class="text-muted mt-1 mb-0 ms-4"><small>FTE count insufficient for required service levels. Based on analysis of 18 similar healthcare contracts.</small></p>
+                                                </div>
+                                                <div class="risk-detail mb-3">
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <div>
+                                                            <i class="bi bi-file-text-fill text-warning me-2"></i>
+                                                            <strong>Scope Alignment:</strong> 35% gap in service requirements
+                                                        </div>
+                                                        <span class="badge bg-warning">Medium Impact</span>
+                                                    </div>
+                                                    <p class="text-muted mt-1 mb-0 ms-4"><small>Specialized dietary services not adequately priced. Missing inflation adjustment clause.</small></p>
+                                                </div>
+                                                <div class="risk-detail">
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <div>
+                                                            <i class="bi bi-graph-up-arrow text-info me-2"></i>
+                                                            <strong>Market Positioning:</strong> 2.5% below regional average
+                                                        </div>
+                                                        <span class="badge bg-info">Low Impact</span>
+                                                    </div>
+                                                    <p class="text-muted mt-1 mb-0 ms-4"><small>Current pricing strategy may affect win probability without significant differentiation.</small></p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -228,20 +266,38 @@
                                 <!-- AI Recommendations -->
                                 <div class="row">
                                     <div class="col-12">
-                                        <h6>AI Recommendations</h6>
+                                        <h6>Virtual OPEX Recommendations</h6>
                                         <div class="card bg-light">
                                             <div class="card-body">
-                                                <div class="recommendation-item mb-3">
-                                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                                    <strong>Adjust Labor Model:</strong> Increase FTE count by 2.5 to meet service level requirements
+                                                <div class="recommendation-item mb-3 p-3 border-start border-success border-4">
+                                                    <div class="d-flex justify-content-between align-items-start">
+                                                        <div>
+                                                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                                            <strong>Adjust Labor Model:</strong> Increase FTE count by 2.5
+                                                        </div>
+                                                        <span class="badge bg-success">+2.1% Margin</span>
+                                                    </div>
+                                                    <p class="text-muted mt-1 mb-0 ms-4"><small>Projected impact: $178K additional margin over contract term. Aligns with service level requirements.</small></p>
                                                 </div>
-                                                <div class="recommendation-item mb-3">
-                                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                                    <strong>Pricing Strategy:</strong> Consider tiered pricing for specialized dietary services
+                                                <div class="recommendation-item mb-3 p-3 border-start border-success border-4">
+                                                    <div class="d-flex justify-content-between align-items-start">
+                                                        <div>
+                                                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                                            <strong>Tiered Pricing Strategy:</strong> For specialized dietary services
+                                                        </div>
+                                                        <span class="badge bg-success">+1.4% Margin</span>
+                                                    </div>
+                                                    <p class="text-muted mt-1 mb-0 ms-4"><small>Add premium pricing for specialized menus. Expected revenue increase: $119K annually.</small></p>
                                                 </div>
-                                                <div class="recommendation-item">
-                                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                                    <strong>Contract Terms:</strong> Add inflation adjustment clause for year 2 and 3
+                                                <div class="recommendation-item p-3 border-start border-success border-4">
+                                                    <div class="d-flex justify-content-between align-items-start">
+                                                        <div>
+                                                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                                            <strong>Contract Safeguards:</strong> Add inflation adjustment clause
+                                                        </div>
+                                                        <span class="badge bg-success">Risk Mitigation</span>
+                                                    </div>
+                                                    <p class="text-muted mt-1 mb-0 ms-4"><small>Protect against 3-5% annual cost inflation in years 2-3. Standard in 89% of similar contracts.</small></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -253,7 +309,7 @@
                         <!-- Historical Comparison -->
                         <div class="card">
                             <div class="card-header">
-                                <h4>Historical Performance Comparison</h4>
+                                <h4>Virtual OPEX Benchmark Analysis</h4>
                             </div>
                             <div class="card-body">
                                 <div id="chart-historical-comparison"></div>
@@ -261,17 +317,28 @@
                                     <div class="col-md-4 text-center">
                                         <h6>Similar Healthcare Contracts</h6>
                                         <h4 class="text-success">18.3%</h4>
-                                        <small>Average Margin</small>
+                                        <small class="text-muted">Average Margin</small>
+                                        <div class="mt-1">
+                                            <span class="badge bg-success">+4.1%</span>
+                                            <small class="text-muted">vs. current</small>
+                                        </div>
                                     </div>
                                     <div class="col-md-4 text-center">
                                         <h6>Regional Benchmarks</h6>
                                         <h4 class="text-warning">16.7%</h4>
-                                        <small>Market Average</small>
+                                        <small class="text-muted">Market Average</small>
+                                        <div class="mt-1">
+                                            <span class="badge bg-warning">+2.5%</span>
+                                            <small class="text-muted">vs. current</small>
+                                        </div>
                                     </div>
                                     <div class="col-md-4 text-center">
-                                        <h6>Current Proposal</h6>
-                                        <h4 class="text-danger">14.2%</h4>
-                                        <small>Your Bid</small>
+                                        <h6>Virtual OPEX Target</h6>
+                                        <h4 class="text-primary">18.3%</h4>
+                                        <small class="text-muted">Recommended</small>
+                                        <div class="mt-1">
+                                            <span class="badge bg-primary">Achievable</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -280,6 +347,64 @@
 
                     <!-- Sidebar - Risk Analysis & Actions -->
                     <div class="col-12 col-lg-4">
+                        <!-- Virtual OPEX Impact Summary -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Virtual OPEX Impact</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="impact-item mb-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span>Margin Protection</span>
+                                        <span class="badge bg-success">$425K</span>
+                                    </div>
+                                    <small class="text-muted">Potential erosion prevented</small>
+                                </div>
+                                <div class="impact-item mb-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span>Risk Reduction</span>
+                                        <span class="badge bg-success">72% → 24%</span>
+                                    </div>
+                                    <small class="text-muted">After implementing recommendations</small>
+                                </div>
+                                <div class="impact-item mb-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span>Win Probability</span>
+                                        <span class="badge bg-success">+18%</span>
+                                    </div>
+                                    <small class="text-muted">With optimized pricing</small>
+                                </div>
+                                <div class="impact-item">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span>Time Savings</span>
+                                        <span class="badge bg-success">6.5 hours</span>
+                                    </div>
+                                    <small class="text-muted">Analysis automation</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Actions -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Recommended Actions</h4>
+                            </div>
+                            <div class="card-body">
+                                <button class="btn btn-success w-100 mb-2">
+                                    <i class="bi bi-check-circle"></i> Apply All Recommendations
+                                </button>
+                                <button class="btn btn-outline-primary w-100 mb-2">
+                                    <i class="bi bi-calculator"></i> Run Margin Simulation
+                                </button>
+                                <button class="btn btn-outline-warning w-100 mb-2">
+                                    <i class="bi bi-file-earmark-pdf"></i> Generate Client Report
+                                </button>
+                                <button class="btn btn-outline-info w-100">
+                                    <i class="bi bi-people"></i> Request Team Review
+                                </button>
+                            </div>
+                        </div>
+
                         <!-- Risk Assessment -->
                         <div class="card">
                             <div class="card-header">
@@ -294,6 +419,7 @@
                                     <div class="progress mt-1">
                                         <div class="progress-bar bg-danger" role="progressbar" style="width: 85%"></div>
                                     </div>
+                                    <small class="text-muted">15% below benchmark</small>
                                 </div>
                                 <div class="risk-item mb-3">
                                     <div class="d-flex justify-content-between">
@@ -303,6 +429,7 @@
                                     <div class="progress mt-1">
                                         <div class="progress-bar bg-warning" role="progressbar" style="width: 65%"></div>
                                     </div>
+                                    <small class="text-muted">35% gap in requirements</small>
                                 </div>
                                 <div class="risk-item mb-3">
                                     <div class="d-flex justify-content-between">
@@ -312,6 +439,7 @@
                                     <div class="progress mt-1">
                                         <div class="progress-bar bg-success" role="progressbar" style="width: 30%"></div>
                                     </div>
+                                    <small class="text-muted">2.5% below market</small>
                                 </div>
                                 <div class="risk-item">
                                     <div class="d-flex justify-content-between">
@@ -321,44 +449,7 @@
                                     <div class="progress mt-1">
                                         <div class="progress-bar bg-warning" role="progressbar" style="width: 55%"></div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Quick Actions -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>Quick Actions</h4>
-                            </div>
-                            <div class="card-body">
-                                <button class="btn btn-outline-primary w-100 mb-2">
-                                    <i class="bi bi-calculator"></i> Run Margin Simulation
-                                </button>
-                                <button class="btn btn-outline-success w-100 mb-2">
-                                    <i class="bi bi-graph-up"></i> Compare with Benchmarks
-                                </button>
-                                <button class="btn btn-outline-warning w-100 mb-2">
-                                    <i class="bi bi-file-earmark-pdf"></i> Generate Risk Report
-                                </button>
-                                <button class="btn btn-outline-info w-100">
-                                    <i class="bi bi-people"></i> Request Team Review
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- AI Confidence Score -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>AI Confidence Score</h4>
-                            </div>
-                            <div class="card-body text-center">
-                                <div class="confidence-circle mb-3">
-                                    <h1 class="text-primary">78%</h1>
-                                    <small>Analysis Accuracy</small>
-                                </div>
-                                <div class="alert alert-info">
-                                    <i class="bi bi-info-circle"></i>
-                                    Based on 245 similar contract analyses with 92% prediction accuracy
+                                    <small class="text-muted">Missing inflation clause</small>
                                 </div>
                             </div>
                         </div>
@@ -372,7 +463,7 @@
                         <p>2025 &copy; Virtual OPEX - Sodexo</p>
                     </div>
                     <div class="float-end">
-                                                <p>Powered by <span class="text-danger"><i class="bi bi-heart"></i></span> <a
+                        <p>Powered by <span class="text-danger"><i class="bi bi-heart"></i></span> <a
                                 href="http://thirdwishfs.com" target="_blank">Thirdwish Food Services</a></p>
                     </div>
                 </div>

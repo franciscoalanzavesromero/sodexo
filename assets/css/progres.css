@@ -1,0 +1,308 @@
+ /* Estilos mejorados para Progress Tracking */
+        .gantt-chart {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .gantt-header {
+            display: flex;
+            background-color: #f8f9fa;
+            border-bottom: 2px solid #dee2e6;
+            font-weight: 600;
+            padding: 0.75rem 1rem;
+        }
+        
+        .gantt-site-name {
+            width: 200px;
+            flex-shrink: 0;
+            font-weight: 600;
+        }
+        
+        .gantt-timeline {
+            display: flex;
+            flex-grow: 1;
+            justify-content: space-between;
+        }
+        
+        .gantt-period {
+            flex: 1;
+            text-align: center;
+            font-size: 0.875rem;
+            color: #6c757d;
+        }
+        
+        .gantt-row {
+            display: flex;
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #e9ecef;
+            align-items: center;
+            transition: background-color 0.2s ease;
+        }
+        
+        .gantt-row:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .gantt-bar {
+            flex-grow: 1;
+            height: 30px;
+            background-color: #e9ecef;
+            border-radius: 15px;
+            position: relative;
+            margin: 0 1rem;
+            overflow: hidden;
+        }
+        
+        .gantt-progress {
+            height: 100%;
+            border-radius: 15px;
+            position: absolute;
+            transition: all 0.3s ease;
+        }
+        
+        .gantt-label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+        }
+        
+        .gantt-milestone {
+            position: absolute;
+            top: -5px;
+            color: #6f42c1;
+            font-size: 1.25rem;
+        }
+        
+        .progress-stats .progress-item {
+            padding: 0.5rem 0;
+        }
+        
+        .metric-card {
+            transition: all 0.2s ease;
+            border-left: 4px solid transparent !important;
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .metric-card:nth-child(1) {
+            border-left-color: #28a745 !important;
+        }
+        
+        .metric-card:nth-child(2) {
+            border-left-color: #17a2b8 !important;
+        }
+        
+        .metric-card:nth-child(3) {
+            border-left-color: #ffc107 !important;
+        }
+        
+        .metric-card:nth-child(4) {
+            border-left-color: #007bff !important;
+        }
+        
+        .trend-bars {
+            padding: 1rem 0;
+        }
+        
+        .trend-bar {
+            position: relative;
+            border-radius: 4px 4px 0 0;
+            transition: all 0.3s ease;
+        }
+        
+        .trend-bar:hover {
+            transform: scale(1.05);
+        }
+        
+        .trend-fill {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-radius: 4px 4px 0 0;
+            transition: height 0.5s ease;
+        }
+        
+        .critical-alert {
+            transition: all 0.2s ease;
+        }
+        
+        .critical-alert:hover {
+            background-color: #fff5f5;
+        }
+        
+        .milestone-item {
+            transition: all 0.2s ease;
+            border-left: 4px solid transparent !important;
+        }
+        
+        .milestone-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .milestone-item:nth-child(1) {
+            border-left-color: #28a745 !important;
+        }
+        
+        .milestone-item:nth-child(2) {
+            border-left-color: #ffc107 !important;
+        }
+        
+        .milestone-item:nth-child(3) {
+            border-left-color: #17a2b8 !important;
+        }
+        
+        .scorecard .score-item {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f8f9fa;
+        }
+        
+        .overall-score {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+            color: white;
+            border-radius: 8px;
+        }
+        
+        .btn-action {
+            transition: all 0.2s ease;
+        }
+        
+        .btn-action:hover {
+            transform: translateY(-2px);
+        }
+        
+        .alert-icon {
+            font-size: 1.25rem;
+        }
+        
+        @media (max-width: 768px) {
+            .gantt-header {
+                flex-direction: column;
+            }
+            
+            .gantt-site-name {
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+            
+            .gantt-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .gantt-bar {
+                width: 100%;
+                margin: 0.5rem 0;
+            }
+        }
+        
+        /* Animaciones para elementos de progreso */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        /* Mejoras para las tarjetas */
+        .card {
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .trend-bar-wrapper {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.trend-bar-wrapper:hover {
+    transform: translateY(-5px);
+}
+
+.trend-bar-wrapper:hover .trend-fill {
+    filter: brightness(1.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.trend-value {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.trend-bar-wrapper:hover .trend-value {
+    opacity: 1;
+}
+
+.forecast-card {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1rem;
+    background: white;
+}
+
+.progress-timeline {
+    border-left: 3px solid #28a745;
+    margin-left: 10px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 20px;
+}
+
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #6c757d;
+    border: 2px solid white;
+}
+
+.timeline-item.bg-light:before {
+    background: #28a745;
+    box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.2);
+}
+
+.summary-item {
+    padding: 0.5rem;
+}
+
+.summary-item h6 {
+    font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+    .trend-bars {
+        height: 120px !important;
+    }
+    
+    .trend-bar {
+        height: 100px !important;
+        width: 40px !important;
+    }
+    
+    .summary-item {
+        margin-bottom: 1rem;
+    }
+}

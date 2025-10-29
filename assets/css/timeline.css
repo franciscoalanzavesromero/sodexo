@@ -1,0 +1,127 @@
+  .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: #e0e0e0;
+            border-radius: 2px;
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin-bottom: 30px;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        
+        .timeline-item:hover {
+            transform: translateX(5px);
+        }
+        
+        .timeline-marker {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            z-index: 2;
+            flex-shrink: 0;
+            box-shadow: 0 0 0 4px white, 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline-content {
+            margin-left: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            flex-grow: 1;
+            border-left: 3px solid transparent;
+        }
+        
+        .timeline-item.completed .timeline-content {
+            border-left-color: #2ecc71;
+        }
+        
+        .timeline-item.current .timeline-content {
+            border-left-color: #3498db;
+        }
+        
+        .timeline-item.pending .timeline-content {
+            border-left-color: #95a5a6;
+        }
+        
+        .timeline-content h6 {
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .timeline-content p {
+            margin-bottom: 5px;
+            color: #7f8c8d;
+        }
+        
+        .timeline-content small {
+            color: #95a5a6;
+        }
+        
+        .progress {
+            height: 8px;
+            margin-top: 10px;
+            background-color: #ecf0f1;
+        }
+        
+        .progress-bar {
+            background-color: #3498db;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+        
+        .completed .status-badge {
+            background-color: rgba(46, 204, 113, 0.1);
+            color: #2ecc71;
+        }
+        
+        .current .status-badge {
+            background-color: rgba(52, 152, 219, 0.1);
+            color: #3498db;
+        }
+        
+        .pending .status-badge {
+            background-color: rgba(149, 165, 166, 0.1);
+            color: #95a5a6;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 25px;
+            }
+            
+            .timeline-marker {
+                width: 50px;
+                height: 50px;
+                font-size: 18px;
+            }
+            
+            .timeline-content {
+                margin-left: 15px;
+            }
+        }

@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/timeline.css">
     <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+    
 </head>
 
 <body>
@@ -279,64 +281,109 @@
                             </div>
                         </div>
 
-                        <!-- Mobilization Timeline -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>Mobilization Timeline - Tech Campus West</h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="timeline">
-                                    <div class="timeline-item completed">
-                                        <div class="timeline-marker bg-success"></div>
-                                        <div class="timeline-content">
-                                            <h6>Contract Signed</h6>
-                                            <p class="text-muted mb-0">November 15, 2025</p>
-                                            <small>All documents executed</small>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-item completed">
-                                        <div class="timeline-marker bg-success"></div>
-                                        <div class="timeline-content">
-                                            <h6>Equipment Ordered</h6>
-                                            <p class="text-muted mb-0">November 18, 2025</p>
-                                            <small>Kitchen equipment procurement complete</small>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-item completed">
-                                        <div class="timeline-marker bg-success"></div>
-                                        <div class="timeline-content">
-                                            <h6>Staffing Finalized</h6>
-                                            <p class="text-muted mb-0">November 22, 2025</p>
-                                            <small>25 FTE positions filled</small>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-item current">
-                                        <div class="timeline-marker bg-primary"></div>
-                                        <div class="timeline-content">
-                                            <h6>Site Preparation</h6>
-                                            <p class="text-muted mb-0">In Progress - 85% Complete</p>
-                                            <small>IT infrastructure and utilities installation</small>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-item pending">
-                                        <div class="timeline-marker bg-secondary"></div>
-                                        <div class="timeline-content">
-                                            <h6>Training & Onboarding</h6>
-                                            <p class="text-muted mb-0">Scheduled: December 5, 2025</p>
-                                            <small>Staff training and system familiarization</small>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-item pending">
-                                        <div class="timeline-marker bg-secondary"></div>
-                                        <div class="timeline-content">
-                                            <h6>Go-Live</h6>
-                                            <p class="text-muted mb-0">Scheduled: December 15, 2025</p>
-                                            <small>Full operational launch</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- Mobilization Timeline - Mejorado -->
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h4><i class="fas fa-project-diagram me-2"></i>Mobilization Timeline - Tech Campus West</h4>
+        <span class="badge bg-light text-dark">Updated: December 1, 2025</span>
+    </div>
+    <div class="card-body">
+        <div class="timeline">
+            <!-- Contract Signed -->
+            <div class="timeline-item completed">
+                <div class="timeline-marker bg-success">
+                    <i class="fas fa-file-contract"></i>
+                </div>
+                <div class="timeline-content">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h6>Contract Signed</h6>
+                        <span class="status-badge">Completed</span>
+                    </div>
+                    <p class="text-muted mb-0">November 15, 2025</p>
+                    <small>All documents executed and approved</small>
+                </div>
+            </div>
+            
+            <!-- Equipment Ordered -->
+            <div class="timeline-item completed">
+                <div class="timeline-marker bg-success">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="timeline-content">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h6>Equipment Ordered</h6>
+                        <span class="status-badge">Completed</span>
+                    </div>
+                    <p class="text-muted mb-0">November 18, 2025</p>
+                    <small>Kitchen equipment procurement process completed</small>
+                </div>
+            </div>
+            
+            <!-- Staffing Finalized -->
+            <div class="timeline-item completed">
+                <div class="timeline-marker bg-success">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="timeline-content">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h6>Staffing Finalized</h6>
+                        <span class="status-badge">Completed</span>
+                    </div>
+                    <p class="text-muted mb-0">November 22, 2025</p>
+                    <small>25 FTE positions filled and contracted</small>
+                </div>
+            </div>
+            
+            <!-- Site Preparation -->
+            <div class="timeline-item current">
+                <div class="timeline-marker bg-primary">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <div class="timeline-content">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h6>Site Preparation</h6>
+                        <span class="status-badge">In Progress</span>
+                    </div>
+                    <p class="text-muted mb-0">In Progress - 85% Complete</p>
+                    <small>IT infrastructure and utilities installation</small>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Training & Onboarding -->
+            <div class="timeline-item pending">
+                <div class="timeline-marker bg-secondary">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="timeline-content">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h6>Training & Onboarding</h6>
+                        <span class="status-badge">Pending</span>
+                    </div>
+                    <p class="text-muted mb-0">Scheduled: December 5, 2025</p>
+                    <small>Staff training and system familiarization</small>
+                </div>
+            </div>
+            
+            <!-- Go-Live -->
+            <div class="timeline-item pending">
+                <div class="timeline-marker bg-secondary">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <div class="timeline-content">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h6>Go-Live</h6>
+                        <span class="status-badge">Pending</span>
+                    </div>
+                    <p class="text-muted mb-0">Scheduled: December 15, 2025</p>
+                    <small>Full operational campus launch</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
                     </div>
 
                     <!-- Sidebar - Quick Stats & Actions -->
@@ -486,6 +533,7 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendors/apexcharts/apexcharts.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

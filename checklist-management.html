@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/chelist.css">
     <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+    
 </head>
 
 <body>
@@ -68,7 +70,7 @@
                                 <li class="submenu-item ">
                                     <a href="mobilization-dashboard.html">Mobilization Dashboard</a>
                                 </li>
-                                <li class="submenu-item ">
+                                <li class="submenu-item active">
                                     <a href="checklist-management.html">Checklist Management</a>
                                 </li>
                                 <li class="submenu-item ">
@@ -258,7 +260,7 @@
                             </div>
                             <div class="card-body">
                                 <!-- Category: Equipment & Supplies -->
-                                <div class="checklist-category mb-4">
+                                <div class="checklist-category">
                                     <h5 class="category-title">
                                         <i class="bi bi-truck me-2"></i>Equipment & Supplies
                                         <span class="badge bg-success ms-2">15/18 Complete</span>
@@ -316,7 +318,7 @@
                                 </div>
 
                                 <!-- Category: Staffing -->
-                                <div class="checklist-category mb-4">
+                                <div class="checklist-category">
                                     <h5 class="category-title">
                                         <i class="bi bi-people me-2"></i>Staffing
                                         <span class="badge bg-success ms-2">8/10 Complete</span>
@@ -374,7 +376,7 @@
                                 </div>
 
                                 <!-- Category: IT & Systems -->
-                                <div class="checklist-category mb-4">
+                                <div class="checklist-category">
                                     <h5 class="category-title">
                                         <i class="bi bi-laptop me-2"></i>IT & Systems
                                         <span class="badge bg-warning ms-2">6/12 Complete</span>
@@ -550,10 +552,10 @@
                                         <span class="fw-bold text-secondary">0</span>
                                     </div>
                                 </div>
-                                <div class="progress mt-3">
-                                    <div class="progress-bar bg-success" style="width: 68%"></div>
-                                    <div class="progress-bar bg-warning" style="width: 20%"></div>
-                                    <div class="progress-bar bg-danger" style="width: 12%"></div>
+                                <div class="progress mt-3" style="height: 20px;">
+                                    <div class="progress-bar bg-success" style="width: 68%">68%</div>
+                                    <div class="progress-bar bg-warning" style="width: 20%">20%</div>
+                                    <div class="progress-bar bg-danger" style="width: 12%">12%</div>
                                 </div>
                             </div>
                         </div>
@@ -648,7 +650,7 @@
                         <p>2025 &copy; Virtual OPEX - Sodexo</p>
                     </div>
                     <div class="float-end">
-                                                <p>Powered by <span class="text-danger"><i class="bi bi-heart"></i></span> <a
+                        <p>Powered by <span class="text-danger"><i class="bi bi-heart"></i></span> <a
                                 href="http://thirdwishfs.com" target="_blank">Thirdwish Food Services</a></p>
                     </div>
                 </div>
@@ -659,6 +661,48 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendors/apexcharts/apexcharts.js"></script>
     <script src="assets/js/main.js"></script>
+    
+    <script>
+        // Funcionalidad para checkboxes interactivos
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkboxes = document.querySelectorAll('.form-check-input');
+            
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    const checklistItem = this.closest('.checklist-item');
+                    const badge = checklistItem.querySelector('.badge');
+                    
+                    if (this.checked) {
+                        checklistItem.classList.remove('in-progress', 'overdue', 'pending');
+                        checklistItem.classList.add('completed');
+                        badge.textContent = 'Completed';
+                        badge.className = 'badge bg-success';
+                    } else {
+                        checklistItem.classList.remove('completed');
+                        checklistItem.classList.add('in-progress');
+                        badge.textContent = 'In Progress';
+                        badge.className = 'badge bg-warning';
+                    }
+                    
+                    // Actualizar estadísticas (simulación)
+                    updateStats();
+                });
+            });
+            
+            // Funcionalidad para tarjetas de plantilla
+            const templateCards = document.querySelectorAll('.template-card');
+            templateCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    alert('Template selected: ' + this.querySelector('h6').textContent);
+                });
+            });
+            
+            function updateStats() {
+                // En una implementación real, aquí se actualizarían las estadísticas
+                console.log('Stats updated');
+            }
+        });
+    </script>
 </body>
 
 </html>
