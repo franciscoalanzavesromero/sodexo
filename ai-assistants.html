@@ -14,11 +14,160 @@
     <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/app.css">
     <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+    
+    <style>
+        /* Estilos adicionales para mejorar la interfaz de IA */
+        .assistant-item {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .assistant-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .assistant-item.active {
+            border-color: #435ebe !important;
+            background-color: rgba(67, 94, 190, 0.05);
+        }
+        
+        .message-bubble {
+            max-width: 80%;
+            padding: 12px 16px;
+            border-radius: 18px;
+            position: relative;
+        }
+        
+        .ai-message .message-bubble {
+            background-color: #f0f5ff;
+            border-bottom-left-radius: 4px;
+        }
+        
+        .user-message .message-bubble {
+            background-color: #435ebe;
+            color: white;
+            border-bottom-right-radius: 4px;
+        }
+        
+        .chat-container {
+            scroll-behavior: smooth;
+        }
+        
+        .typing-indicator {
+            display: none;
+            padding: 10px 16px;
+        }
+        
+        .typing-indicator span {
+            height: 8px;
+            width: 8px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 1px;
+            animation: typing 1.5s infinite ease-in-out;
+        }
+        
+        .typing-indicator span:nth-child(1) {
+            animation-delay: 0s;
+        }
+        
+        .typing-indicator span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .typing-indicator span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        
+        @keyframes typing {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .quick-action-btn {
+            transition: all 0.2s ease;
+        }
+        
+        .quick-action-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .conversation-item {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .conversation-item:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .assistant-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .ai-avatar {
+            background-color: #e9ecef;
+        }
+        
+        .user-avatar {
+            background-color: #dee2e6;
+        }
+        
+        .capability-item, .recommendation-item {
+            transition: transform 0.2s ease;
+        }
+        
+        .capability-item:hover, .recommendation-item:hover {
+            transform: translateX(5px);
+        }
+        
+        .metric-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .insight-alert {
+            border-left: 4px solid #17a2b8;
+        }
+        
+        .performance-chart {
+            height: 200px;
+            background: linear-gradient(180deg, rgba(67, 94, 190, 0.1) 0%, rgba(255,255,255,0) 100%);
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .chart-bar {
+            position: absolute;
+            bottom: 0;
+            width: 30px;
+            background-color: #435ebe;
+            border-radius: 4px 4px 0 0;
+            transition: height 0.5s ease;
+        }
+        
+        .chart-label {
+            position: absolute;
+            bottom: -25px;
+            text-align: center;
+            width: 30px;
+            font-size: 0.75rem;
+        }
+    </style>
 </head>
 
 <body>
     <div id="app">
         <div id="sidebar" class="active">
+            <!-- Sidebar content remains the same as in the original -->
             <div class="sidebar-wrapper active">
                 <div class="sidebar-header">
                     <div class="d-flex justify-content-between">
@@ -173,9 +322,9 @@
                             </div>
                             <div class="card-body">
                                 <div class="assistants-list">
-                                    <div class="assistant-item active p-3 border rounded mb-3">
+                                    <div class="assistant-item active p-3 border rounded mb-3" data-assistant="bid-analysis">
                                         <div class="d-flex align-items-center">
-                                            <div class="assistant-avatar me-3">
+                                            <div class="assistant-avatar me-3 ai-avatar">
                                                 <i class="bi bi-graph-up text-primary fs-4"></i>
                                             </div>
                                             <div>
@@ -184,9 +333,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="assistant-item p-3 border rounded mb-3">
+                                    <div class="assistant-item p-3 border rounded mb-3" data-assistant="mobilization">
                                         <div class="d-flex align-items-center">
-                                            <div class="assistant-avatar me-3">
+                                            <div class="assistant-avatar me-3 ai-avatar">
                                                 <i class="bi bi-building text-success fs-4"></i>
                                             </div>
                                             <div>
@@ -195,9 +344,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="assistant-item p-3 border rounded mb-3">
+                                    <div class="assistant-item p-3 border rounded mb-3" data-assistant="performance">
                                         <div class="d-flex align-items-center">
-                                            <div class="assistant-avatar me-3">
+                                            <div class="assistant-avatar me-3 ai-avatar">
                                                 <i class="bi bi-gear text-warning fs-4"></i>
                                             </div>
                                             <div>
@@ -206,9 +355,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="assistant-item p-3 border rounded">
+                                    <div class="assistant-item p-3 border rounded" data-assistant="financial">
                                         <div class="d-flex align-items-center">
-                                            <div class="assistant-avatar me-3">
+                                            <div class="assistant-avatar me-3 ai-avatar">
                                                 <i class="bi bi-currency-dollar text-info fs-4"></i>
                                             </div>
                                             <div>
@@ -227,16 +376,16 @@
                                 <h4>Quick Actions</h4>
                             </div>
                             <div class="card-body">
-                                <button class="btn btn-outline-primary w-100 mb-2">
+                                <button class="btn btn-outline-primary w-100 mb-2 quick-action-btn" data-action="analyze-contract">
                                     <i class="bi bi-file-earmark-text"></i> Analyze Contract
                                 </button>
-                                <button class="btn btn-outline-success w-100 mb-2">
+                                <button class="btn btn-outline-success w-100 mb-2 quick-action-btn" data-action="performance-review">
                                     <i class="bi bi-graph-up"></i> Performance Review
                                 </button>
-                                <button class="btn btn-outline-warning w-100 mb-2">
+                                <button class="btn btn-outline-warning w-100 mb-2 quick-action-btn" data-action="margin-simulation">
                                     <i class="bi bi-calculator"></i> Margin Simulation
                                 </button>
-                                <button class="btn btn-outline-info w-100">
+                                <button class="btn btn-outline-info w-100 quick-action-btn" data-action="get-recommendations">
                                     <i class="bi bi-lightbulb"></i> Get Recommendations
                                 </button>
                             </div>
@@ -280,11 +429,11 @@
                             <div class="card-header">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div>
-                                        <h4 class="mb-0">Bid Analysis Assistant</h4>
-                                        <small class="text-muted">Online - Ready to help</small>
+                                        <h4 class="mb-0" id="assistantName">Bid Analysis Assistant</h4>
+                                        <small class="text-muted" id="assistantStatus">Online - Ready to help</small>
                                     </div>
                                     <div class="assistant-status">
-                                        <span class="badge bg-success">
+                                        <span class="badge bg-success" id="statusBadge">
                                             <i class="bi bi-circle-fill me-1"></i>
                                             Active
                                         </span>
@@ -296,7 +445,7 @@
                                 <div class="chat-container" id="chatContainer" style="height: 500px; overflow-y: auto; padding: 20px;">
                                     <!-- Welcome Message -->
                                     <div class="chat-message ai-message mb-4">
-                                        <div class="message-avatar">
+                                        <div class="message-avatar ai-avatar">
                                             <i class="bi bi-robot text-primary"></i>
                                         </div>
                                         <div class="message-content">
@@ -322,14 +471,14 @@
                                             </div>
                                             <small class="text-muted">Just now</small>
                                         </div>
-                                        <div class="message-avatar">
+                                        <div class="message-avatar user-avatar">
                                             <i class="bi bi-person-circle text-secondary"></i>
                                         </div>
                                     </div>
 
                                     <!-- AI Response -->
                                     <div class="chat-message ai-message mb-4">
-                                        <div class="message-avatar">
+                                        <div class="message-avatar ai-avatar">
                                             <i class="bi bi-robot text-primary"></i>
                                         </div>
                                         <div class="message-content">
@@ -383,14 +532,14 @@
                                             </div>
                                             <small class="text-muted">Just now</small>
                                         </div>
-                                        <div class="message-avatar">
+                                        <div class="message-avatar user-avatar">
                                             <i class="bi bi-person-circle text-secondary"></i>
                                         </div>
                                     </div>
 
                                     <!-- AI Response with Data -->
                                     <div class="chat-message ai-message">
-                                        <div class="message-avatar">
+                                        <div class="message-avatar ai-avatar">
                                             <i class="bi bi-robot text-primary"></i>
                                         </div>
                                         <div class="message-content">
@@ -411,6 +560,24 @@
                                                             <small class="text-muted">Food Waste</small>
                                                         </div>
                                                     </div>
+                                                </div>
+
+                                                <!-- Performance Chart -->
+                                                <div class="performance-chart mb-3 p-3">
+                                                    <div class="chart-bar" style="left: 10%; height: 70%;"></div>
+                                                    <div class="chart-label" style="left: 10%;">Labor</div>
+                                                    
+                                                    <div class="chart-bar" style="left: 30%; height: 45%;"></div>
+                                                    <div class="chart-label" style="left: 30%;">Food</div>
+                                                    
+                                                    <div class="chart-bar" style="left: 50%; height: 60%;"></div>
+                                                    <div class="chart-label" style="left: 50%;">Ops</div>
+                                                    
+                                                    <div class="chart-bar" style="left: 70%; height: 85%;"></div>
+                                                    <div class="chart-label" style="left: 70%;">Admin</div>
+                                                    
+                                                    <div class="chart-bar" style="left: 90%; height: 40%;"></div>
+                                                    <div class="chart-label" style="left: 90%;">Other</div>
                                                 </div>
 
                                                 <div class="comparison-table">
@@ -454,6 +621,20 @@
                                             <small class="text-muted">Just now</small>
                                         </div>
                                     </div>
+                                    
+                                    <!-- Typing Indicator -->
+                                    <div class="chat-message ai-message typing-indicator" id="typingIndicator">
+                                        <div class="message-avatar ai-avatar">
+                                            <i class="bi bi-robot text-primary"></i>
+                                        </div>
+                                        <div class="message-content">
+                                            <div class="message-bubble">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <!-- Chat Input -->
@@ -465,13 +646,13 @@
                                         </button>
                                     </div>
                                     <div class="quick-actions mt-2">
-                                        <button class="btn btn-sm btn-outline-secondary me-1">
+                                        <button class="btn btn-sm btn-outline-secondary me-1 chat-quick-action" data-action="analyze-bid">
                                             <i class="bi bi-graph-up"></i> Analyze Bid
                                         </button>
-                                        <button class="btn btn-sm btn-outline-secondary me-1">
+                                        <button class="btn btn-sm btn-outline-secondary me-1 chat-quick-action" data-action="margin-sim">
                                             <i class="bi bi-calculator"></i> Margin Sim
                                         </button>
-                                        <button class="btn btn-sm btn-outline-secondary">
+                                        <button class="btn btn-sm btn-outline-secondary chat-quick-action" data-action="generate-report">
                                             <i class="bi bi-file-text"></i> Generate Report
                                         </button>
                                     </div>
@@ -481,8 +662,11 @@
 
                         <!-- Conversation History -->
                         <div class="card">
-                            <div class="card-header">
-                                <h4>Recent Conversations</h4>
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h4 class="mb-0">Recent Conversations</h4>
+                                <button class="btn btn-sm btn-outline-secondary" id="clearHistoryBtn">
+                                    <i class="bi bi-trash"></i> Clear
+                                </button>
                             </div>
                             <div class="card-body">
                                 <div class="conversation-list">
@@ -520,7 +704,7 @@
                         <p>2025 &copy; Virtual OPEX - Sodexo</p>
                     </div>
                     <div class="float-end">
-                                                <p>Powered by <span class="text-danger"><i class="bi bi-heart"></i></span> <a
+                        <p>Powered by <span class="text-danger"><i class="bi bi-heart"></i></span> <a
                                 href="http://thirdwishfs.com" target="_blank">Thirdwish Food Services</a></p>
                     </div>
                 </div>
@@ -531,12 +715,48 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-        // Simple chat functionality
+        // Enhanced chat functionality
         document.addEventListener('DOMContentLoaded', function() {
             const messageInput = document.getElementById('messageInput');
             const sendMessageBtn = document.getElementById('sendMessageBtn');
             const chatContainer = document.getElementById('chatContainer');
             const newChatBtn = document.getElementById('newChatBtn');
+            const clearHistoryBtn = document.getElementById('clearHistoryBtn');
+            const typingIndicator = document.getElementById('typingIndicator');
+            const assistantName = document.getElementById('assistantName');
+            const assistantStatus = document.getElementById('assistantStatus');
+            const statusBadge = document.getElementById('statusBadge');
+            
+            let currentAssistant = 'bid-analysis';
+            let conversationHistory = [];
+
+            // Assistant data
+            const assistants = {
+                'bid-analysis': {
+                    name: 'Bid Analysis Assistant',
+                    description: 'Analyzes contract bids and identifies risks',
+                    welcomeMessage: "Hello! I'm your Bid Analysis Assistant. I can help you analyze contract bids for risks, compare pricing with historical data, identify margin optimization opportunities, and generate risk assessment reports. What would you like me to analyze today?",
+                    color: 'primary'
+                },
+                'mobilization': {
+                    name: 'Mobilization Coach',
+                    description: 'Guides site mobilization and checklist management',
+                    welcomeMessage: "Hello! I'm your Mobilization Coach. I can help you with site mobilization planning, checklist management, progress tracking, and resource allocation. How can I assist with your mobilization project today?",
+                    color: 'success'
+                },
+                'performance': {
+                    name: 'Performance Advisor',
+                    description: 'Monitors site performance and suggests improvements',
+                    welcomeMessage: "Hello! I'm your Performance Advisor. I can help you monitor site performance metrics, identify improvement opportunities, analyze KPI trends, and provide data-driven recommendations. What performance aspect would you like to discuss?",
+                    color: 'warning'
+                },
+                'financial': {
+                    name: 'Financial Analyst',
+                    description: 'Provides financial insights and margin optimization',
+                    welcomeMessage: "Hello! I'm your Financial Analyst. I can help you with financial performance analysis, margin optimization, cost control strategies, and profitability insights. What financial aspect would you like to explore?",
+                    color: 'info'
+                }
+            };
 
             // Send message function
             function sendMessage() {
@@ -545,13 +765,32 @@
                     // Add user message
                     addMessage(message, 'user');
                     
+                    // Save to conversation history
+                    conversationHistory.push({
+                        type: 'user',
+                        content: message,
+                        timestamp: new Date()
+                    });
+                    
                     // Clear input
                     messageInput.value = '';
                     
+                    // Show typing indicator
+                    showTypingIndicator();
+                    
                     // Simulate AI response after delay
                     setTimeout(() => {
-                        simulateAIResponse(message);
-                    }, 1000);
+                        hideTypingIndicator();
+                        const aiResponse = generateAIResponse(message, currentAssistant);
+                        addMessage(aiResponse, 'ai');
+                        
+                        // Save AI response to conversation history
+                        conversationHistory.push({
+                            type: 'ai',
+                            content: aiResponse,
+                            timestamp: new Date()
+                        });
+                    }, 1500 + Math.random() * 2000); // Random delay between 1.5-3.5 seconds
                 }
             }
 
@@ -560,77 +799,195 @@
                 const messageDiv = document.createElement('div');
                 messageDiv.className = `chat-message ${sender}-message mb-4`;
                 
+                const timestamp = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+                
                 if (sender === 'user') {
                     messageDiv.innerHTML = `
                         <div class="message-content">
                             <div class="message-bubble">
                                 <p class="mb-0">${content}</p>
                             </div>
-                            <small class="text-muted">Just now</small>
+                            <small class="text-muted">${timestamp}</small>
                         </div>
-                        <div class="message-avatar">
+                        <div class="message-avatar user-avatar">
                             <i class="bi bi-person-circle text-secondary"></i>
                         </div>
                     `;
                 } else {
                     messageDiv.innerHTML = `
-                        <div class="message-avatar">
-                            <i class="bi bi-robot text-primary"></i>
+                        <div class="message-avatar ai-avatar">
+                            <i class="bi bi-robot text-${assistants[currentAssistant].color}"></i>
                         </div>
                         <div class="message-content">
                             <div class="message-bubble">
                                 <p class="mb-0">${content}</p>
                             </div>
-                            <small class="text-muted">Just now</small>
+                            <small class="text-muted">${timestamp}</small>
                         </div>
                     `;
+                }
+                
+                // Remove typing indicator if present
+                if (typingIndicator.style.display !== 'none') {
+                    typingIndicator.style.display = 'none';
                 }
                 
                 chatContainer.appendChild(messageDiv);
                 chatContainer.scrollTop = chatContainer.scrollHeight;
             }
 
-            // Simulate AI response
-            function simulateAIResponse(userMessage) {
-                const responses = [
-                    "I've analyzed your query and found some interesting insights. Based on historical data, I recommend...",
-                    "That's a great question! Let me check the latest performance metrics and provide you with detailed analysis.",
-                    "I understand your concern. Looking at similar contracts, here are the key risk factors to consider...",
-                    "Based on the data patterns I'm seeing, there are several optimization opportunities available.",
-                    "I've processed your request and generated a comprehensive analysis with actionable recommendations."
-                ];
+            // Show typing indicator
+            function showTypingIndicator() {
+                typingIndicator.style.display = 'flex';
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }
+
+            // Hide typing indicator
+            function hideTypingIndicator() {
+                typingIndicator.style.display = 'none';
+            }
+
+            // Generate AI response based on user message and assistant type
+            function generateAIResponse(userMessage, assistantType) {
+                const responses = {
+                    'bid-analysis': [
+                        "I've analyzed your bid and identified several key risk factors. The labor cost assumptions appear to be 12% below industry benchmarks for similar contracts.",
+                        "Based on historical data for contracts of this size and sector, I'm seeing a potential margin gap of 3.2%. Let me provide a detailed breakdown.",
+                        "Your pricing strategy looks competitive, but I've identified some areas where operational efficiencies could improve profitability by 2-4%.",
+                        "I've compared your bid against 27 similar contracts in our database. The risk score is moderate, but there are optimization opportunities."
+                    ],
+                    'mobilization': [
+                        "Based on your mobilization timeline, I recommend prioritizing the kitchen equipment installation phase to avoid delays in other areas.",
+                        "I've reviewed your checklist and identified 3 critical path items that need immediate attention to stay on schedule.",
+                        "The resource allocation plan looks good, but I suggest increasing staffing during the first two weeks to handle unexpected issues.",
+                        "Based on similar mobilizations, I estimate a 92% probability of completing on time if you follow the recommended adjustments."
+                    ],
+                    'performance': [
+                        "I've analyzed the performance metrics and identified a 15% improvement opportunity in labor efficiency during peak hours.",
+                        "The customer satisfaction scores are strong, but there's a correlation between service speed and repeat business we should address.",
+                        "Compared to similar sites, your food cost percentage is 2.3% above benchmark. Let me suggest some optimization strategies.",
+                        "The KPI trends show consistent improvement in safety metrics, but there's an opportunity in waste reduction."
+                    ],
+                    'financial': [
+                        "The financial projections look solid, but I've identified a potential 4.7% improvement in gross margin through supply chain optimization.",
+                        "Based on the cost structure analysis, there's an opportunity to reduce overhead by 2.1% without impacting service quality.",
+                        "I've compared your financial performance against industry benchmarks. The results are strong, but there are 3 areas for improvement.",
+                        "The cash flow projection indicates a potential shortfall in month 6. Let me suggest some mitigation strategies."
+                    ]
+                };
                 
-                const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-                addMessage(randomResponse, 'ai');
+                // Simple keyword-based response selection
+                const message = userMessage.toLowerCase();
+                let responsePool = responses[assistantType];
+                
+                if (message.includes('risk') || message.includes('problem')) {
+                    responsePool = [
+                        "I've identified several risk factors that need immediate attention. The primary concern is the labor cost assumption which is 15% below historical benchmarks.",
+                        "The risk analysis shows moderate exposure in three key areas: labor costs, supply chain volatility, and contract terms. Let me provide detailed mitigation strategies.",
+                        "Based on the risk assessment, I recommend implementing additional safeguards in the operational plan to address the identified vulnerabilities."
+                    ];
+                } else if (message.includes('margin') || message.includes('profit')) {
+                    responsePool = [
+                        "The margin analysis reveals a 3.2% gap compared to similar contracts. Implementing the recommended changes could close this gap entirely.",
+                        "I've identified three specific areas where margin improvement is possible: labor optimization (1.8%), supply chain efficiency (0.9%), and waste reduction (0.5%).",
+                        "The current margin projection is solid, but there's potential for an additional 2.7% improvement through operational efficiencies."
+                    ];
+                } else if (message.includes('recommend') || message.includes('suggest')) {
+                    responsePool = [
+                        "Based on my analysis, I recommend: 1) Adjusting the labor model, 2) Implementing tiered pricing, and 3) Adding inflation adjustment clauses.",
+                        "Here are my top three recommendations: Optimize staffing during peak hours, renegotiate with key suppliers, and implement predictive maintenance scheduling.",
+                        "I suggest focusing on these areas: labor efficiency improvements, supply chain optimization, and enhanced customer engagement strategies."
+                    ];
+                }
+                
+                return responsePool[Math.floor(Math.random() * responsePool.length)];
+            }
+
+            // Switch assistant
+            function switchAssistant(assistantId) {
+                currentAssistant = assistantId;
+                const assistant = assistants[assistantId];
+                
+                // Update UI
+                assistantName.textContent = assistant.name;
+                assistantStatus.textContent = 'Online - Ready to help';
+                statusBadge.className = `badge bg-${assistant.color}`;
+                
+                // Clear chat and add welcome message
+                chatContainer.innerHTML = '';
+                addMessage(assistant.welcomeMessage, 'ai');
+                
+                // Update active assistant in the list
+                document.querySelectorAll('.assistant-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                document.querySelector(`[data-assistant="${assistantId}"]`).classList.add('active');
             }
 
             // Event listeners
             sendMessageBtn.addEventListener('click', sendMessage);
+            
             messageInput.addEventListener('keypress', function(e) {
                 if (e.key === 'Enter') {
                     sendMessage();
                 }
             });
-
+            
             newChatBtn.addEventListener('click', function() {
-                if (confirm('Start a new conversation? Current chat will be saved.')) {
-                    // In a real app, this would save the current chat and start fresh
-                    location.reload();
+                if (confirm('Start a new conversation? The current chat will be saved.')) {
+                    switchAssistant(currentAssistant);
                 }
             });
-
+            
+            clearHistoryBtn.addEventListener('click', function() {
+                if (confirm('Clear all conversation history? This action cannot be undone.')) {
+                    document.querySelector('.conversation-list').innerHTML = '<p class="text-muted text-center py-3">No recent conversations</p>';
+                }
+            });
+            
             // Assistant selection
-            const assistantItems = document.querySelectorAll('.assistant-item');
-            assistantItems.forEach(item => {
+            document.querySelectorAll('.assistant-item').forEach(item => {
                 item.addEventListener('click', function() {
-                    assistantItems.forEach(i => i.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    // Update chat header with selected assistant
-                    const assistantName = this.querySelector('h6').textContent;
-                    document.querySelector('.card-header h4').textContent = assistantName;
+                    const assistantId = this.getAttribute('data-assistant');
+                    switchAssistant(assistantId);
                 });
             });
+            
+            // Quick actions
+            document.querySelectorAll('.quick-action-btn, .chat-quick-action').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const action = this.getAttribute('data-action');
+                    let message = '';
+                    
+                    switch(action) {
+                        case 'analyze-contract':
+                        case 'analyze-bid':
+                            message = "Please analyze this contract bid and identify any risks or optimization opportunities.";
+                            break;
+                        case 'performance-review':
+                            message = "Can you provide a performance review for the last quarter?";
+                            break;
+                        case 'margin-simulation':
+                        case 'margin-sim':
+                            message = "Run a margin simulation with different labor cost scenarios.";
+                            break;
+                        case 'get-recommendations':
+                            message = "What recommendations do you have for improving operational efficiency?";
+                            break;
+                        case 'generate-report':
+                            message = "Generate a comprehensive risk assessment report for this contract.";
+                            break;
+                    }
+                    
+                    if (message) {
+                        messageInput.value = message;
+                        sendMessage();
+                    }
+                });
+            });
+            
+            // Initialize chat with welcome message
+            switchAssistant('bid-analysis');
         });
     </script>
 </body>
