@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contract Risk Screening - Virtual OPEX - Sodexo</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+</head>
+
+<body>
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo">
+                            <a href="dasboard.html"><img src="assets/images/logo/logo.png" alt="Sodexo Logo" srcset=""></a>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-title">Virtual OPEX</li>
+
+                        <li class="sidebar-item  ">
+                            <a href="dasboard.html" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item  has-sub active">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-graph-up"></i>
+                                <span>Commercial <br> Excellence</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="commercial-bid-analysis.html">Bid Analysis</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="contract-risk.html">Contract Risk Screening</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="pricing-optimization.html">Pricing Optimization</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-building"></i>
+                                <span>Site <br> Mobilization</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="mobilization-dashboard.html">Mobilization Dashboard</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="checklist-management.html">Checklist Management</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="progress-tracking.html">Progress Tracking</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-gear-fill"></i>
+                                <span>Operational <br> Excellence</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="performance-monitoring.html">Performance Monitoring</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="account-recovery.html">Account Recovery</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="kpi-analytics.html">KPI Analytics</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-title">Tools & Analytics</li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-bar-chart-fill"></i>
+                                <span>Reports</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="financial-performance.html">Financial Performance</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="operational-metrics.html">Operational Metrics</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="client-retention.html">Client Retention</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  ">
+                            <a href="ai-assistants.html" class='sidebar-link'>
+                                <i class="bi bi-robot"></i>
+                                <span>AI Assistants</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-sliders"></i>
+                                <span>Settings</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="user-management.html">User Management</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="system-configuration.html">System Configuration</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+
+            <div class="page-heading">
+                <div class="row">
+                    <div class="col-8">
+                        <h3>Contract Risk Screening</h3>
+                        <p class="text-subtitle text-muted">AI-powered risk detection before contract signing</p>
+                    </div>
+                    <div class="col-4 text-end">
+                        <button class="btn btn-primary">
+                            <i class="bi bi-upload"></i> Upload Contract
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-content">
+                <section class="row">
+                    <!-- Risk Overview Cards -->
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-6 col-lg-3 col-md-6">
+                                <div class="card">
+                                    <div class="card-body px-3 py-4-5">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="stats-icon purple">
+                                                    <i class="bi bi-file-earmark-check"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h6 class="text-muted font-semibold">Contracts Screened</h6>
+                                                <h6 class="font-extrabold mb-0">156</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-3 col-md-6">
+                                <div class="card">
+                                    <div class="card-body px-3 py-4-5">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="stats-icon red">
+                                                    <i class="bi bi-exclamation-triangle"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h6 class="text-muted font-semibold">High Risk Contracts</h6>
+                                                <h6 class="font-extrabold mb-0">23</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-3 col-md-6">
+                                <div class="card">
+                                    <div class="card-body px-3 py-4-5">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="stats-icon green">
+                                                    <i class="bi bi-currency-dollar"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h6 class="text-muted font-semibold">Margin Protected</h6>
+                                                <h6 class="font-extrabold mb-0">$8.7M</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-3 col-md-6">
+                                <div class="card">
+                                    <div class="card-body px-3 py-4-5">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="stats-icon blue">
+                                                    <i class="bi bi-clock-history"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h6 class="text-muted font-semibold">Avg. Review Time</h6>
+                                                <h6 class="font-extrabold mb-0">12min</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Content Area -->
+                    <div class="col-12 col-lg-8">
+                        <!-- Current Contract Analysis -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Contract Analysis - Corporate Campus Agreement</h4>
+                                <div class="badge bg-danger">Critical Risk</div>
+                            </div>
+                            <div class="card-body">
+                                <!-- Risk Alerts -->
+                                <div class="row mb-4">
+                                    <div class="col-12">
+                                        <div class="alert alert-danger">
+                                            <i class="bi bi-exclamation-triangle-fill"></i>
+                                            <strong>Critical Risk Detected:</strong> Labor assumptions 22% below industry standards
+                                        </div>
+                                        <div class="alert alert-warning">
+                                            <i class="bi bi-exclamation-triangle-fill"></i>
+                                            <strong>Medium Risk:</strong> No inflation adjustment clause for multi-year contract
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Contract Details -->
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <h6>Contract Overview</h6>
+                                        <table class="table table-sm">
+                                            <tr>
+                                                <td><strong>Client:</strong></td>
+                                                <td>Global Tech Solutions</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Contract Value:</strong></td>
+                                                <td>$12.3M (5 years)</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Proposed Margin:</strong></td>
+                                                <td>11.8%</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Risk Score:</strong></td>
+                                                <td><span class="badge bg-danger">84/100</span></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6>Risk Indicators</h6>
+                                        <div class="risk-indicators">
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <span>Labor Cost Risk</span>
+                                                <span class="badge bg-danger">High</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <span>Scope Creep Potential</span>
+                                                <span class="badge bg-warning">Medium</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-2">
+                                                <span>Payment Terms</span>
+                                                <span class="badge bg-success">Low</span>
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <span>Contract Flexibility</span>
+                                                <span class="badge bg-danger">High</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Risk Details -->
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h6>Detailed Risk Analysis</h6>
+                                        <div class="risk-details">
+                                            <div class="risk-category mb-3">
+                                                <h6 class="text-danger">Labor Assumptions</h6>
+                                                <p class="mb-1">FTE count is 22% below similar corporate campus contracts</p>
+                                                <small class="text-muted">Impact: Potential $450K annual loss</small>
+                                            </div>
+                                            <div class="risk-category mb-3">
+                                                <h6 class="text-warning">Contract Terms</h6>
+                                                <p class="mb-1">No annual inflation adjustment for years 2-5</p>
+                                                <small class="text-muted">Impact: Erosion of 3-5% margin annually</small>
+                                            </div>
+                                            <div class="risk-category">
+                                                <h6 class="text-warning">Scope Definition</h6>
+                                                <p class="mb-1">Vague language around special event services</p>
+                                                <small class="text-muted">Impact: Potential scope creep of 15-20%</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Risk Mitigation Recommendations -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Risk Mitigation Recommendations</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="recommendation-item mb-3 p-3 border-start border-4 border-success">
+                                    <h6 class="text-success">Adjust Labor Model</h6>
+                                    <p class="mb-1">Increase FTE count by 8 to meet service level requirements</p>
+                                    <small class="text-muted">Expected impact: +3.2% margin improvement</small>
+                                </div>
+                                <div class="recommendation-item mb-3 p-3 border-start border-4 border-warning">
+                                    <h6 class="text-warning">Contract Language</h6>
+                                    <p class="mb-1">Add CPI-based inflation adjustment clause for years 2-5</p>
+                                    <small class="text-muted">Expected impact: Protects 4-6% margin annually</small>
+                                </div>
+                                <div class="recommendation-item p-3 border-start border-4 border-info">
+                                    <h6 class="text-info">Scope Clarification</h6>
+                                    <p class="mb-1">Define special event services and associated pricing tiers</p>
+                                    <small class="text-muted">Expected impact: Prevents 15-20% scope creep</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar - Quick Actions & History -->
+                    <div class="col-12 col-lg-4">
+                        <!-- Quick Risk Assessment -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Quick Risk Check</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <label class="form-label">Contract Type</label>
+                                    <select class="form-select">
+                                        <option>Corporate Services</option>
+                                        <option>Healthcare</option>
+                                        <option>Education</option>
+                                        <option>Government</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Contract Value</label>
+                                    <input type="text" class="form-control" placeholder="$ Amount">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Contract Duration</label>
+                                    <input type="text" class="form-control" placeholder="Years">
+                                </div>
+                                <button class="btn btn-outline-primary w-100">
+                                    <i class="bi bi-lightning-charge"></i> Quick Assessment
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Risk History -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Recent Risk Assessments</h4>
+                            </div>
+                            <div class="card-content pb-4">
+                                <div class="recent-risk d-flex px-4 py-3 border-bottom">
+                                    <div class="risk-icon me-3">
+                                        <i class="bi bi-exclamation-triangle-fill text-danger"></i>
+                                    </div>
+                                    <div class="risk-info">
+                                        <h6 class="mb-1">University Dining</h6>
+                                        <p class="text-muted mb-0">Risk Score: 76/100</p>
+                                        <small class="text-muted">2 hours ago</small>
+                                    </div>
+                                </div>
+                                <div class="recent-risk d-flex px-4 py-3 border-bottom">
+                                    <div class="risk-icon me-3">
+                                        <i class="bi bi-exclamation-triangle-fill text-warning"></i>
+                                    </div>
+                                    <div class="risk-info">
+                                        <h6 class="mb-1">Hospital Cafeteria</h6>
+                                        <p class="text-muted mb-0">Risk Score: 58/100</p>
+                                        <small class="text-muted">5 hours ago</small>
+                                    </div>
+                                </div>
+                                <div class="recent-risk d-flex px-4 py-3">
+                                    <div class="risk-icon me-3">
+                                        <i class="bi bi-check-circle-fill text-success"></i>
+                                    </div>
+                                    <div class="risk-info">
+                                        <h6 class="mb-1">Office Park</h6>
+                                        <p class="text-muted mb-0">Risk Score: 32/100</p>
+                                        <small class="text-muted">1 day ago</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Risk Statistics -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Risk Distribution</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="risk-stats">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>High Risk</span>
+                                        <span class="fw-bold text-danger">18%</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Medium Risk</span>
+                                        <span class="fw-bold text-warning">35%</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <span>Low Risk</span>
+                                        <span class="fw-bold text-success">47%</span>
+                                    </div>
+                                </div>
+                                <div class="progress mt-3">
+                                    <div class="progress-bar bg-danger" style="width: 18%"></div>
+                                    <div class="progress-bar bg-warning" style="width: 35%"></div>
+                                    <div class="progress-bar bg-success" style="width: 47%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <footer>
+                <div class="footer clearfix mb-0 text-muted">
+                    <div class="float-start">
+                        <p>2025 &copy; Virtual OPEX - Sodexo</p>
+                    </div>
+                    <div class="float-end">
+                        <p>Powered by <span class="text-danger"><i class="bi bi-heart"></i></span> <a
+                                href="http://thirdwishfs.com">Thirdwish Food Services</a></p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/apexcharts/apexcharts.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

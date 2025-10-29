@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist Management - Virtual OPEX - Sodexo</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+</head>
+
+<body>
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo">
+                            <a href="index.html"><img src="assets/images/logo/logo.png" alt="Sodexo Logo" srcset=""></a>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-title">Virtual OPEX</li>
+
+                        <li class="sidebar-item">
+                            <a href="dasboard.html" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-graph-up"></i>
+                                <span>Commercial <br> Excellence</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="commercial-bid-analysis.html">Bid Analysis</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="contract-risk.html">Contract Risk Screening</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="pricing-optimization.html">Pricing Optimization</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  has-sub active">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-building"></i>
+                                <span>Site <br> Mobilization</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="mobilization-dashboard.html">Mobilization Dashboard</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="checklist-management.html">Checklist Management</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="progress-tracking.html">Progress Tracking</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-gear-fill"></i>
+                                <span>Operational <br> Excellence</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="performance-monitoring.html">Performance Monitoring</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="account-recovery.html">Account Recovery</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="kpi-analytics.html">KPI Analytics</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-title">Tools & Analytics</li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-bar-chart-fill"></i>
+                                <span>Reports</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="financial-performance.html">Financial Performance</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="operational-metrics.html">Operational Metrics</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="client-retention.html">Client Retention</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  ">
+                            <a href="ai-assistants.html" class='sidebar-link'>
+                                <i class="bi bi-robot"></i>
+                                <span>AI Assistants</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-sliders"></i>
+                                <span>Settings</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="user-management.html">User Management</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="system-configuration.html">System Configuration</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+
+            <div class="page-heading">
+                <div class="row">
+                    <div class="col-8">
+                        <h3>Checklist Management</h3>
+                        <p class="text-subtitle text-muted">Manage 61+ SOP tasks for Day 1 site readiness</p>
+                    </div>
+                    <div class="col-4 text-end">
+                        <button class="btn btn-primary">
+                            <i class="bi bi-plus-circle"></i> New Checklist
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-content">
+                <section class="row">
+                    <!-- Checklist Overview Cards -->
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-6 col-lg-3 col-md-6">
+                                <div class="card">
+                                    <div class="card-body px-3 py-4-5">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="stats-icon blue">
+                                                    <i class="bi bi-list-check"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h6 class="text-muted font-semibold">Total Tasks</h6>
+                                                <h6 class="font-extrabold mb-0">61</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-3 col-md-6">
+                                <div class="card">
+                                    <div class="card-body px-3 py-4-5">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="stats-icon green">
+                                                    <i class="bi bi-check-circle"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h6 class="text-muted font-semibold">Completed</h6>
+                                                <h6 class="font-extrabold mb-0">42</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-3 col-md-6">
+                                <div class="card">
+                                    <div class="card-body px-3 py-4-5">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="stats-icon orange">
+                                                    <i class="bi bi-clock"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h6 class="text-muted font-semibold">In Progress</h6>
+                                                <h6 class="font-extrabold mb-0">12</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-3 col-md-6">
+                                <div class="card">
+                                    <div class="card-body px-3 py-4-5">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="stats-icon red">
+                                                    <i class="bi bi-exclamation-circle"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h6 class="text-muted font-semibold">Overdue</h6>
+                                                <h6 class="font-extrabold mb-0">7</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Content Area -->
+                    <div class="col-12 col-lg-8">
+                        <!-- Current Site Checklist -->
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <h4>Tech Campus West - Mobilization Checklist</h4>
+                                        <p class="text-muted mb-0">Go-Live Date: December 15, 2025</p>
+                                    </div>
+                                    <div class="col-4 text-end">
+                                        <div class="progress" style="height: 10px; width: 150px; display: inline-block;">
+                                            <div class="progress-bar bg-success" style="width: 68%"></div>
+                                        </div>
+                                        <span class="ms-2">68%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <!-- Category: Equipment & Supplies -->
+                                <div class="checklist-category mb-4">
+                                    <h5 class="category-title">
+                                        <i class="bi bi-truck me-2"></i>Equipment & Supplies
+                                        <span class="badge bg-success ms-2">15/18 Complete</span>
+                                    </h5>
+                                    <div class="checklist-items">
+                                        <div class="checklist-item completed">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" checked>
+                                                <label class="form-check-label">
+                                                    Kitchen equipment procurement complete
+                                                </label>
+                                            </div>
+                                            <div class="task-meta">
+                                                <span class="badge bg-success">Completed</span>
+                                                <small class="text-muted">Nov 18, 2025</small>
+                                            </div>
+                                        </div>
+                                        <div class="checklist-item completed">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" checked>
+                                                <label class="form-check-label">
+                                                    Refrigeration units installed and tested
+                                                </label>
+                                            </div>
+                                            <div class="task-meta">
+                                                <span class="badge bg-success">Completed</span>
+                                                <small class="text-muted">Nov 22, 2025</small>
+                                            </div>
+                                        </div>
+                                        <div class="checklist-item in-progress">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                                <label class="form-check-label">
+                                                    Smallwares and utensils delivery
+                                                </label>
+                                            </div>
+                                            <div class="task-meta">
+                                                <span class="badge bg-warning">In Progress</span>
+                                                <small class="text-muted">Due: Dec 5, 2025</small>
+                                            </div>
+                                        </div>
+                                        <div class="checklist-item overdue">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                                <label class="form-check-label">
+                                                    Specialty cooking equipment installation
+                                                </label>
+                                            </div>
+                                            <div class="task-meta">
+                                                <span class="badge bg-danger">Overdue</span>
+                                                <small class="text-muted">Was due: Nov 28, 2025</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Category: Staffing -->
+                                <div class="checklist-category mb-4">
+                                    <h5 class="category-title">
+                                        <i class="bi bi-people me-2"></i>Staffing
+                                        <span class="badge bg-success ms-2">8/10 Complete</span>
+                                    </h5>
+                                    <div class="checklist-items">
+                                        <div class="checklist-item completed">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" checked>
+                                                <label class="form-check-label">
+                                                    Executive Chef hired and onboarded
+                                                </label>
+                                            </div>
+                                            <div class="task-meta">
+                                                <span class="badge bg-success">Completed</span>
+                                                <small class="text-muted">Nov 15, 2025</small>
+                                            </div>
+                                        </div>
+                                        <div class="checklist-item completed">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" checked>
+                                                <label class="form-check-label">
+                                                    20 FTE positions filled
+                                                </label>
+                                            </div>
+                                            <div class="task-meta">
+                                                <span class="badge bg-success">Completed</span>
+                                                <small class="text-muted">Nov 22, 2025</small>
+                                            </div>
+                                        </div>
+                                        <div class="checklist-item in-progress">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                                <label class="form-check-label">
+                                                    Remaining 5 positions recruitment
+                                                </label>
+                                            </div>
+                                            <div class="task-meta">
+                                                <span class="badge bg-warning">In Progress</span>
+                                                <small class="text-muted">Due: Dec 8, 2025</small>
+                                            </div>
+                                        </div>
+                                        <div class="checklist-item pending">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                                <label class="form-check-label">
+                                                    Staff training and orientation
+                                                </label>
+                                            </div>
+                                            <div class="task-meta">
+                                                <span class="badge bg-secondary">Pending</span>
+                                                <small class="text-muted">Due: Dec 10, 2025</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Category: IT & Systems -->
+                                <div class="checklist-category mb-4">
+                                    <h5 class="category-title">
+                                        <i class="bi bi-laptop me-2"></i>IT & Systems
+                                        <span class="badge bg-warning ms-2">6/12 Complete</span>
+                                    </h5>
+                                    <div class="checklist-items">
+                                        <div class="checklist-item completed">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" checked>
+                                                <label class="form-check-label">
+                                                    POS system hardware ordered
+                                                </label>
+                                            </div>
+                                            <div class="task-meta">
+                                                <span class="badge bg-success">Completed</span>
+                                                <small class="text-muted">Nov 20, 2025</small>
+                                            </div>
+                                        </div>
+                                        <div class="checklist-item overdue">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                                <label class="form-check-label">
+                                                    Network infrastructure setup
+                                                </label>
+                                            </div>
+                                            <div class="task-meta">
+                                                <span class="badge bg-danger">Overdue</span>
+                                                <small class="text-muted">Was due: Nov 25, 2025</small>
+                                            </div>
+                                        </div>
+                                        <div class="checklist-item in-progress">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                                <label class="form-check-label">
+                                                    Inventory management system configuration
+                                                </label>
+                                            </div>
+                                            <div class="task-meta">
+                                                <span class="badge bg-warning">In Progress</span>
+                                                <small class="text-muted">Due: Dec 3, 2025</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Category: Site Readiness -->
+                                <div class="checklist-category">
+                                    <h5 class="category-title">
+                                        <i class="bi bi-building me-2"></i>Site Readiness
+                                        <span class="badge bg-info ms-2">13/21 Complete</span>
+                                    </h5>
+                                    <div class="checklist-items">
+                                        <div class="checklist-item completed">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" checked>
+                                                <label class="form-check-label">
+                                                    Health department permits obtained
+                                                </label>
+                                            </div>
+                                            <div class="task-meta">
+                                                <span class="badge bg-success">Completed</span>
+                                                <small class="text-muted">Nov 18, 2025</small>
+                                            </div>
+                                        </div>
+                                        <div class="checklist-item in-progress">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                                <label class="form-check-label">
+                                                    Final cleaning and sanitation
+                                                </label>
+                                            </div>
+                                            <div class="task-meta">
+                                                <span class="badge bg-warning">In Progress</span>
+                                                <small class="text-muted">Due: Dec 12, 2025</small>
+                                            </div>
+                                        </div>
+                                        <div class="checklist-item pending">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox">
+                                                <label class="form-check-label">
+                                                    Safety inspections completed
+                                                </label>
+                                            </div>
+                                            <div class="task-meta">
+                                                <span class="badge bg-secondary">Pending</span>
+                                                <small class="text-muted">Due: Dec 14, 2025</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Checklist Templates -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Checklist Templates</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <div class="template-card p-3 border rounded">
+                                            <h6>Corporate Dining</h6>
+                                            <p class="text-muted small">Standard template for office locations</p>
+                                            <span class="badge bg-primary">58 tasks</span>
+                                            <button class="btn btn-sm btn-outline-primary w-100 mt-2">Use Template</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="template-card p-3 border rounded">
+                                            <h6>Healthcare</h6>
+                                            <p class="text-muted small">Hospital and medical facility template</p>
+                                            <span class="badge bg-primary">61 tasks</span>
+                                            <button class="btn btn-sm btn-outline-primary w-100 mt-2">Use Template</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="template-card p-3 border rounded">
+                                            <h6>Education</h6>
+                                            <p class="text-muted small">School and university template</p>
+                                            <span class="badge bg-primary">55 tasks</span>
+                                            <button class="btn btn-sm btn-outline-primary w-100 mt-2">Use Template</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar - Actions & Details -->
+                    <div class="col-12 col-lg-4">
+                        <!-- Quick Actions -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Quick Actions</h4>
+                            </div>
+                            <div class="card-body">
+                                <button class="btn btn-outline-primary w-100 mb-2">
+                                    <i class="bi bi-send"></i> Send Reminders
+                                </button>
+                                <button class="btn btn-outline-success w-100 mb-2">
+                                    <i class="bi bi-file-pdf"></i> Export Checklist
+                                </button>
+                                <button class="btn btn-outline-warning w-100 mb-2">
+                                    <i class="bi bi-arrow-clockwise"></i> Update Progress
+                                </button>
+                                <button class="btn btn-outline-info w-100">
+                                    <i class="bi bi-share"></i> Share with Team
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Task Statistics -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Task Statistics</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="task-stats">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Completed</span>
+                                        <span class="fw-bold text-success">42</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>In Progress</span>
+                                        <span class="fw-bold text-warning">12</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Overdue</span>
+                                        <span class="fw-bold text-danger">7</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <span>Pending</span>
+                                        <span class="fw-bold text-secondary">0</span>
+                                    </div>
+                                </div>
+                                <div class="progress mt-3">
+                                    <div class="progress-bar bg-success" style="width: 68%"></div>
+                                    <div class="progress-bar bg-warning" style="width: 20%"></div>
+                                    <div class="progress-bar bg-danger" style="width: 12%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Overdue Tasks -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Overdue Tasks</h4>
+                            </div>
+                            <div class="card-content pb-4">
+                                <div class="overdue-task d-flex px-4 py-3 border-bottom">
+                                    <div class="task-icon me-3">
+                                        <i class="bi bi-exclamation-triangle-fill text-danger"></i>
+                                    </div>
+                                    <div class="task-info">
+                                        <h6 class="mb-1">Specialty Equipment</h6>
+                                        <p class="text-muted mb-0">Installation delayed by vendor</p>
+                                        <small class="text-muted">7 days overdue</small>
+                                    </div>
+                                </div>
+                                <div class="overdue-task d-flex px-4 py-3 border-bottom">
+                                    <div class="task-icon me-3">
+                                        <i class="bi bi-exclamation-triangle-fill text-danger"></i>
+                                    </div>
+                                    <div class="task-info">
+                                        <h6 class="mb-1">Network Setup</h6>
+                                        <p class="text-muted mb-0">IT team awaiting client approval</p>
+                                        <small class="text-muted">5 days overdue</small>
+                                    </div>
+                                </div>
+                                <div class="overdue-task d-flex px-4 py-3">
+                                    <div class="task-icon me-3">
+                                        <i class="bi bi-exclamation-triangle-fill text-danger"></i>
+                                    </div>
+                                    <div class="task-info">
+                                        <h6 class="mb-1">Safety Inspection</h6>
+                                        <p class="text-muted mb-0">Scheduling conflict with inspector</p>
+                                        <small class="text-muted">3 days overdue</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Team Assignment -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Team Assignment</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="team-member mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar avatar-sm me-3">
+                                            <img src="assets/images/faces/1.jpg">
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-0">Sarah Johnson</h6>
+                                            <small class="text-muted">Equipment Manager</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="team-member mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar avatar-sm me-3">
+                                            <img src="assets/images/faces/2.jpg">
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-0">Mike Chen</h6>
+                                            <small class="text-muted">IT Coordinator</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="team-member">
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar avatar-sm me-3">
+                                            <img src="assets/images/faces/3.jpg">
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-0">Lisa Rodriguez</h6>
+                                            <small class="text-muted">HR Manager</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <footer>
+                <div class="footer clearfix mb-0 text-muted">
+                    <div class="float-start">
+                        <p>2025 &copy; Virtual OPEX - Sodexo</p>
+                    </div>
+                    <div class="float-end">
+                        <p>Powered by <span class="text-danger"><i class="bi bi-heart"></i></span> <a
+                                href="http://thirdwishfs.com">Thirdwish Food Services</a></p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/apexcharts/apexcharts.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

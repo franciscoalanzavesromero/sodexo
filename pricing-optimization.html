@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Optimization - Virtual OPEX - Sodexo</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+</head>
+
+<body>
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo">
+                            <a href="index.html"><img src="assets/images/logo/logo.png" alt="Sodexo Logo" srcset=""></a>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-title">Virtual OPEX</li>
+
+                        <li class="sidebar-item  ">
+                            <a href="dasboard.html" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item  has-sub active">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-graph-up"></i>
+                                <span>Commercial <br> Excellence</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="commercial-bid-analysis.html">Bid Analysis</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="contract-risk.html">Contract Risk Screening</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="pricing-optimization.html">Pricing Optimization</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-building"></i>
+                                <span>Site <br> Mobilization</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="mobilization-dashboard.html">Mobilization Dashboard</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="checklist-management.html">Checklist Management</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="progress-tracking.html">Progress Tracking</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-gear-fill"></i>
+                                <span>Operational <br> Excellence</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="performance-monitoring.html">Performance Monitoring</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="account-recovery.html">Account Recovery</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="kpi-analytics.html">KPI Analytics</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-title">Tools & Analytics</li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-bar-chart-fill"></i>
+                                <span>Reports</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="financial-performance.html">Financial Performance</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="operational-metrics.html">Operational Metrics</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="client-retention.html">Client Retention</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  ">
+                            <a href="ai-assistants.html" class='sidebar-link'>
+                                <i class="bi bi-robot"></i>
+                                <span>AI Assistants</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-sliders"></i>
+                                <span>Settings</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="user-management.html">User Management</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="system-configuration.html">System Configuration</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+
+            <div class="page-heading">
+                <div class="row">
+                    <div class="col-8">
+                        <h3>Pricing Optimization</h3>
+                        <p class="text-subtitle text-muted">AI-powered pricing strategy and margin optimization</p>
+                    </div>
+                    <div class="col-4 text-end">
+                        <button class="btn btn-primary">
+                            <i class="bi bi-calculator"></i> New Simulation
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-content">
+                <section class="row">
+                    <!-- Main Content Area -->
+                    <div class="col-12 col-lg-8">
+                        <!-- Current Pricing Analysis -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Pricing Analysis - Healthcare System RFP</h4>
+                                <div class="badge bg-success">Optimization Ready</div>
+                            </div>
+                            <div class="card-body">
+                                <!-- Optimization Alert -->
+                                <div class="row mb-4">
+                                    <div class="col-12">
+                                        <div class="alert alert-success">
+                                            <i class="bi bi-lightbulb-fill"></i>
+                                            <strong>Optimization Opportunity:</strong> Tiered pricing can increase margin by 2.8% without affecting win probability
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Current vs Optimized Pricing -->
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <h6>Current Pricing</h6>
+                                        <table class="table table-sm">
+                                            <tr>
+                                                <td><strong>Base Meal Price:</strong></td>
+                                                <td>$8.75</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Special Diet Surcharge:</strong></td>
+                                                <td>$1.50</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Catering Minimum:</strong></td>
+                                                <td>$250</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Projected Margin:</strong></td>
+                                                <td>15.2%</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6>AI-Optimized Pricing</h6>
+                                        <table class="table table-sm">
+                                            <tr class="table-success">
+                                                <td><strong>Base Meal Price:</strong></td>
+                                                <td>$8.95 <span class="badge bg-success">+2.3%</span></td>
+                                            </tr>
+                                            <tr class="table-success">
+                                                <td><strong>Special Diet Surcharge:</strong></td>
+                                                <td>$1.75 <span class="badge bg-success">+16.7%</span></td>
+                                            </tr>
+                                            <tr class="table-success">
+                                                <td><strong>Catering Minimum:</strong></td>
+                                                <td>$275 <span class="badge bg-success">+10%</span></td>
+                                            </tr>
+                                            <tr class="table-success">
+                                                <td><strong>Projected Margin:</strong></td>
+                                                <td>18.0% <span class="badge bg-success">+2.8%</span></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <!-- Market Comparison -->
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h6>Market Position Analysis</h6>
+                                        <div class="market-comparison">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <span>Your Current Price</span>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="progress" style="width: 200px;">
+                                                        <div class="progress-bar bg-info" style="width: 65%"></div>
+                                                    </div>
+                                                    <span class="ms-2">$8.75</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <span>Market Average</span>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="progress" style="width: 200px;">
+                                                        <div class="progress-bar bg-warning" style="width: 75%"></div>
+                                                    </div>
+                                                    <span class="ms-2">$9.25</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span>Optimized Price</span>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="progress" style="width: 200px;">
+                                                        <div class="progress-bar bg-success" style="width: 70%"></div>
+                                                    </div>
+                                                    <span class="ms-2">$8.95</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pricing Strategies -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Recommended Pricing Strategies</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="strategy-item mb-4 p-3 border rounded">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h6 class="text-success mb-0">Tiered Service Pricing</h6>
+                                        <span class="badge bg-success">+1.5% Margin</span>
+                                    </div>
+                                    <p class="mb-2">Implement bronze/silver/gold service tiers with differentiated pricing</p>
+                                    <small class="text-muted">Impact: Better margin segmentation and client choice</small>
+                                </div>
+                                
+                                <div class="strategy-item mb-4 p-3 border rounded">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h6 class="text-warning mb-0">Dynamic Menu Pricing</h6>
+                                        <span class="badge bg-warning">+0.8% Margin</span>
+                                    </div>
+                                    <p class="mb-2">Adjust pricing based on ingredient costs and demand patterns</p>
+                                    <small class="text-muted">Impact: Better cost recovery and revenue optimization</small>
+                                </div>
+                                
+                                <div class="strategy-item p-3 border rounded">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h6 class="text-info mb-0">Bundle Pricing</h6>
+                                        <span class="badge bg-info">+0.5% Margin</span>
+                                    </div>
+                                    <p class="mb-2">Create meal plan bundles with volume-based discounts</p>
+                                    <small class="text-muted">Impact: Increased customer loyalty and predictable revenue</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar - Tools & Simulations -->
+                    <div class="col-12 col-lg-4">
+                        <!-- Quick Pricing Calculator -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Quick Pricing Calculator</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <label class="form-label">Service Type</label>
+                                    <select class="form-select">
+                                        <option>Corporate Dining</option>
+                                        <option>Healthcare</option>
+                                        <option>Education</option>
+                                        <option>Catering</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Cost Base</label>
+                                    <input type="number" class="form-control" placeholder="$ Cost per meal">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Target Margin</label>
+                                    <input type="number" class="form-control" placeholder="%" value="18">
+                                </div>
+                                <button class="btn btn-outline-primary w-100 mb-2">
+                                    <i class="bi bi-calculator"></i> Calculate Price
+                                </button>
+                                <div class="result p-2 bg-light rounded text-center">
+                                    <strong>Recommended Price: $9.25</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Win Probability Analysis -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Win Probability Analysis</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="win-probability text-center mb-3">
+                                    <h2 class="text-success">78%</h2>
+                                    <small>Probability of Winning</small>
+                                </div>
+                                <div class="probability-factors">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Price Competitiveness</span>
+                                        <span class="fw-bold text-success">85%</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Service Differentiation</span>
+                                        <span class="fw-bold text-warning">72%</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <span>Client Relationship</span>
+                                        <span class="fw-bold text-success">88%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recent Optimizations -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Recent Optimizations</h4>
+                            </div>
+                            <div class="card-content pb-4">
+                                <div class="recent-opt d-flex px-4 py-3 border-bottom">
+                                    <div class="opt-icon me-3">
+                                        <i class="bi bi-graph-up-arrow text-success"></i>
+                                    </div>
+                                    <div class="opt-info">
+                                        <h6 class="mb-1">University Contract</h6>
+                                        <p class="text-muted mb-0">+2.1% margin improvement</p>
+                                        <small class="text-muted">3 hours ago</small>
+                                    </div>
+                                </div>
+                                <div class="recent-opt d-flex px-4 py-3 border-bottom">
+                                    <div class="opt-icon me-3">
+                                        <i class="bi bi-graph-up-arrow text-warning"></i>
+                                    </div>
+                                    <div class="opt-info">
+                                        <h6 class="mb-1">Corporate Campus</h6>
+                                        <p class="text-muted mb-0">+1.8% margin improvement</p>
+                                        <small class="text-muted">1 day ago</small>
+                                    </div>
+                                </div>
+                                <div class="recent-opt d-flex px-4 py-3">
+                                    <div class="opt-icon me-3">
+                                        <i class="bi bi-graph-up-arrow text-success"></i>
+                                    </div>
+                                    <div class="opt-info">
+                                        <h6 class="mb-1">Hospital RFP</h6>
+                                        <p class="text-muted mb-0">+3.2% margin improvement</p>
+                                        <small class="text-muted">2 days ago</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Margin Sensitivity -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Margin Sensitivity</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="sensitivity-chart">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>-10% Price</span>
+                                        <span class="text-danger">8.2% Margin</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>-5% Price</span>
+                                        <span class="text-warning">11.7% Margin</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Current</span>
+                                        <span class="text-info">15.2% Margin</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>+5% Price</span>
+                                        <span class="text-success">18.0% Margin</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <span>+10% Price</span>
+                                        <span class="text-success">20.3% Margin</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <footer>
+                <div class="footer clearfix mb-0 text-muted">
+                    <div class="float-start">
+                        <p>2025 &copy; Virtual OPEX - Sodexo</p>
+                    </div>
+                    <div class="float-end">
+                        <p>Powered by <span class="text-danger"><i class="bi bi-heart"></i></span> <a
+                                href="http://thirdwishfs.com">Thirdwish Food Services</a></p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/apexcharts/apexcharts.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operational Metrics - Virtual OPEX - Sodexo</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+</head>
+
+<body>
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo">
+                            <a href="index.html"><img src="assets/images/logo/logo.png" alt="Sodexo Logo" srcset=""></a>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-title">Virtual OPEX</li>
+
+                        <li class="sidebar-item ">
+                            <a href="dasboard.html" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-graph-up"></i>
+                                <span>Commercial <br> Excellence</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="commercial-bid-analysis.html">Bid Analysis</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="contract-risk.html">Contract Risk Screening</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="pricing-optimization.html">Pricing Optimization</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-building"></i>
+                                <span>Site <br> Mobilization</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="mobilization-dashboard.html">Mobilization Dashboard</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="checklist-management.html">Checklist Management</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="progress-tracking.html">Progress Tracking</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-gear-fill"></i>
+                                <span>Operational <br> Excellence</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="performance-monitoring.html">Performance Monitoring</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="account-recovery.html">Account Recovery</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="kpi-analytics.html">KPI Analytics</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-title">Tools & Analytics</li>
+
+                        <li class="sidebar-item  has-sub active">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-bar-chart-fill"></i>
+                                <span>Reports</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="financial-performance.html">Financial Performance</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="operational-metrics.html">Operational Metrics</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="client-retention.html">Client Retention</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  ">
+                            <a href="ai-assistants.html" class='sidebar-link'>
+                                <i class="bi bi-robot"></i>
+                                <span>AI Assistants</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-sliders"></i>
+                                <span>Settings</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="user-management.html">User Management</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="system-configuration.html">System Configuration</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+
+            <div class="page-heading">
+                <div class="row">
+                    <div class="col-8">
+                        <h3>Operational Metrics</h3>
+                        <p class="text-subtitle text-muted">Comprehensive operational efficiency and performance analytics</p>
+                    </div>
+                    <div class="col-4 text-end">
+                        <button class="btn btn-primary">
+                            <i class="bi bi-download"></i> Export Report
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-content">
+                <section class="row">
+                    <!-- Main Content Area -->
+                    <div class="col-12 col-lg-8">
+                        <!-- Operational Efficiency Dashboard -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Operational Efficiency Overview</h4>
+                                <div class="header-actions">
+                                    <select class="form-select form-select-sm" style="width: auto; display: inline-block;">
+                                        <option>Last 7 Days</option>
+                                        <option>Last 30 Days</option>
+                                        <option selected>Last 90 Days</option>
+                                        <option>Year to Date</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="operational-metrics">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="metric-card p-3 border rounded mb-3">
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <h6 class="mb-0">Labor Efficiency</h6>
+                                                    <span class="badge bg-success">+3.5%</span>
+                                                </div>
+                                                <div class="metric-value text-success">87.3%</div>
+                                                <small class="text-muted">Target: 85.0%</small>
+                                                <div class="progress mt-2" style="height: 8px;">
+                                                    <div class="progress-bar bg-success" style="width: 103%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="metric-card p-3 border rounded mb-3">
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <h6 class="mb-0">Food Waste Reduction</h6>
+                                                    <span class="badge bg-danger">+0.5%</span>
+                                                </div>
+                                                <div class="metric-value text-danger">4.2%</div>
+                                                <small class="text-muted">Target: 3.7%</small>
+                                                <div class="progress mt-2" style="height: 8px;">
+                                                    <div class="progress-bar bg-danger" style="width: 114%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="metric-card p-3 border rounded">
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <h6 class="mb-0">Inventory Turnover</h6>
+                                                    <span class="badge bg-success">+0.8</span>
+                                                </div>
+                                                <div class="metric-value text-success">12.5x</div>
+                                                <small class="text-muted">Target: 12.0x</small>
+                                                <div class="progress mt-2" style="height: 8px;">
+                                                    <div class="progress-bar bg-success" style="width: 104%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="metric-card p-3 border rounded">
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <h6 class="mb-0">Service Time</h6>
+                                                    <span class="badge bg-success">-0.2 min</span>
+                                                </div>
+                                                <div class="metric-value text-success">2.8 min</div>
+                                                <small class="text-muted">Target: 3.0 min</small>
+                                                <div class="progress mt-2" style="height: 8px;">
+                                                    <div class="progress-bar bg-success" style="width: 93%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Operational Performance by Site Type -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Operational Performance by Site Type</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="site-performance">
+                                    <div class="performance-table">
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th>Site Type</th>
+                                                    <th>Labor Efficiency</th>
+                                                    <th>Food Waste</th>
+                                                    <th>Service Time</th>
+                                                    <th>Inventory Turnover</th>
+                                                    <th>Overall Score</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <i class="bi bi-building me-2 text-primary"></i>
+                                                            <span>Corporate</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <span class="fw-bold text-success">91.2%</span>
+                                                        <div class="progress mt-1" style="height: 4px; width: 80px;">
+                                                            <div class="progress-bar bg-success" style="width: 91%"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <span class="fw-bold text-success">3.1%</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="fw-bold text-success">2.5 min</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="fw-bold text-success">14.2x</span>
+                                                    </td>
+                                                    <td><span class="badge bg-success">94</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <i class="bi bi-hospital me-2 text-info"></i>
+                                                            <span>Healthcare</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <span class="fw-bold text-warning">82.5%</span>
+                                                        <div class="progress mt-1" style="height: 4px; width: 80px;">
+                                                            <div class="progress-bar bg-warning" style="width: 83%"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <span class="fw-bold text-warning">4.8%</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="fw-bold text-warning">3.2 min</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="fw-bold text-warning">11.3x</span>
+                                                    </td>
+                                                    <td><span class="badge bg-warning">78</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <i class="bi bi-mortarboard me-2 text-warning"></i>
+                                                            <span>Education</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <span class="fw-bold text-danger">75.8%</span>
+                                                        <div class="progress mt-1" style="height: 4px; width: 80px;">
+                                                            <div class="progress-bar bg-danger" style="width: 76%"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <span class="fw-bold text-danger">5.4%</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="fw-bold text-danger">3.8 min</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="fw-bold text-danger">9.2x</span>
+                                                    </td>
+                                                    <td><span class="badge bg-danger">65</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <i class="bi bi-building me-2 text-success"></i>
+                                                            <span>Government</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <span class="fw-bold text-success">88.7%</span>
+                                                        <div class="progress mt-1" style="height: 4px; width: 80px;">
+                                                            <div class="progress-bar bg-success" style="width: 89%"></div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <span class="fw-bold text-success">3.5%</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="fw-bold text-success">2.7 min</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="fw-bold text-success">13.1x</span>
+                                                    </td>
+                                                    <td><span class="badge bg-success">89</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Operational Trends & Insights -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Operational Trends & AI Insights</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="operational-trends">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h6>Labor Efficiency Trend (Last 6 Months)</h6>
+                                            <div class="trend-chart">
+                                                <div class="trend-bars d-flex align-items-end" style="height: 120px;">
+                                                    <div class="trend-bar me-2 text-center" style="width: 40px;">
+                                                        <div class="bar bg-warning" style="height: 75%;"></div>
+                                                        <small class="d-block mt-1">Jan</small>
+                                                    </div>
+                                                    <div class="trend-bar me-2 text-center" style="width: 40px;">
+                                                        <div class="bar bg-success" style="height: 78%;"></div>
+                                                        <small class="d-block mt-1">Feb</small>
+                                                    </div>
+                                                    <div class="trend-bar me-2 text-center" style="width: 40px;">
+                                                        <div class="bar bg-success" style="height: 82%;"></div>
+                                                        <small class="d-block mt-1">Mar</small>
+                                                    </div>
+                                                    <div class="trend-bar me-2 text-center" style="width: 40px;">
+                                                        <div class="bar bg-success" style="height: 85%;"></div>
+                                                        <small class="d-block mt-1">Apr</small>
+                                                    </div>
+                                                    <div class="trend-bar me-2 text-center" style="width: 40px;">
+                                                        <div class="bar bg-success" style="height: 86%;"></div>
+                                                        <small class="d-block mt-1">May</small>
+                                                    </div>
+                                                    <div class="trend-bar text-center" style="width: 40px;">
+                                                        <div class="bar bg-success" style="height: 87%;"></div>
+                                                        <small class="d-block mt-1">Jun</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h6>AI Operational Insights</h6>
+                                            <div class="ai-insights">
+                                                <div class="insight-item p-3 bg-light rounded mb-3">
+                                                    <h6 class="text-success">Optimization Opportunity</h6>
+                                                    <p class="mb-1 small">Education sites could improve labor efficiency by 12% through better scheduling</p>
+                                                    <small class="text-muted">Potential Savings: $1.2M annually</small>
+                                                </div>
+                                                <div class="insight-item p-3 bg-light rounded">
+                                                    <h6 class="text-warning">Risk Alert</h6>
+                                                    <p class="mb-1 small">Food waste trending upward in healthcare segment, requires immediate attention</p>
+                                                    <small class="text-muted">Impact: $450K annually if not addressed</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar - Operational Tools & Alerts -->
+                    <div class="col-12 col-lg-4">
+                        <!-- Operational Alerts -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Operational Alerts</h4>
+                            </div>
+                            <div class="card-content pb-4">
+                                <div class="operational-alert d-flex px-4 py-3 border-bottom">
+                                    <div class="alert-icon me-3">
+                                        <i class="bi bi-exclamation-triangle-fill text-danger"></i>
+                                    </div>
+                                    <div class="alert-info">
+                                        <h6 class="mb-1">Food Waste Increase</h6>
+                                        <p class="text-muted mb-0">Education sites above target by 1.7%</p>
+                                        <small class="text-muted">15 sites affected</small>
+                                    </div>
+                                </div>
+                                <div class="operational-alert d-flex px-4 py-3 border-bottom">
+                                    <div class="alert-icon me-3">
+                                        <i class="bi bi-exclamation-triangle-fill text-warning"></i>
+                                    </div>
+                                    <div class="alert-info">
+                                        <h6 class="mb-1">Labor Efficiency Drop</h6>
+                                        <p class="text-muted mb-0">Healthcare segment below target</p>
+                                        <small class="text-muted">8 sites below 80% efficiency</small>
+                                    </div>
+                                </div>
+                                <div class="operational-alert d-flex px-4 py-3">
+                                    <div class="alert-icon me-3">
+                                        <i class="bi bi-lightbulb-fill text-success"></i>
+                                    </div>
+                                    <div class="alert-info">
+                                        <h6 class="mb-1">Best Practice Identified</h6>
+                                        <p class="text-muted mb-0">Corporate sites achieving 91% efficiency</p>
+                                        <small class="text-muted">Replicable across 22 sites</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Operational Analysis -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Quick Operational Analysis</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="analysis-tools">
+                                    <div class="mb-3">
+                                        <label class="form-label">Site Type</label>
+                                        <select class="form-select">
+                                            <option>All Types</option>
+                                            <option>Corporate</option>
+                                            <option>Healthcare</option>
+                                            <option>Education</option>
+                                            <option>Government</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Metric</label>
+                                        <select class="form-select">
+                                            <option>Labor Efficiency</option>
+                                            <option>Food Waste</option>
+                                            <option>Service Time</option>
+                                            <option>Inventory Turnover</option>
+                                        </select>
+                                    </div>
+                                    <button class="btn btn-outline-primary w-100 mb-2">
+                                        <i class="bi bi-graph-up"></i> Generate Analysis
+                                    </button>
+                                    <button class="btn btn-outline-success w-100">
+                                        <i class="bi bi-robot"></i> AI Recommendations
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Efficiency Benchmarks -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Efficiency Benchmarks</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="efficiency-benchmarks">
+                                    <div class="benchmark-item d-flex justify-content-between mb-2">
+                                        <span>Your Labor Efficiency</span>
+                                        <span class="fw-bold text-success">87.3%</span>
+                                    </div>
+                                    <div class="benchmark-item d-flex justify-content-between mb-2">
+                                        <span>Industry Average</span>
+                                        <span class="fw-bold text-warning">82.5%</span>
+                                    </div>
+                                    <div class="benchmark-item d-flex justify-content-between mb-2">
+                                        <span>Top Performers</span>
+                                        <span class="fw-bold text-info">91.8%</span>
+                                    </div>
+                                    <div class="benchmark-item d-flex justify-content-between">
+                                        <span>Performance Gap</span>
+                                        <span class="fw-bold text-success">+4.8%</span>
+                                    </div>
+                                </div>
+                                <div class="progress mt-3">
+                                    <div class="progress-bar bg-success" style="width: 65%">You: 87.3%</div>
+                                    <div class="progress-bar bg-warning" style="width: 35%">Industry: 82.5%</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Operational Health Score -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Operational Health Score</h4>
+                            </div>
+                            <div class="card-body text-center">
+                                <div class="health-score mb-3">
+                                    <div class="score-circle mx-auto">
+                                        <h1 class="text-warning">78</h1>
+                                        <small>Out of 100</small>
+                                    </div>
+                                </div>
+                                <div class="health-breakdown">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Labor Efficiency</span>
+                                        <span class="fw-bold text-success">87</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Waste Management</span>
+                                        <span class="fw-bold text-danger">65</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Inventory Management</span>
+                                        <span class="fw-bold text-success">82</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <span>Service Quality</span>
+                                        <span class="fw-bold text-warning">78</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Operational Improvement Tools -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Improvement Tools</h4>
+                            </div>
+                            <div class="card-body">
+                                <button class="btn btn-outline-primary w-100 mb-2">
+                                    <i class="bi bi-clock"></i> Labor Scheduling
+                                </button>
+                                <button class="btn btn-outline-success w-100 mb-2">
+                                    <i class="bi bi-trash"></i> Waste Reduction
+                                </button>
+                                <button class="btn btn-outline-info w-100">
+                                    <i class="bi bi-arrow-repeat"></i> Inventory Optimization
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <footer>
+                <div class="footer clearfix mb-0 text-muted">
+                    <div class="float-start">
+                        <p>2025 &copy; Virtual OPEX - Sodexo</p>
+                    </div>
+                    <div class="float-end">
+                        <p>Powered by <span class="text-danger"><i class="bi bi-heart"></i></span> <a
+                                href="http://thirdwishfs.com">Thirdwish Food Services</a></p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/apexcharts/apexcharts.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

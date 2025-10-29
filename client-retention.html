@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Retention - Virtual OPEX - Sodexo</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+</head>
+
+<body>
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo">
+                            <a href="index.html"><img src="assets/images/logo/logo.png" alt="Sodexo Logo" srcset=""></a>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-title">Virtual OPEX</li>
+
+                        <li class="sidebar-item">
+                            <a href="dasboard.html" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-graph-up"></i>
+                                <span>Commercial <br> Excellence</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="commercial-bid-analysis.html">Bid Analysis</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="contract-risk.html">Contract Risk Screening</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="pricing-optimization.html">Pricing Optimization</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-building"></i>
+                                <span>Site <br> Mobilization</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="mobilization-dashboard.html">Mobilization Dashboard</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="checklist-management.html">Checklist Management</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="progress-tracking.html">Progress Tracking</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-gear-fill"></i>
+                                <span>Operational <br> Excellence</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="performance-monitoring.html">Performance Monitoring</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="account-recovery.html">Account Recovery</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="kpi-analytics.html">KPI Analytics</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-title">Tools & Analytics</li>
+
+                        <li class="sidebar-item  has-sub active">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-bar-chart-fill"></i>
+                                <span>Reports</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="financial-performance.html">Financial Performance</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="operational-metrics.html">Operational Metrics</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="client-retention.html">Client Retention</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  ">
+                            <a href="ai-assistants.html" class='sidebar-link'>
+                                <i class="bi bi-robot"></i>
+                                <span>AI Assistants</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-sliders"></i>
+                                <span>Settings</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="user-management.html">User Management</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="system-configuration.html">System Configuration</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+
+            <div class="page-heading">
+                <div class="row">
+                    <div class="col-8">
+                        <h3>Client Retention</h3>
+                        <p class="text-subtitle text-muted">AI-powered client retention analytics and risk prediction</p>
+                    </div>
+                    <div class="col-4 text-end">
+                        <button class="btn btn-primary">
+                            <i class="bi bi-download"></i> Export Report
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-content">
+                <section class="row">
+                 <!-- Main Content Area -->
+                    <div class="col-12 col-lg-8">
+                        <!-- Client Retention Dashboard -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Client Retention Dashboard</h4>
+                                <div class="header-actions">
+                                    <select class="form-select form-select-sm" style="width: auto; display: inline-block;">
+                                        <option>Last 30 Days</option>
+                                        <option>Last 90 Days</option>
+                                        <option selected>Year to Date</option>
+                                        <option>Last 12 Months</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="retention-metrics">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="metric-card p-3 border rounded mb-3">
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <h6 class="mb-0">Overall Retention Rate</h6>
+                                                    <span class="badge bg-success">+2.1%</span>
+                                                </div>
+                                                <div class="metric-value text-success">94.2%</div>
+                                                <small class="text-muted">Target: 92.0%</small>
+                                                <div class="progress mt-2" style="height: 8px;">
+                                                    <div class="progress-bar bg-success" style="width: 102%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="metric-card p-3 border rounded mb-3">
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <h6 class="mb-0">Client Satisfaction</h6>
+                                                    <span class="badge bg-warning">-1.3%</span>
+                                                </div>
+                                                <div class="metric-value text-warning">88.7%</div>
+                                                <small class="text-muted">Target: 90.0%</small>
+                                                <div class="progress mt-2" style="height: 8px;">
+                                                    <div class="progress-bar bg-warning" style="width: 99%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="metric-card p-3 border rounded">
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <h6 class="mb-0">Net Promoter Score</h6>
+                                                    <span class="badge bg-success">+5</span>
+                                                </div>
+                                                <div class="metric-value text-success">42</div>
+                                                <small class="text-muted">Target: 40</small>
+                                                <div class="progress mt-2" style="height: 8px;">
+                                                    <div class="progress-bar bg-success" style="width: 105%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="metric-card p-3 border rounded">
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <h6 class="mb-0">Contract Renewal Rate</h6>
+                                                    <span class="badge bg-success">+3.8%</span>
+                                                </div>
+                                                <div class="metric-value text-success">91.5%</div>
+                                                <small class="text-muted">Target: 88.0%</small>
+                                                <div class="progress mt-2" style="height: 8px;">
+                                                    <div class="progress-bar bg-success" style="width: 104%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- At-Risk Clients Analysis -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>At-Risk Clients Analysis</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="at-risk-clients">
+                                    <div class="client-card p-4 border rounded mb-4">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <div class="avatar avatar-lg me-3">
+                                                        <img src="assets/images/faces/3.jpg">
+                                                    </div>
+                                                    <div>
+                                                        <h4 class="mb-0">State University</h4>
+                                                        <p class="text-muted mb-0">Education Sector • Contract Value: $2.8M</p>
+                                                    </div>
+                                                </div>
+                                                <div class="risk-indicators">
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="risk-metric">
+                                                                <span class="text-danger fw-bold">High Risk</span>
+                                                                <div class="progress mt-1" style="height: 8px;">
+                                                                    <div class="progress-bar bg-danger" style="width: 78%"></div>
+                                                                </div>
+                                                                <small class="text-muted">Loss Probability: 78%</small>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="satisfaction-metric">
+                                                                <span class="text-warning fw-bold">72% Satisfaction</span>
+                                                                <div class="progress mt-1" style="height: 8px;">
+                                                                    <div class="progress-bar bg-warning" style="width: 72%"></div>
+                                                                </div>
+                                                                <small class="text-muted">Below Target: 18%</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="retention-status text-end">
+                                                    <span class="badge bg-danger mb-2">Immediate Action</span>
+                                                    <div class="renewal-date">
+                                                        <small class="text-muted">Renewal Date</small>
+                                                        <div class="fw-bold text-danger">Dec 15, 2025</div>
+                                                        <small>45 days remaining</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Retention Actions -->
+                                        <div class="retention-actions mt-4">
+                                            <h6>Recommended Retention Actions</h6>
+                                            <div class="actions-list">
+                                                <div class="action-item p-3 border rounded mb-2">
+                                                    <div class="d-flex justify-content-between align-items-start">
+                                                        <div>
+                                                            <h6 class="text-success mb-1">Service Quality Improvement</h6>
+                                                            <p class="mb-1 small">Address food quality complaints and implement menu enhancements</p>
+                                                        </div>
+                                                        <span class="badge bg-success">High Impact</span>
+                                                    </div>
+                                                    <small class="text-muted">Expected Impact: +15% satisfaction improvement</small>
+                                                </div>
+                                                <div class="action-item p-3 border rounded">
+                                                    <div class="d-flex justify-content-between align-items-start">
+                                                        <div>
+                                                            <h6 class="text-warning mb-1">Executive Relationship Repair</h6>
+                                                            <p class="mb-1 small">Schedule meetings with university administration to address concerns</p>
+                                                        </div>
+                                                        <span class="badge bg-warning">Medium Impact</span>
+                                                    </div>
+                                                    <small class="text-muted">Expected Impact: +25% retention probability</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Additional At-Risk Clients -->
+                                    <div class="client-list">
+                                        <div class="client-item d-flex justify-content-between align-items-center p-3 border rounded mb-2">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar avatar-sm me-3">
+                                                    <img src="assets/images/faces/2.jpg">
+                                                </div>
+                                                <div>
+                                                    <h6 class="mb-0">Metro Hospital</h6>
+                                                    <small class="text-muted">Healthcare • $4.2M contract</small>
+                                                </div>
+                                            </div>
+                                            <div class="risk-info">
+                                                <span class="badge bg-warning me-2">Medium Risk</span>
+                                                <span class="text-muted">Renewal: Mar 2026</span>
+                                            </div>
+                                        </div>
+                                        <div class="client-item d-flex justify-content-between align-items-center p-3 border rounded">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar avatar-sm me-3">
+                                                    <img src="assets/images/faces/4.jpg">
+                                                </div>
+                                                <div>
+                                                    <h6 class="mb-0">Tech Solutions Inc</h6>
+                                                    <small class="text-muted">Corporate • $1.8M contract</small>
+                                                </div>
+                                            </div>
+                                            <div class="risk-info">
+                                                <span class="badge bg-warning me-2">Medium Risk</span>
+                                                <span class="text-muted">Renewal: Jan 2026</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Retention Trends & Predictions -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Retention Trends & AI Predictions</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="retention-trends">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h6>Retention Rate Trend (Last 6 Quarters)</h6>
+                                            <div class="trend-chart">
+                                                <div class="trend-bars d-flex align-items-end" style="height: 120px;">
+                                                    <div class="trend-bar me-2 text-center" style="width: 50px;">
+                                                        <div class="bar bg-warning" style="height: 85%;"></div>
+                                                        <small class="d-block mt-1">Q4'24</small>
+                                                    </div>
+                                                    <div class="trend-bar me-2 text-center" style="width: 50px;">
+                                                        <div class="bar bg-success" style="height: 88%;"></div>
+                                                        <small class="d-block mt-1">Q1'25</small>
+                                                    </div>
+                                                    <div class="trend-bar me-2 text-center" style="width: 50px;">
+                                                        <div class="bar bg-success" style="height: 90%;"></div>
+                                                        <small class="d-block mt-1">Q2'25</small>
+                                                    </div>
+                                                    <div class="trend-bar me-2 text-center" style="width: 50px;">
+                                                        <div class="bar bg-success" style="height: 92%;"></div>
+                                                        <small class="d-block mt-1">Q3'25</small>
+                                                    </div>
+                                                    <div class="trend-bar me-2 text-center" style="width: 50px;">
+                                                        <div class="bar bg-success" style="height: 93%;"></div>
+                                                        <small class="d-block mt-1">Q4'25</small>
+                                                    </div>
+                                                    <div class="trend-bar text-center" style="width: 50px;">
+                                                        <div class="bar bg-success" style="height: 94%;"></div>
+                                                        <small class="d-block mt-1">Q1'26</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h6>AI Retention Predictions</h6>
+                                            <div class="prediction-insights">
+                                                <div class="insight-item p-3 bg-light rounded mb-3">
+                                                    <h6 class="text-success">Positive Trend</h6>
+                                                    <p class="mb-1">Retention rate expected to reach 95.8% by Q2 2026 based on current initiatives</p>
+                                                    <small class="text-muted">Confidence: 82%</small>
+                                                </div>
+                                                <div class="insight-item p-3 bg-light rounded">
+                                                    <h6 class="text-warning">Risk Alert</h6>
+                                                    <p class="mb-1">Education segment shows concerning patterns similar to historical losses</p>
+                                                    <small class="text-muted">Recommend: Proactive intervention required</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar - Retention Tools & Insights -->
+                    <div class="col-12 col-lg-4">
+                        <!-- Retention Risk Alerts -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Retention Risk Alerts</h4>
+                            </div>
+                            <div class="card-content pb-4">
+                                <div class="retention-alert d-flex px-4 py-3 border-bottom">
+                                    <div class="alert-icon me-3">
+                                        <i class="bi bi-exclamation-triangle-fill text-danger"></i>
+                                    </div>
+                                    <div class="alert-info">
+                                        <h6 class="mb-1">State University</h6>
+                                        <p class="text-muted mb-0">Satisfaction dropped to 72%</p>
+                                        <small class="text-muted">High risk of non-renewal</small>
+                                    </div>
+                                </div>
+                                <div class="retention-alert d-flex px-4 py-3 border-bottom">
+                                    <div class="alert-icon me-3">
+                                        <i class="bi bi-exclamation-triangle-fill text-warning"></i>
+                                    </div>
+                                    <div class="alert-info">
+                                        <h6 class="mb-1">Metro Hospital</h6>
+                                        <p class="text-muted mb-0">Service complaints increasing</p>
+                                        <small class="text-muted">Medium risk identified</small>
+                                    </div>
+                                </div>
+                                <div class="retention-alert d-flex px-4 py-3">
+                                    <div class="alert-icon me-3">
+                                        <i class="bi bi-lightbulb-fill text-success"></i>
+                                    </div>
+                                    <div class="alert-info">
+                                        <h6 class="mb-1">Corporate Segment</h6>
+                                        <p class="text-muted mb-0">Retention rate improved to 96%</p>
+                                        <small class="text-muted">Best practices identified</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Retention Analysis -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Quick Retention Analysis</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="analysis-tools">
+                                    <div class="mb-3">
+                                        <label class="form-label">Business Segment</label>
+                                        <select class="form-select">
+                                            <option>All Segments</option>
+                                            <option>Corporate</option>
+                                            <option>Healthcare</option>
+                                            <option>Education</option>
+                                            <option>Government</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Risk Level</label>
+                                        <select class="form-select">
+                                            <option>All Risk Levels</option>
+                                            <option>High Risk</option>
+                                            <option>Medium Risk</option>
+                                            <option>Low Risk</option>
+                                        </select>
+                                    </div>
+                                    <button class="btn btn-outline-primary w-100 mb-2">
+                                        <i class="bi bi-graph-up"></i> Generate Analysis
+                                    </button>
+                                    <button class="btn btn-outline-success w-100">
+                                        <i class="bi bi-robot"></i> AI Recommendations
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Retention Health Score -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Retention Health Score</h4>
+                            </div>
+                            <div class="card-body text-center">
+                                <div class="health-score mb-3">
+                                    <div class="score-circle mx-auto">
+                                        <h1 class="text-success">86</h1>
+                                        <small>Out of 100</small>
+                                    </div>
+                                </div>
+                                <div class="health-breakdown">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Satisfaction Metrics</span>
+                                        <span class="fw-bold text-warning">78</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Service Quality</span>
+                                        <span class="fw-bold text-success">88</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Relationship Strength</span>
+                                        <span class="fw-bold text-success">92</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <span>Contract Stability</span>
+                                        <span class="fw-bold text-success">86</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Upcoming Renewals -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Upcoming Renewals</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="renewal-list">
+                                    <div class="renewal-item mb-3 p-3 border rounded">
+                                        <div class="d-flex justify-content-between align-items-start mb-1">
+                                            <h6 class="text-danger mb-0">State University</h6>
+                                            <span class="badge bg-danger">Dec 15</span>
+                                        </div>
+                                        <p class="text-muted mb-0 small">45 days remaining • High Risk</p>
+                                    </div>
+                                    <div class="renewal-item mb-3 p-3 border rounded">
+                                        <div class="d-flex justify-content-between align-items-start mb-1">
+                                            <h6 class="text-warning mb-0">Tech Solutions Inc</h6>
+                                            <span class="badge bg-warning">Jan 20</span>
+                                        </div>
+                                        <p class="text-muted mb-0 small">81 days remaining • Medium Risk</p>
+                                    </div>
+                                    <div class="renewal-item p-3 border rounded">
+                                        <div class="d-flex justify-content-between align-items-start mb-1">
+                                            <h6 class="text-success mb-0">Global Bank HQ</h6>
+                                            <span class="badge bg-success">Feb 5</span>
+                                        </div>
+                                        <p class="text-muted mb-0 small">97 days remaining • Low Risk</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Retention Improvement Tools -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Retention Tools</h4>
+                            </div>
+                            <div class="card-body">
+                                <button class="btn btn-outline-primary w-100 mb-2">
+                                    <i class="bi bi-chat-dots"></i> Client Feedback
+                                </button>
+                                <button class="btn btn-outline-success w-100 mb-2">
+                                    <i class="bi bi-graph-up"></i> Satisfaction Analysis
+                                </button>
+                                <button class="btn btn-outline-info w-100">
+                                    <i class="bi bi-shield-check"></i> Risk Assessment
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <footer>
+                <div class="footer clearfix mb-0 text-muted">
+                    <div class="float-start">
+                        <p>2025 &copy; Virtual OPEX - Sodexo</p>
+                    </div>
+                    <div class="float-end">
+                        <p>Powered by <span class="text-danger"><i class="bi bi-heart"></i></span> <a
+                                href="http://thirdwishfs.com">Thirdwish Food Services</a></p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/apexcharts/apexcharts.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

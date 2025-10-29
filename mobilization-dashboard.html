@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobilization Dashboard - Virtual OPEX - Sodexo</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+</head>
+
+<body>
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo">
+                            <a href="index.html"><img src="assets/images/logo/logo.png" alt="Sodexo Logo" srcset=""></a>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-title">Virtual OPEX</li>
+
+                        <li class="sidebar-item  ">
+                            <a href="dasboard.html" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-graph-up"></i>
+                                <span>Commercial <br> Excellence</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="commercial-bid-analysis.html">Bid Analysis</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="contract-risk.html">Contract Risk Screening</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="pricing-optimization.html">Pricing Optimization</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  has-sub active">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-building"></i>
+                                <span>Site <br> Mobilization</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="mobilization-dashboard.html">Mobilization Dashboard</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="checklist-management.html">Checklist Management</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="progress-tracking.html">Progress Tracking</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-gear-fill"></i>
+                                <span>Operational <br> Excellence</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="performance-monitoring.html">Performance Monitoring</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="account-recovery.html">Account Recovery</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="kpi-analytics.html">KPI Analytics</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-title">Tools & Analytics</li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-bar-chart-fill"></i>
+                                <span>Reports</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="financial-performance.html">Financial Performance</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="operational-metrics.html">Operational Metrics</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="client-retention.html">Client Retention</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  ">
+                            <a href="ai-assistants.html" class='sidebar-link'>
+                                <i class="bi bi-robot"></i>
+                                <span>AI Assistants</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-sliders"></i>
+                                <span>Settings</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="user-management.html">User Management</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="system-configuration.html">System Configuration</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+
+            <div class="page-heading">
+                <div class="row">
+                    <div class="col-8">
+                        <h3>Mobilization Dashboard</h3>
+                        <p class="text-subtitle text-muted">Real-time site mobilization tracking and coordination</p>
+                    </div>
+                    <div class="col-4 text-end">
+                        <button class="btn btn-primary">
+                            <i class="bi bi-plus-circle"></i> New Site
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-content">
+                <section class="row">
+                    <!-- Main Content Area -->
+                    <div class="col-12 col-lg-8">
+                        <!-- Active Mobilizations Table -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Active Site Mobilizations</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-lg">
+                                        <thead>
+                                            <tr>
+                                                <th>Site Name</th>
+                                                <th>Client</th>
+                                                <th>Start Date</th>
+                                                <th>Progress</th>
+                                                <th>Status</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="col-3">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="avatar avatar-md">
+                                                            <img src="assets/images/faces/5.jpg">
+                                                        </div>
+                                                        <p class="font-bold ms-3 mb-0">Tech Campus West</p>
+                                                    </div>
+                                                </td>
+                                                <td>Global Tech Inc</td>
+                                                <td>Nov 15, 2025</td>
+                                                <td>
+                                                    <div class="progress" style="height: 8px;">
+                                                        <div class="progress-bar bg-success" style="width: 85%"></div>
+                                                    </div>
+                                                    <small>85% Complete</small>
+                                                </td>
+                                                <td><span class="badge bg-success">On Track</span></td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-primary">View</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-3">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="avatar avatar-md">
+                                                            <img src="assets/images/faces/2.jpg">
+                                                        </div>
+                                                        <p class="font-bold ms-3 mb-0">Metro Hospital</p>
+                                                    </div>
+                                                </td>
+                                                <td>Metro Health System</td>
+                                                <td>Nov 20, 2025</td>
+                                                <td>
+                                                    <div class="progress" style="height: 8px;">
+                                                        <div class="progress-bar bg-warning" style="width: 45%"></div>
+                                                    </div>
+                                                    <small>45% Complete</small>
+                                                </td>
+                                                <td><span class="badge bg-warning">At Risk</span></td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-warning">Review</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-3">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="avatar avatar-md">
+                                                            <img src="assets/images/faces/3.jpg">
+                                                        </div>
+                                                        <p class="font-bold ms-3 mb-0">University Dining Hall</p>
+                                                    </div>
+                                                </td>
+                                                <td>State University</td>
+                                                <td>Nov 10, 2025</td>
+                                                <td>
+                                                    <div class="progress" style="height: 8px;">
+                                                        <div class="progress-bar bg-danger" style="width: 30%"></div>
+                                                    </div>
+                                                    <small>30% Complete</small>
+                                                </td>
+                                                <td><span class="badge bg-danger">Delayed</span></td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-danger">Intervene</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col-3">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="avatar avatar-md">
+                                                            <img src="assets/images/faces/4.jpg">
+                                                        </div>
+                                                        <p class="font-bold ms-3 mb-0">Corporate Plaza</p>
+                                                    </div>
+                                                </td>
+                                                <td>Financial Partners</td>
+                                                <td>Nov 25, 2025</td>
+                                                <td>
+                                                    <div class="progress" style="height: 8px;">
+                                                        <div class="progress-bar bg-success" style="width: 92%"></div>
+                                                    </div>
+                                                    <small>92% Complete</small>
+                                                </td>
+                                                <td><span class="badge bg-success">On Track</span></td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-primary">View</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mobilization Timeline -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Mobilization Timeline - Tech Campus West</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="timeline">
+                                    <div class="timeline-item completed">
+                                        <div class="timeline-marker bg-success"></div>
+                                        <div class="timeline-content">
+                                            <h6>Contract Signed</h6>
+                                            <p class="text-muted mb-0">November 15, 2025</p>
+                                            <small>All documents executed</small>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item completed">
+                                        <div class="timeline-marker bg-success"></div>
+                                        <div class="timeline-content">
+                                            <h6>Equipment Ordered</h6>
+                                            <p class="text-muted mb-0">November 18, 2025</p>
+                                            <small>Kitchen equipment procurement complete</small>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item completed">
+                                        <div class="timeline-marker bg-success"></div>
+                                        <div class="timeline-content">
+                                            <h6>Staffing Finalized</h6>
+                                            <p class="text-muted mb-0">November 22, 2025</p>
+                                            <small>25 FTE positions filled</small>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item current">
+                                        <div class="timeline-marker bg-primary"></div>
+                                        <div class="timeline-content">
+                                            <h6>Site Preparation</h6>
+                                            <p class="text-muted mb-0">In Progress - 85% Complete</p>
+                                            <small>IT infrastructure and utilities installation</small>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item pending">
+                                        <div class="timeline-marker bg-secondary"></div>
+                                        <div class="timeline-content">
+                                            <h6>Training & Onboarding</h6>
+                                            <p class="text-muted mb-0">Scheduled: December 5, 2025</p>
+                                            <small>Staff training and system familiarization</small>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item pending">
+                                        <div class="timeline-marker bg-secondary"></div>
+                                        <div class="timeline-content">
+                                            <h6>Go-Live</h6>
+                                            <p class="text-muted mb-0">Scheduled: December 15, 2025</p>
+                                            <small>Full operational launch</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar - Quick Stats & Actions -->
+                    <div class="col-12 col-lg-4">
+                        <!-- Mobilization Performance -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Mobilization Performance</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="performance-stats text-center mb-4">
+                                    <h2 class="text-success">78%</h2>
+                                    <small>On-Time Completion Rate</small>
+                                </div>
+                                <div class="performance-metrics">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Avg. Mobilization Time</span>
+                                        <span class="fw-bold">42 days</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Time to Profitability</span>
+                                        <span class="fw-bold text-success">28 days</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <span>Cost Variance</span>
+                                        <span class="fw-bold text-warning">+3.2%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Critical Actions -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Critical Actions Required</h4>
+                            </div>
+                            <div class="card-content pb-4">
+                                <div class="critical-action d-flex px-4 py-3 border-bottom">
+                                    <div class="action-icon me-3">
+                                        <i class="bi bi-exclamation-triangle-fill text-danger"></i>
+                                    </div>
+                                    <div class="action-info">
+                                        <h6 class="mb-1">University Dining Hall</h6>
+                                        <p class="text-muted mb-0">Equipment delivery delayed by 7 days</p>
+                                        <small class="text-muted">Required: Expedite shipping</small>
+                                    </div>
+                                </div>
+                                <div class="critical-action d-flex px-4 py-3 border-bottom">
+                                    <div class="action-icon me-3">
+                                        <i class="bi bi-exclamation-triangle-fill text-warning"></i>
+                                    </div>
+                                    <div class="action-info">
+                                        <h6 class="mb-1">Metro Hospital</h6>
+                                        <p class="text-muted mb-0">Staffing shortfall: 3 positions open</p>
+                                        <small class="text-muted">Required: Accelerate recruitment</small>
+                                    </div>
+                                </div>
+                                <div class="critical-action d-flex px-4 py-3">
+                                    <div class="action-icon me-3">
+                                        <i class="bi bi-exclamation-triangle-fill text-warning"></i>
+                                    </div>
+                                    <div class="action-info">
+                                        <h6 class="mb-1">Tech Campus West</h6>
+                                        <p class="text-muted mb-0">IT provisioning pending approval</p>
+                                        <small class="text-muted">Required: Client sign-off</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Upcoming Milestones -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Upcoming Milestones</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="milestone-item mb-3 p-3 border rounded">
+                                    <div class="d-flex justify-content-between align-items-start mb-1">
+                                        <h6 class="text-primary mb-0">Corporate Plaza Go-Live</h6>
+                                        <span class="badge bg-success">Dec 5</span>
+                                    </div>
+                                    <p class="text-muted mb-0 small">Final preparations for launch</p>
+                                </div>
+                                <div class="milestone-item mb-3 p-3 border rounded">
+                                    <div class="d-flex justify-content-between align-items-start mb-1">
+                                        <h6 class="text-warning mb-0">Metro Hospital Training</h6>
+                                        <span class="badge bg-warning">Dec 8</span>
+                                    </div>
+                                    <p class="text-muted mb-0 small">Staff onboarding session</p>
+                                </div>
+                                <div class="milestone-item p-3 border rounded">
+                                    <div class="d-flex justify-content-between align-items-start mb-1">
+                                        <h6 class="text-info mb-0">Tech Campus Equipment</h6>
+                                        <span class="badge bg-info">Dec 10</span>
+                                    </div>
+                                    <p class="text-muted mb-0 small">Final equipment installation</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Site Launch -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Quick Site Launch</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <label class="form-label">Site Type</label>
+                                    <select class="form-select">
+                                        <option>Corporate Dining</option>
+                                        <option>Healthcare</option>
+                                        <option>Education</option>
+                                        <option>Government</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Estimated Size</label>
+                                    <select class="form-select">
+                                        <option>Small (< 100 meals/day)</option>
+                                        <option>Medium (100-500 meals/day)</option>
+                                        <option>Large (500+ meals/day)</option>
+                                    </select>
+                                </div>
+                                <button class="btn btn-outline-primary w-100">
+                                    <i class="bi bi-rocket-takeoff"></i> Generate Plan
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <footer>
+                <div class="footer clearfix mb-0 text-muted">
+                    <div class="float-start">
+                        <p>2025 &copy; Virtual OPEX - Sodexo</p>
+                    </div>
+                    <div class="float-end">
+                        <p>Powered by <span class="text-danger"><i class="bi bi-heart"></i></span> <a
+                                href="http://thirdwishfs.com">Thirdwish Food Services</a></p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/apexcharts/apexcharts.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

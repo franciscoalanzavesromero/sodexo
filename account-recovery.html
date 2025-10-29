@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Recovery - Virtual OPEX - Sodexo</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+</head>
+
+<body>
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo">
+                            <a href="index.html"><img src="assets/images/logo/logo.png" alt="Sodexo Logo" srcset=""></a>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-title">Virtual OPEX</li>
+
+                        <li class="sidebar-item">
+                            <a href="dasboard.html" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-graph-up"></i>
+                                <span>Commercial <br> Excellence</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="commercial-bid-analysis.html">Bid Analysis</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="contract-risk.html">Contract Risk Screening</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="pricing-optimization.html">Pricing Optimization</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-building"></i>
+                                <span>Site <br> Mobilization</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="mobilization-dashboard.html">Mobilization Dashboard</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="checklist-management.html">Checklist Management</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="progress-tracking.html">Progress Tracking</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  has-sub active">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-gear-fill"></i>
+                                <span>Operational <br> Excellence</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="performance-monitoring.html">Performance Monitoring</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="account-recovery.html">Account Recovery</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="kpi-analytics.html">KPI Analytics</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-title">Tools & Analytics</li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-bar-chart-fill"></i>
+                                <span>Reports</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="financial-performance.html">Financial Performance</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="operational-metrics.html">Operational Metrics</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="client-retention.html">Client Retention</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  ">
+                            <a href="ai-assistants.html" class='sidebar-link'>
+                                <i class="bi bi-robot"></i>
+                                <span>AI Assistants</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-sliders"></i>
+                                <span>Settings</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="user-management.html">User Management</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="system-configuration.html">System Configuration</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+
+            <div class="page-heading">
+                <div class="row">
+                    <div class="col-8">
+                        <h3>Account Recovery</h3>
+                        <p class="text-subtitle text-muted">AI-powered recovery plans for underperforming accounts</p>
+                    </div>
+                    <div class="col-4 text-end">
+                        <button class="btn btn-primary">
+                            <i class="bi bi-plus-circle"></i> New Recovery Plan
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-content">
+                <section class="row">
+                    <!-- Recovery Overview Cards -->
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-6 col-lg-3 col-md-6">
+                                <div class="card">
+                                    <div class="card-body px-3 py-4-5">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="stats-icon red">
+                                                    <i class="bi bi-exclamation-triangle"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h6 class="text-muted font-semibold">At-Risk Accounts</h6>
+                                                <h6 class="font-extrabold mb-0">8</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-3 col-md-6">
+                                <div class="card">
+                                    <div class="card-body px-3 py-4-5">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="stats-icon orange">
+                                                    <i class="bi bi-clock-history"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h6 class="text-muted font-semibold">Active Recovery Plans</h6>
+                                                <h6 class="font-extrabold mb-0">12</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-3 col-md-6">
+                                <div class="card">
+                                    <div class="card-body px-3 py-4-5">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="stats-icon green">
+                                                    <i class="bi bi-check-circle"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h6 class="text-muted font-semibold">Successfully Recovered</h6>
+                                                <h6 class="font-extrabold mb-0">5</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-lg-3 col-md-6">
+                                <div class="card">
+                                    <div class="card-body px-3 py-4-5">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="stats-icon blue">
+                                                    <i class="bi bi-currency-dollar"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h6 class="text-muted font-semibold">Value Protected</h6>
+                                                <h6 class="font-extrabold mb-0">$3.2M</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Content Area -->
+                    <div class="col-12 col-lg-8">
+                        <!-- Critical Accounts Dashboard -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Critical Accounts Requiring Immediate Action</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="critical-accounts">
+                                    <!-- University Dining Hall Account -->
+                                    <div class="account-card p-4 border rounded mb-4">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <div class="avatar avatar-lg me-3">
+                                                        <img src="assets/images/faces/3.jpg">
+                                                    </div>
+                                                    <div>
+                                                        <h4 class="mb-0">University Dining Hall</h4>
+                                                        <p class="text-muted mb-0">State University • Education Sector</p>
+                                                    </div>
+                                                </div>
+                                                <div class="risk-indicators">
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="risk-metric">
+                                                                <span class="text-danger fw-bold">Critical Risk</span>
+                                                                <div class="progress mt-1" style="height: 8px;">
+                                                                    <div class="progress-bar bg-danger" style="width: 85%"></div>
+                                                                </div>
+                                                                <small class="text-muted">Loss Probability: 85%</small>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="performance-metric">
+                                                                <span class="text-warning fw-bold">-12.3% Margin</span>
+                                                                <div class="progress mt-1" style="height: 8px;">
+                                                                    <div class="progress-bar bg-warning" style="width: 45%"></div>
+                                                                </div>
+                                                                <small class="text-muted">Below Target: $240K annually</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="recovery-status text-end">
+                                                    <span class="badge bg-danger mb-2">Immediate Action Required</span>
+                                                    <div class="recovery-progress">
+                                                        <small class="text-muted">Recovery Progress</small>
+                                                        <div class="progress" style="height: 10px;">
+                                                            <div class="progress-bar bg-info" style="width: 35%"></div>
+                                                        </div>
+                                                        <small>35% Complete</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Recovery Plan Details -->
+                                        <div class="recovery-plan mt-4">
+                                            <h6>AI-Generated Recovery Plan</h6>
+                                            <div class="plan-steps">
+                                                <div class="step completed">
+                                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                                    <span>Root cause analysis completed</span>
+                                                    <small class="text-muted ms-2">Nov 28, 2025</small>
+                                                </div>
+                                                <div class="step in-progress">
+                                                    <i class="bi bi-arrow-clockwise text-warning me-2"></i>
+                                                    <span>Labor model optimization in progress</span>
+                                                    <small class="text-muted ms-2">Due: Dec 10, 2025</small>
+                                                </div>
+                                                <div class="step pending">
+                                                    <i class="bi bi-circle text-secondary me-2"></i>
+                                                    <span>Menu engineering and cost reduction</span>
+                                                    <small class="text-muted ms-2">Due: Dec 15, 2025</small>
+                                                </div>
+                                                <div class="step pending">
+                                                    <i class="bi bi-circle text-secondary me-2"></i>
+                                                    <span>Client relationship rebuilding</span>
+                                                    <small class="text-muted ms-2">Due: Dec 20, 2025</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Metro Hospital Account -->
+                                    <div class="account-card p-4 border rounded">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <div class="avatar avatar-lg me-3">
+                                                        <img src="assets/images/faces/2.jpg">
+                                                    </div>
+                                                    <div>
+                                                        <h4 class="mb-0">Metro Hospital</h4>
+                                                        <p class="text-muted mb-0">Metro Health System • Healthcare Sector</p>
+                                                    </div>
+                                                </div>
+                                                <div class="risk-indicators">
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="risk-metric">
+                                                                <span class="text-warning fw-bold">High Risk</span>
+                                                                <div class="progress mt-1" style="height: 8px;">
+                                                                    <div class="progress-bar bg-warning" style="width: 65%"></div>
+                                                                </div>
+                                                                <small class="text-muted">Loss Probability: 65%</small>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="performance-metric">
+                                                                <span class="text-warning fw-bold">-5.8% Margin</span>
+                                                                <div class="progress mt-1" style="height: 8px;">
+                                                                    <div class="progress-bar bg-warning" style="width: 68%"></div>
+                                                                </div>
+                                                                <small class="text-muted">Below Target: $180K annually</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="recovery-status text-end">
+                                                    <span class="badge bg-warning mb-2">Active Recovery</span>
+                                                    <div class="recovery-progress">
+                                                        <small class="text-muted">Recovery Progress</small>
+                                                        <div class="progress" style="height: 10px;">
+                                                            <div class="progress-bar bg-info" style="width: 60%"></div>
+                                                        </div>
+                                                        <small>60% Complete</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recovery Plan Builder -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Recovery Plan Builder - University Dining Hall</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="recovery-builder">
+                                    <!-- Root Cause Analysis -->
+                                    <div class="analysis-section mb-4">
+                                        <h6>Root Cause Analysis</h6>
+                                        <div class="causes-list">
+                                            <div class="cause-item p-3 border rounded mb-2">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <i class="bi bi-exclamation-triangle-fill text-danger me-2"></i>
+                                                        <strong>Labor Cost Overrun</strong>
+                                                    </div>
+                                                    <span class="badge bg-danger">Primary Cause</span>
+                                                </div>
+                                                <p class="mb-0 mt-2">FTE count exceeds requirements by 18%, resulting in $120K annual overrun</p>
+                                            </div>
+                                            <div class="cause-item p-3 border rounded mb-2">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <i class="bi bi-exclamation-triangle-fill text-warning me-2"></i>
+                                                        <strong>Menu Engineering Issues</strong>
+                                                    </div>
+                                                    <span class="badge bg-warning">Secondary Cause</span>
+                                                </div>
+                                                <p class="mb-0 mt-2">High-cost specialty items with low demand contributing to food waste</p>
+                                            </div>
+                                            <div class="cause-item p-3 border rounded">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <i class="bi bi-exclamation-triangle-fill text-warning me-2"></i>
+                                                        <strong>Client Relationship Strain</strong>
+                                                    </div>
+                                                    <span class="badge bg-warning">Secondary Cause</span>
+                                                </div>
+                                                <p class="mb-0 mt-2">Communication breakdown leading to service quality perception issues</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Recovery Actions -->
+                                    <div class="actions-section">
+                                        <h6>Recommended Recovery Actions</h6>
+                                        <div class="actions-list">
+                                            <div class="action-item p-3 border rounded mb-3">
+                                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                                    <h6 class="text-success mb-0">Labor Optimization</h6>
+                                                    <span class="badge bg-success">High Impact</span>
+                                                </div>
+                                                <p class="mb-2">Right-size FTE count and implement flexible scheduling</p>
+                                                <div class="action-details">
+                                                    <small class="text-muted"><strong>Expected Impact:</strong> +8.2% margin improvement</small><br>
+                                                    <small class="text-muted"><strong>Timeline:</strong> 30 days</small><br>
+                                                    <small class="text-muted"><strong>Resources Required:</strong> HR, Operations</small>
+                                                </div>
+                                            </div>
+                                            <div class="action-item p-3 border rounded mb-3">
+                                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                                    <h6 class="text-warning mb-0">Menu Re-engineering</h6>
+                                                    <span class="badge bg-warning">Medium Impact</span>
+                                                </div>
+                                                <p class="mb-2">Revise menu based on consumption data and cost analysis</p>
+                                                <div class="action-details">
+                                                    <small class="text-muted"><strong>Expected Impact:</strong> +3.1% margin improvement</small><br>
+                                                    <small class="text-muted"><strong>Timeline:</strong> 45 days</small><br>
+                                                    <small class="text-muted"><strong>Resources Required:</strong> Culinary, Procurement</small>
+                                                </div>
+                                            </div>
+                                            <div class="action-item p-3 border rounded">
+                                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                                    <h6 class="text-info mb-0">Client Relationship Repair</h6>
+                                                    <span class="badge bg-info">Critical</span>
+                                                </div>
+                                                <p class="mb-2">Implement structured communication plan and service recovery initiatives</p>
+                                                <div class="action-details">
+                                                    <small class="text-muted"><strong>Expected Impact:</strong> Retention probability +35%</small><br>
+                                                    <small class="text-muted"><strong>Timeline:</strong> 60 days</small><br>
+                                                    <small class="text-muted"><strong>Resources Required:</strong> Account Management</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar - Recovery Tools & Metrics -->
+                    <div class="col-12 col-lg-4">
+                        <!-- Quick Risk Assessment -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Account Risk Assessment</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="risk-calculator">
+                                    <div class="mb-3">
+                                        <label class="form-label">Account Name</label>
+                                        <input type="text" class="form-control" placeholder="Enter account name">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Current Margin</label>
+                                        <input type="number" class="form-control" placeholder="%" value="12.3">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Target Margin</label>
+                                        <input type="number" class="form-control" placeholder="%" value="18.0">
+                                    </div>
+                                    <button class="btn btn-outline-primary w-100">
+                                        <i class="bi bi-calculator"></i> Calculate Risk Score
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recovery Success Metrics -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Recovery Success Metrics</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="success-metrics">
+                                    <div class="metric-item text-center mb-4">
+                                        <h2 class="text-success">68%</h2>
+                                        <small>Recovery Success Rate</small>
+                                    </div>
+                                    <div class="metric-details">
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <span>Avg. Recovery Time</span>
+                                            <span class="fw-bold">45 days</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <span>Avg. Margin Improvement</span>
+                                            <span class="fw-bold text-success">+7.2%</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <span>Client Retention Rate</span>
+                                            <span class="fw-bold text-success">82%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AI Recovery Coach -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>AI Recovery Coach</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="ai-coach">
+                                    <div class="coach-message p-3 bg-light rounded mb-3">
+                                        <p class="mb-2"><strong>Based on 247 similar recovery cases, I recommend:</strong></p>
+                                        <p class="mb-0">Focus on labor optimization first - this addresses 65% of the margin gap. Client relationship repair should run parallel to build trust during changes.</p>
+                                    </div>
+                                    <div class="confidence-score text-center">
+                                        <small class="text-muted">Confidence Score: 87%</small>
+                                        <div class="progress mt-1">
+                                            <div class="progress-bar bg-success" style="width: 87%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recovery Timeline -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Recovery Timeline</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="recovery-timeline">
+                                    <div class="timeline-item completed">
+                                        <div class="timeline-marker bg-success"></div>
+                                        <div class="timeline-content">
+                                            <h6>Assessment</h6>
+                                            <p class="text-muted mb-0">Nov 25, 2025</p>
+                                            <small>Root cause analysis complete</small>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item current">
+                                        <div class="timeline-marker bg-primary"></div>
+                                        <div class="timeline-content">
+                                            <h6>Implementation</h6>
+                                            <p class="text-muted mb-0">In Progress</p>
+                                            <small>Labor optimization phase</small>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item pending">
+                                        <div class="timeline-marker bg-secondary"></div>
+                                        <div class="timeline-content">
+                                            <h6>Stabilization</h6>
+                                            <p class="text-muted mb-0">Dec 20, 2025</p>
+                                            <small>Monitor and adjust</small>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item pending">
+                                        <div class="timeline-marker bg-secondary"></div>
+                                        <div class="timeline-content">
+                                            <h6>Recovery Complete</h6>
+                                            <p class="text-muted mb-0">Jan 15, 2026</p>
+                                            <small>Target margin achieved</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recovery Resources -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Recovery Resources</h4>
+                            </div>
+                            <div class="card-body">
+                                <button class="btn btn-outline-primary w-100 mb-2">
+                                    <i class="bi bi-file-earmark-text"></i> Recovery Plan Template
+                                </button>
+                                <button class="btn btn-outline-success w-100 mb-2">
+                                    <i class="bi bi-graph-up"></i> Success Case Studies
+                                </button>
+                                <button class="btn btn-outline-info w-100">
+                                    <i class="bi bi-people"></i> Expert Support Team
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <footer>
+                <div class="footer clearfix mb-0 text-muted">
+                    <div class="float-start">
+                        <p>2025 &copy; Virtual OPEX - Sodexo</p>
+                    </div>
+                    <div class="float-end">
+                        <p>Powered by <span class="text-danger"><i class="bi bi-heart"></i></span> <a
+                                href="http://thirdwishfs.com">Thirdwish Food Services</a></p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/apexcharts/apexcharts.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

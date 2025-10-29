@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bid Analysis - Virtual OPEX - Sodexo</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+</head>
+
+<body>
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo">
+                            <a href="dasboard.html"><img src="assets/images/logo/logo.png" alt="Sodexo Logo" srcset=""></a>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-title">Virtual OPEX</li>
+
+                        <li class="sidebar-item ">
+                            <a href="dasboard.html" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item  has-sub active">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-graph-up"></i>
+                                <span>Commercial <br> Excellence</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item active">
+                                    <a href="commercial-bid-analysis.html">Bid Analysis</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="contract-risk.html">Contract Risk Screening</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="pricing-optimization.html">Pricing Optimization</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-building"></i>
+                                <span>Site <br> Mobilization</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="mobilization-dashboard.html">Mobilization Dashboard</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="checklist-management.html">Checklist Management</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="progress-tracking.html">Progress Tracking</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-gear-fill"></i>
+                                <span>Operational <br> Excellence</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="performance-monitoring.html">Performance Monitoring</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="account-recovery.html">Account Recovery</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="kpi-analytics.html">KPI Analytics</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-title">Tools & Analytics</li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-bar-chart-fill"></i>
+                                <span>Reports</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="financial-performance.html">Financial Performance</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="operational-metrics.html">Operational Metrics</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="client-retention.html">Client Retention</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  ">
+                            <a href="ai-assistants.html" class='sidebar-link'>
+                                <i class="bi bi-robot"></i>
+                                <span>AI Assistants</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-sliders"></i>
+                                <span>Settings</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="user-management.html">User Management</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="system-configuration.html">System Configuration</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+
+            <div class="page-heading">
+                <div class="row">
+                    <div class="col-8">
+                        <h3>Real-Time Bid Analysis</h3>
+                        <p class="text-subtitle text-muted">AI-powered commercial offer evaluation and risk detection</p>
+                    </div>
+                    <div class="col-4 text-end">
+                        <button class="btn btn-primary">
+                            <i class="bi bi-plus-circle"></i> New Analysis
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-content">
+                <section class="row">
+
+                    <!-- Main Content Area -->
+                    <div class="col-12 col-lg-8">
+                        <!-- Current Bid Analysis -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Current Bid Analysis - Healthcare Campus RFP</h4>
+                                <div class="badge bg-warning">High Priority</div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="alert alert-warning">
+                                            <i class="bi bi-exclamation-triangle-fill"></i>
+                                            <strong>Risk Detected:</strong> Labor assumptions 15% below historical benchmarks
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <h6>Bid Overview</h6>
+                                        <table class="table table-sm">
+                                            <tr>
+                                                <td><strong>Client:</strong></td>
+                                                <td>Metro Healthcare System</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Contract Value:</strong></td>
+                                                <td>$8.5M (3 years)</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Proposed Margin:</strong></td>
+                                                <td>14.2%</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>AI Risk Score:</strong></td>
+                                                <td><span class="badge bg-danger">72/100</span></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6>Key Metrics</h6>
+                                        <div class="progress mb-2">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 85%">
+                                                Labor Cost Accuracy: 85%
+                                            </div>
+                                        </div>
+                                        <div class="progress mb-2">
+                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 65%">
+                                                Scope Alignment: 65%
+                                            </div>
+                                        </div>
+                                        <div class="progress mb-2">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 45%">
+                                                Risk Coverage: 45%
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- AI Recommendations -->
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h6>AI Recommendations</h6>
+                                        <div class="card bg-light">
+                                            <div class="card-body">
+                                                <div class="recommendation-item mb-3">
+                                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                                    <strong>Adjust Labor Model:</strong> Increase FTE count by 2.5 to meet service level requirements
+                                                </div>
+                                                <div class="recommendation-item mb-3">
+                                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                                    <strong>Pricing Strategy:</strong> Consider tiered pricing for specialized dietary services
+                                                </div>
+                                                <div class="recommendation-item">
+                                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                                    <strong>Contract Terms:</strong> Add inflation adjustment clause for year 2 and 3
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Historical Comparison -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Historical Performance Comparison</h4>
+                            </div>
+                            <div class="card-body">
+                                <div id="chart-historical-comparison"></div>
+                                <div class="row mt-3">
+                                    <div class="col-md-4 text-center">
+                                        <h6>Similar Healthcare Contracts</h6>
+                                        <h4 class="text-success">18.3%</h4>
+                                        <small>Average Margin</small>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <h6>Regional Benchmarks</h6>
+                                        <h4 class="text-warning">16.7%</h4>
+                                        <small>Market Average</small>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <h6>Current Proposal</h6>
+                                        <h4 class="text-danger">14.2%</h4>
+                                        <small>Your Bid</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar - Risk Analysis & Actions -->
+                    <div class="col-12 col-lg-4">
+                        <!-- Risk Assessment -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Risk Assessment</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="risk-item mb-3">
+                                    <div class="d-flex justify-content-between">
+                                        <span>Labor Assumptions</span>
+                                        <span class="badge bg-danger">High</span>
+                                    </div>
+                                    <div class="progress mt-1">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="risk-item mb-3">
+                                    <div class="d-flex justify-content-between">
+                                        <span>Scope Definition</span>
+                                        <span class="badge bg-warning">Medium</span>
+                                    </div>
+                                    <div class="progress mt-1">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 65%"></div>
+                                    </div>
+                                </div>
+                                <div class="risk-item mb-3">
+                                    <div class="d-flex justify-content-between">
+                                        <span>Pricing Strategy</span>
+                                        <span class="badge bg-success">Low</span>
+                                    </div>
+                                    <div class="progress mt-1">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 30%"></div>
+                                    </div>
+                                </div>
+                                <div class="risk-item">
+                                    <div class="d-flex justify-content-between">
+                                        <span>Contract Terms</span>
+                                        <span class="badge bg-warning">Medium</span>
+                                    </div>
+                                    <div class="progress mt-1">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 55%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Actions -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Quick Actions</h4>
+                            </div>
+                            <div class="card-body">
+                                <button class="btn btn-outline-primary w-100 mb-2">
+                                    <i class="bi bi-calculator"></i> Run Margin Simulation
+                                </button>
+                                <button class="btn btn-outline-success w-100 mb-2">
+                                    <i class="bi bi-graph-up"></i> Compare with Benchmarks
+                                </button>
+                                <button class="btn btn-outline-warning w-100 mb-2">
+                                    <i class="bi bi-file-earmark-pdf"></i> Generate Risk Report
+                                </button>
+                                <button class="btn btn-outline-info w-100">
+                                    <i class="bi bi-people"></i> Request Team Review
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- AI Confidence Score -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>AI Confidence Score</h4>
+                            </div>
+                            <div class="card-body text-center">
+                                <div class="confidence-circle mb-3">
+                                    <h1 class="text-primary">78%</h1>
+                                    <small>Analysis Accuracy</small>
+                                </div>
+                                <div class="alert alert-info">
+                                    <i class="bi bi-info-circle"></i>
+                                    Based on 245 similar contract analyses with 92% prediction accuracy
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <footer>
+                <div class="footer clearfix mb-0 text-muted">
+                    <div class="float-start">
+                        <p>2025 &copy; Virtual OPEX - Sodexo</p>
+                    </div>
+                    <div class="float-end">
+                        <p>Powered by <span class="text-danger"><i class="bi bi-heart"></i></span> <a
+                                href="http://thirdwishfs.com">Thirdwish Food Services</a></p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/apexcharts/apexcharts.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

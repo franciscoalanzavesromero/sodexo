@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Tracking - Virtual OPEX - Sodexo</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+</head>
+
+<body>
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo">
+                            <a href="index.html"><img src="assets/images/logo/logo.png" alt="Sodexo Logo" srcset=""></a>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-title">Virtual OPEX</li>
+
+                        <li class="sidebar-item">
+                            <a href="dasboard.html" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-graph-up"></i>
+                                <span>Commercial <br> Excellence</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="commercial-bid-analysis.html">Bid Analysis</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="contract-risk.html">Contract Risk Screening</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="pricing-optimization.html">Pricing Optimization</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  has-sub active">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-building"></i>
+                                <span>Site <br> Mobilization</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="mobilization-dashboard.html">Mobilization Dashboard</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="checklist-management.html">Checklist Management</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="progress-tracking.html">Progress Tracking</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-gear-fill"></i>
+                                <span>Operational <br> Excellence</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="performance-monitoring.html">Performance Monitoring</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="account-recovery.html">Account Recovery</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="kpi-analytics.html">KPI Analytics</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-title">Tools & Analytics</li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-bar-chart-fill"></i>
+                                <span>Reports</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="financial-performance.html">Financial Performance</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="operational-metrics.html">Operational Metrics</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="client-retention.html">Client Retention</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  ">
+                            <a href="ai-assistants.html" class='sidebar-link'>
+                                <i class="bi bi-robot"></i>
+                                <span>AI Assistants</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-sliders"></i>
+                                <span>Settings</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="user-management.html">User Management</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="system-configuration.html">System Configuration</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+
+            <div class="page-heading">
+                <div class="row">
+                    <div class="col-8">
+                        <h3>Progress Tracking</h3>
+                        <p class="text-subtitle text-muted">Real-time mobilization progress and performance analytics</p>
+                    </div>
+                    <div class="col-4 text-end">
+                        <button class="btn btn-primary">
+                            <i class="bi bi-graph-up"></i> Generate Report
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-content">
+                <section class="row">
+                    <!-- Main Content Area -->
+                    <div class="col-12 col-lg-8">
+                        <!-- Progress Gantt Chart -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Mobilization Timeline - All Active Sites</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="gantt-chart">
+                                    <div class="gantt-header">
+                                        <div class="gantt-site-name" style="width: 200px;">Site Name</div>
+                                        <div class="gantt-timeline">
+                                            <div class="gantt-period">Nov 15</div>
+                                            <div class="gantt-period">Nov 22</div>
+                                            <div class="gantt-period">Nov 29</div>
+                                            <div class="gantt-period">Dec 6</div>
+                                            <div class="gantt-period">Dec 13</div>
+                                            <div class="gantt-period">Dec 20</div>
+                                        </div>
+                                    </div>
+                                    <div class="gantt-row">
+                                        <div class="gantt-site-name">Tech Campus West</div>
+                                        <div class="gantt-bar">
+                                            <div class="gantt-progress bg-success" style="width: 85%; left: 0%;">
+                                                <span class="gantt-label">85%</span>
+                                            </div>
+                                            <div class="gantt-milestone" style="left: 85%;">
+                                                <i class="bi bi-flag"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gantt-row">
+                                        <div class="gantt-site-name">Metro Hospital</div>
+                                        <div class="gantt-bar">
+                                            <div class="gantt-progress bg-warning" style="width: 45%; left: 10%;">
+                                                <span class="gantt-label">45%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gantt-row">
+                                        <div class="gantt-site-name">University Dining</div>
+                                        <div class="gantt-bar">
+                                            <div class="gantt-progress bg-danger" style="width: 30%; left: 5%;">
+                                                <span class="gantt-label">30%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gantt-row">
+                                        <div class="gantt-site-name">Corporate Plaza</div>
+                                        <div class="gantt-bar">
+                                            <div class="gantt-progress bg-success" style="width: 92%; left: 0%;">
+                                                <span class="gantt-label">92%</span>
+                                            </div>
+                                            <div class="gantt-milestone" style="left: 92%;">
+                                                <i class="bi bi-flag"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Detailed Progress Analytics -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Progress Analytics - Tech Campus West</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h6>Progress by Category</h6>
+                                        <div class="progress-stats">
+                                            <div class="progress-item mb-3">
+                                                <div class="d-flex justify-content-between mb-1">
+                                                    <span>Equipment & Supplies</span>
+                                                    <span class="fw-bold">83%</span>
+                                                </div>
+                                                <div class="progress" style="height: 8px;">
+                                                    <div class="progress-bar bg-success" style="width: 83%"></div>
+                                                </div>
+                                            </div>
+                                            <div class="progress-item mb-3">
+                                                <div class="d-flex justify-content-between mb-1">
+                                                    <span>Staffing</span>
+                                                    <span class="fw-bold">80%</span>
+                                                </div>
+                                                <div class="progress" style="height: 8px;">
+                                                    <div class="progress-bar bg-info" style="width: 80%"></div>
+                                                </div>
+                                            </div>
+                                            <div class="progress-item mb-3">
+                                                <div class="d-flex justify-content-between mb-1">
+                                                    <span>IT & Systems</span>
+                                                    <span class="fw-bold">50%</span>
+                                                </div>
+                                                <div class="progress" style="height: 8px;">
+                                                    <div class="progress-bar bg-warning" style="width: 50%"></div>
+                                                </div>
+                                            </div>
+                                            <div class="progress-item">
+                                                <div class="d-flex justify-content-between mb-1">
+                                                    <span>Site Readiness</span>
+                                                    <span class="fw-bold">62%</span>
+                                                </div>
+                                                <div class="progress" style="height: 8px;">
+                                                    <div class="progress-bar bg-primary" style="width: 62%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6>Performance Metrics</h6>
+                                        <div class="performance-metrics">
+                                            <div class="metric-card p-3 border rounded mb-3">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span>Days Until Go-Live</span>
+                                                    <span class="badge bg-success">12</span>
+                                                </div>
+                                            </div>
+                                            <div class="metric-card p-3 border rounded mb-3">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span>Budget Utilization</span>
+                                                    <span class="badge bg-info">78%</span>
+                                                </div>
+                                            </div>
+                                            <div class="metric-card p-3 border rounded mb-3">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span>Critical Path Delay</span>
+                                                    <span class="badge bg-warning">2 days</span>
+                                                </div>
+                                            </div>
+                                            <div class="metric-card p-3 border rounded">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span>Team Productivity</span>
+                                                    <span class="badge bg-success">94%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Progress History & Trends -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Progress Trends & Forecast</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="progress-trends">
+                                    <div class="trend-item mb-4">
+                                        <h6>Weekly Progress Rate</h6>
+                                        <div class="trend-bars d-flex align-items-end" style="height: 100px;">
+                                            <div class="trend-bar me-2" style="height: 60%; background-color: #e9ecef; width: 40px;">
+                                                <div class="trend-fill bg-success" style="height: 40%;"></div>
+                                                <small class="d-block text-center">Week 1</small>
+                                            </div>
+                                            <div class="trend-bar me-2" style="height: 60%; background-color: #e9ecef; width: 40px;">
+                                                <div class="trend-fill bg-success" style="height: 55%;"></div>
+                                                <small class="d-block text-center">Week 2</small>
+                                            </div>
+                                            <div class="trend-bar me-2" style="height: 60%; background-color: #e9ecef; width: 40px;">
+                                                <div class="trend-fill bg-warning" style="height: 35%;"></div>
+                                                <small class="d-block text-center">Week 3</small>
+                                            </div>
+                                            <div class="trend-bar me-2" style="height: 60%; background-color: #e9ecef; width: 40px;">
+                                                <div class="trend-fill bg-success" style="height: 65%;"></div>
+                                                <small class="d-block text-center">Week 4</small>
+                                            </div>
+                                            <div class="trend-bar" style="height: 60%; background-color: #e9ecef; width: 40px;">
+                                                <div class="trend-fill bg-info" style="height: 45%;"></div>
+                                                <small class="d-block text-center">Week 5</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="trend-forecast">
+                                        <h6>Completion Forecast</h6>
+                                        <div class="alert alert-info">
+                                            <i class="bi bi-graph-up"></i>
+                                            <strong>Forecast:</strong> Based on current progress rate, project is expected to complete on <strong>December 14, 2025</strong> (1 day ahead of schedule)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar - Alerts & Actions -->
+                    <div class="col-12 col-lg-4">
+                        <!-- Critical Alerts -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Critical Path Alerts</h4>
+                            </div>
+                            <div class="card-content pb-4">
+                                <div class="critical-alert d-flex px-4 py-3 border-bottom">
+                                    <div class="alert-icon me-3">
+                                        <i class="bi bi-exclamation-triangle-fill text-danger"></i>
+                                    </div>
+                                    <div class="alert-info">
+                                        <h6 class="mb-1">IT Infrastructure Delay</h6>
+                                        <p class="text-muted mb-0">Network setup blocking 12 dependent tasks</p>
+                                        <small class="text-muted">Impact: High</small>
+                                    </div>
+                                </div>
+                                <div class="critical-alert d-flex px-4 py-3 border-bottom">
+                                    <div class="alert-icon me-3">
+                                        <i class="bi bi-exclamation-triangle-fill text-warning"></i>
+                                    </div>
+                                    <div class="alert-info">
+                                        <h6 class="mb-1">Equipment Delivery</h6>
+                                        <p class="text-muted mb-0">Specialty oven delivery delayed by vendor</p>
+                                        <small class="text-muted">Impact: Medium</small>
+                                    </div>
+                                </div>
+                                <div class="critical-alert d-flex px-4 py-3">
+                                    <div class="alert-icon me-3">
+                                        <i class="bi bi-exclamation-triangle-fill text-warning"></i>
+                                    </div>
+                                    <div class="alert-info">
+                                        <h6 class="mb-1">Staffing Shortage</h6>
+                                        <p class="text-muted mb-0">3 key positions still open</p>
+                                        <small class="text-muted">Impact: Medium</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Progress Actions -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Progress Actions</h4>
+                            </div>
+                            <div class="card-body">
+                                <button class="btn btn-outline-primary w-100 mb-2">
+                                    <i class="bi bi-arrow-clockwise"></i> Update Progress
+                                </button>
+                                <button class="btn btn-outline-success w-100 mb-2">
+                                    <i class="bi bi-check-circle"></i> Mark Milestone
+                                </button>
+                                <button class="btn btn-outline-warning w-100 mb-2">
+                                    <i class="bi bi-flag"></i> Set Critical Path
+                                </button>
+                                <button class="btn btn-outline-info w-100">
+                                    <i class="bi bi-graph-up"></i> View Analytics
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Milestone Tracker -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Upcoming Milestones</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="milestone-tracker">
+                                    <div class="milestone-item mb-3 p-3 border rounded">
+                                        <div class="d-flex justify-content-between align-items-start mb-1">
+                                            <h6 class="text-success mb-0">Equipment Installation</h6>
+                                            <span class="badge bg-success">Dec 5</span>
+                                        </div>
+                                        <p class="text-muted mb-0 small">Final kitchen equipment setup</p>
+                                        <div class="progress mt-2" style="height: 6px;">
+                                            <div class="progress-bar bg-success" style="width: 90%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="milestone-item mb-3 p-3 border rounded">
+                                        <div class="d-flex justify-content-between align-items-start mb-1">
+                                            <h6 class="text-warning mb-0">Staff Training</h6>
+                                            <span class="badge bg-warning">Dec 8</span>
+                                        </div>
+                                        <p class="text-muted mb-0 small">Complete team onboarding</p>
+                                        <div class="progress mt-2" style="height: 6px;">
+                                            <div class="progress-bar bg-warning" style="width: 60%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="milestone-item p-3 border rounded">
+                                        <div class="d-flex justify-content-between align-items-start mb-1">
+                                            <h6 class="text-info mb-0">System Go-Live</h6>
+                                            <span class="badge bg-info">Dec 15</span>
+                                        </div>
+                                        <p class="text-muted mb-0 small">Full operational launch</p>
+                                        <div class="progress mt-2" style="height: 6px;">
+                                            <div class="progress-bar bg-info" style="width: 85%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Performance Scorecard -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Performance Scorecard</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="scorecard">
+                                    <div class="score-item d-flex justify-content-between mb-2">
+                                        <span>Schedule Adherence</span>
+                                        <span class="fw-bold text-success">88%</span>
+                                    </div>
+                                    <div class="score-item d-flex justify-content-between mb-2">
+                                        <span>Budget Compliance</span>
+                                        <span class="fw-bold text-warning">92%</span>
+                                    </div>
+                                    <div class="score-item d-flex justify-content-between mb-2">
+                                        <span>Quality Metrics</span>
+                                        <span class="fw-bold text-success">95%</span>
+                                    </div>
+                                    <div class="score-item d-flex justify-content-between">
+                                        <span>Risk Management</span>
+                                        <span class="fw-bold text-info">78%</span>
+                                    </div>
+                                </div>
+                                <div class="overall-score text-center mt-3 p-3 bg-light rounded">
+                                    <h3 class="text-primary mb-0">88%</h3>
+                                    <small class="text-muted">Overall Performance Score</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <footer>
+                <div class="footer clearfix mb-0 text-muted">
+                    <div class="float-start">
+                        <p>2025 &copy; Virtual OPEX - Sodexo</p>
+                    </div>
+                    <div class="float-end">
+                        <p>Powered by <span class="text-danger"><i class="bi bi-heart"></i></span> <a
+                                href="http://thirdwishfs.com">Thirdwish Food Services</a></p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/apexcharts/apexcharts.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

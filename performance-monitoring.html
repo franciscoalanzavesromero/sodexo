@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Monitoring - Virtual OPEX - Sodexo</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+</head>
+
+<body>
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo">
+                            <a href="index.html"><img src="assets/images/logo/logo.png" alt="Sodexo Logo" srcset=""></a>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-title">Virtual OPEX</li>
+
+                        <li class="sidebar-item">
+                            <a href="dasboard.html" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-graph-up"></i>
+                                <span>Commercial <br> Excellence</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="commercial-bid-analysis.html">Bid Analysis</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="contract-risk.html">Contract Risk Screening</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="pricing-optimization.html">Pricing Optimization</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-building"></i>
+                                <span>Site <br> Mobilization</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="mobilization-dashboard.html">Mobilization Dashboard</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="checklist-management.html">Checklist Management</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="progress-tracking.html">Progress Tracking</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  has-sub active">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-gear-fill"></i>
+                                <span>Operational <br> Excellence</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="performance-monitoring.html">Performance Monitoring</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="account-recovery.html">Account Recovery</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="kpi-analytics.html">KPI Analytics</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-title">Tools & Analytics</li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-bar-chart-fill"></i>
+                                <span>Reports</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="financial-performance.html">Financial Performance</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="operational-metrics.html">Operational Metrics</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="client-retention.html">Client Retention</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item  ">
+                            <a href="ai-assistants.html" class='sidebar-link'>
+                                <i class="bi bi-robot"></i>
+                                <span>AI Assistants</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-sliders"></i>
+                                <span>Settings</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="user-management.html">User Management</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="system-configuration.html">System Configuration</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+
+            <div class="page-heading">
+                <div class="row">
+                    <div class="col-8">
+                        <h3>Performance Monitoring</h3>
+                        <p class="text-subtitle text-muted">Real-time operational performance tracking and analytics</p>
+                    </div>
+                    <div class="col-4 text-end">
+                        <button class="btn btn-primary">
+                            <i class="bi bi-download"></i> Export Report
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-content">
+                <section class="row">
+                    <!-- Main Content Area -->
+                    <div class="col-12 col-lg-8">
+                        <!-- Performance Dashboard -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Site Performance Dashboard</h4>
+                                <div class="header-actions">
+                                    <select class="form-select form-select-sm" style="width: auto; display: inline-block;">
+                                        <option>Last 7 Days</option>
+                                        <option>Last 30 Days</option>
+                                        <option selected>Last 90 Days</option>
+                                        <option>Year to Date</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="performance-grid">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="metric-card p-3 border rounded mb-3">
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <h6 class="mb-0">Financial Performance</h6>
+                                                    <span class="badge bg-success">+2.1%</span>
+                                                </div>
+                                                <div class="metric-value text-success">$4.8M</div>
+                                                <small class="text-muted">Revenue vs Target</small>
+                                                <div class="progress mt-2" style="height: 6px;">
+                                                    <div class="progress-bar bg-success" style="width: 105%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="metric-card p-3 border rounded mb-3">
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <h6 class="mb-0">Operational Efficiency</h6>
+                                                    <span class="badge bg-warning">-1.2%</span>
+                                                </div>
+                                                <div class="metric-value text-warning">87.3%</div>
+                                                <small class="text-muted">Labor Productivity</small>
+                                                <div class="progress mt-2" style="height: 6px;">
+                                                    <div class="progress-bar bg-warning" style="width: 87%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="metric-card p-3 border rounded">
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <h6 class="mb-0">Quality Metrics</h6>
+                                                    <span class="badge bg-success">+0.8%</span>
+                                                </div>
+                                                <div class="metric-value text-info">96.2%</div>
+                                                <small class="text-muted">Service Quality Score</small>
+                                                <div class="progress mt-2" style="height: 6px;">
+                                                    <div class="progress-bar bg-info" style="width: 96%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="metric-card p-3 border rounded">
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <h6 class="mb-0">Client Retention</h6>
+                                                    <span class="badge bg-success">+3.5%</span>
+                                                </div>
+                                                <div class="metric-value text-primary">98.7%</div>
+                                                <small class="text-muted">Contract Renewal Rate</small>
+                                                <div class="progress mt-2" style="height: 6px;">
+                                                    <div class="progress-bar bg-primary" style="width: 99%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Site Performance Table -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Site Performance Overview</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-lg">
+                                        <thead>
+                                            <tr>
+                                                <th>Site Name</th>
+                                                <th>Margin</th>
+                                                <th>Revenue</th>
+                                                <th>Efficiency</th>
+                                                <th>Satisfaction</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="avatar avatar-sm me-3">
+                                                            <img src="assets/images/faces/5.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="mb-0">Tech Campus West</h6>
+                                                            <small class="text-muted">Corporate</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="fw-bold text-success">21.5%</span>
+                                                    <div class="progress mt-1" style="height: 4px; width: 80px;">
+                                                        <div class="progress-bar bg-success" style="width: 86%"></div>
+                                                    </div>
+                                                </td>
+                                                <td>$1.2M</td>
+                                                <td>
+                                                    <span class="fw-bold text-success">92%</span>
+                                                </td>
+                                                <td>
+                                                    <span class="fw-bold text-success">96%</span>
+                                                </td>
+                                                <td><span class="badge bg-success">High Performing</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="avatar avatar-sm me-3">
+                                                            <img src="assets/images/faces/2.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="mb-0">Metro Hospital</h6>
+                                                            <small class="text-muted">Healthcare</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="fw-bold text-warning">15.8%</span>
+                                                    <div class="progress mt-1" style="height: 4px; width: 80px;">
+                                                        <div class="progress-bar bg-warning" style="width: 63%"></div>
+                                                    </div>
+                                                </td>
+                                                <td>$2.1M</td>
+                                                <td>
+                                                    <span class="fw-bold text-warning">78%</span>
+                                                </td>
+                                                <td>
+                                                    <span class="fw-bold text-warning">82%</span>
+                                                </td>
+                                                <td><span class="badge bg-warning">Needs Attention</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="avatar avatar-sm me-3">
+                                                            <img src="assets/images/faces/3.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="mb-0">University Dining</h6>
+                                                            <small class="text-muted">Education</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="fw-bold text-danger">12.3%</span>
+                                                    <div class="progress mt-1" style="height: 4px; width: 80px;">
+                                                        <div class="progress-bar bg-danger" style="width: 49%"></div>
+                                                    </div>
+                                                </td>
+                                                <td>$0.9M</td>
+                                                <td>
+                                                    <span class="fw-bold text-danger">65%</span>
+                                                </td>
+                                                <td>
+                                                    <span class="fw-bold text-danger">74%</span>
+                                                </td>
+                                                <td><span class="badge bg-danger">At Risk</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="avatar avatar-sm me-3">
+                                                            <img src="assets/images/faces/4.jpg">
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="mb-0">Corporate Plaza</h6>
+                                                            <small class="text-muted">Corporate</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="fw-bold text-success">19.2%</span>
+                                                    <div class="progress mt-1" style="height: 4px; width: 80px;">
+                                                        <div class="progress-bar bg-success" style="width: 77%"></div>
+                                                    </div>
+                                                </td>
+                                                <td>$1.8M</td>
+                                                <td>
+                                                    <span class="fw-bold text-success">88%</span>
+                                                </td>
+                                                <td>
+                                                    <span class="fw-bold text-success">94%</span>
+                                                </td>
+                                                <td><span class="badge bg-success">High Performing</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Performance Trends -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Performance Trends & Analytics</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h6>Margin Trend (Last 6 Months)</h6>
+                                        <div class="trend-chart">
+                                            <div class="trend-bars d-flex align-items-end" style="height: 120px;">
+                                                <div class="trend-bar me-2 text-center" style="width: 40px;">
+                                                    <div class="bar bg-success" style="height: 80%;"></div>
+                                                    <small class="d-block mt-1">Jan</small>
+                                                </div>
+                                                <div class="trend-bar me-2 text-center" style="width: 40px;">
+                                                    <div class="bar bg-success" style="height: 85%;"></div>
+                                                    <small class="d-block mt-1">Feb</small>
+                                                </div>
+                                                <div class="trend-bar me-2 text-center" style="width: 40px;">
+                                                    <div class="bar bg-warning" style="height: 72%;"></div>
+                                                    <small class="d-block mt-1">Mar</small>
+                                                </div>
+                                                <div class="trend-bar me-2 text-center" style="width: 40px;">
+                                                    <div class="bar bg-success" style="height: 88%;"></div>
+                                                    <small class="d-block mt-1">Apr</small>
+                                                </div>
+                                                <div class="trend-bar me-2 text-center" style="width: 40px;">
+                                                    <div class="bar bg-success" style="height: 92%;"></div>
+                                                    <small class="d-block mt-1">May</small>
+                                                </div>
+                                                <div class="trend-bar text-center" style="width: 40px;">
+                                                    <div class="bar bg-success" style="height: 95%;"></div>
+                                                    <small class="d-block mt-1">Jun</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6>Performance Distribution</h6>
+                                        <div class="performance-distribution">
+                                            <div class="dist-item d-flex justify-content-between align-items-center mb-2">
+                                                <span>High Performing</span>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="progress" style="width: 100px; height: 8px;">
+                                                        <div class="progress-bar bg-success" style="width: 65%"></div>
+                                                    </div>
+                                                    <span class="ms-2">65%</span>
+                                                </div>
+                                            </div>
+                                            <div class="dist-item d-flex justify-content-between align-items-center mb-2">
+                                                <span>Meeting Target</span>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="progress" style="width: 100px; height: 8px;">
+                                                        <div class="progress-bar bg-warning" style="width: 25%"></div>
+                                                    </div>
+                                                    <span class="ms-2">25%</span>
+                                                </div>
+                                            </div>
+                                            <div class="dist-item d-flex justify-content-between align-items-center">
+                                                <span>Needs Improvement</span>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="progress" style="width: 100px; height: 8px;">
+                                                        <div class="progress-bar bg-danger" style="width: 10%"></div>
+                                                    </div>
+                                                    <span class="ms-2">10%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar - Alerts & Insights -->
+                    <div class="col-12 col-lg-4">
+                        <!-- Performance Alerts -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Performance Alerts</h4>
+                            </div>
+                            <div class="card-content pb-4">
+                                <div class="performance-alert d-flex px-4 py-3 border-bottom">
+                                    <div class="alert-icon me-3">
+                                        <i class="bi bi-exclamation-triangle-fill text-danger"></i>
+                                    </div>
+                                    <div class="alert-info">
+                                        <h6 class="mb-1">University Dining</h6>
+                                        <p class="text-muted mb-0">Margin dropped below target by 5.7%</p>
+                                        <small class="text-muted">Trigger: Labor cost overrun</small>
+                                    </div>
+                                </div>
+                                <div class="performance-alert d-flex px-4 py-3 border-bottom">
+                                    <div class="alert-icon me-3">
+                                        <i class="bi bi-exclamation-triangle-fill text-warning"></i>
+                                    </div>
+                                    <div class="alert-info">
+                                        <h6 class="mb-1">Metro Hospital</h6>
+                                        <p class="text-muted mb-0">Client satisfaction below threshold</p>
+                                        <small class="text-muted">Trigger: Service quality score 82%</small>
+                                    </div>
+                                </div>
+                                <div class="performance-alert d-flex px-4 py-3">
+                                    <div class="alert-icon me-3">
+                                        <i class="bi bi-lightbulb-fill text-info"></i>
+                                    </div>
+                                    <div class="alert-info">
+                                        <h6 class="mb-1">Tech Campus West</h6>
+                                        <p class="text-muted mb-0">Exceptional performance detected</p>
+                                        <small class="text-muted">Margin exceeded target by 3.5%</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AI Insights -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>AI Performance Insights</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="insight-item mb-3 p-3 border rounded">
+                                    <h6 class="text-success">Optimization Opportunity</h6>
+                                    <p class="mb-1 small">Labor scheduling adjustments could improve Metro Hospital efficiency by 12%</p>
+                                    <small class="text-muted">Confidence: 87%</small>
+                                </div>
+                                <div class="insight-item mb-3 p-3 border rounded">
+                                    <h6 class="text-warning">Risk Alert</h6>
+                                    <p class="mb-1 small">University Dining shows patterns similar to previously lost accounts</p>
+                                    <small class="text-muted">Similarity: 78%</small>
+                                </div>
+                                <div class="insight-item p-3 border rounded">
+                                    <h6 class="text-info">Best Practice</h6>
+                                    <p class="mb-1 small">Tech Campus West's inventory management could be replicated across 8 similar sites</p>
+                                    <small class="text-muted">Impact: +2.3% margin</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Actions -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Performance Actions</h4>
+                            </div>
+                            <div class="card-body">
+                                <button class="btn btn-outline-primary w-100 mb-2">
+                                    <i class="bi bi-graph-up"></i> View Detailed Analytics
+                                </button>
+                                <button class="btn btn-outline-success w-100 mb-2">
+                                    <i class="bi bi-download"></i> Export Performance Report
+                                </button>
+                                <button class="btn btn-outline-warning w-100 mb-2">
+                                    <i class="bi bi-flag"></i> Flag for Review
+                                </button>
+                                <button class="btn btn-outline-info w-100">
+                                    <i class="bi bi-robot"></i> AI Recommendations
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Performance Scorecard -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Overall Health Score</h4>
+                            </div>
+                            <div class="card-body text-center">
+                                <div class="health-score mb-3">
+                                    <div class="score-circle mx-auto">
+                                        <h1 class="text-success">86</h1>
+                                        <small>Out of 100</small>
+                                    </div>
+                                </div>
+                                <div class="health-breakdown">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Financial Health</span>
+                                        <span class="fw-bold text-success">92</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Operational Health</span>
+                                        <span class="fw-bold text-warning">78</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <span>Client Health</span>
+                                        <span class="fw-bold text-success">88</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Benchmark Comparison -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Benchmark Comparison</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="benchmark-item d-flex justify-content-between mb-2">
+                                    <span>Your Margin</span>
+                                    <span class="fw-bold text-success">18.2%</span>
+                                </div>
+                                <div class="benchmark-item d-flex justify-content-between mb-2">
+                                    <span>Industry Average</span>
+                                    <span class="fw-bold text-warning">16.7%</span>
+                                </div>
+                                <div class="benchmark-item d-flex justify-content-between mb-2">
+                                    <span>Top Performers</span>
+                                    <span class="fw-bold text-info">21.3%</span>
+                                </div>
+                                <div class="benchmark-item d-flex justify-content-between">
+                                    <span>Performance Gap</span>
+                                    <span class="fw-bold text-success">+1.5%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <footer>
+                <div class="footer clearfix mb-0 text-muted">
+                    <div class="float-start">
+                        <p>2025 &copy; Virtual OPEX - Sodexo</p>
+                    </div>
+                    <div class="float-end">
+                        <p>Powered by <span class="text-danger"><i class="bi bi-heart"></i></span> <a
+                                href="http://thirdwishfs.com">Thirdwish Food Services</a></p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/apexcharts/apexcharts.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
