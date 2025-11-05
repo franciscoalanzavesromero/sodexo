@@ -1,453 +1,1014 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contract Risk Screening - Virtual OPEX - Sodexo</title>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
-    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
-    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
-    <link rel="stylesheet" href="assets/css/app.css">
-    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
-</head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/vendors/iconly/bold.css" />
+    <link
+      rel="stylesheet"
+      href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/vendors/bootstrap-icons/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="assets/css/app.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.svg"
+      type="image/x-icon"
+    />
+  </head>
 
-<body>
+  <body>
     <div id="app">
-        <div id="sidebar" class="active">
-            <div class="sidebar-wrapper active">
-                <div class="sidebar-header">
-                    <div class="d-flex justify-content-between">
-                        <div class="logo">
-                            <a href="dasboard.html"><img src="assets/images/logo/logo.png" alt="Sodexo Logo" srcset=""></a>
-                        </div>
-                        <div class="toggler">
-                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="sidebar-menu">
-                    <ul class="menu">
-                        <li class="sidebar-title">Virtual OPEX</li>
-
-                        <li class="sidebar-item  ">
-                            <a href="dasboard.html" class='sidebar-link'>
-                                <i class="bi bi-grid-fill"></i>
-                                <span>Dashboard</span>
-                            </a>
-                        </li>
-
-                        <li class="sidebar-item  has-sub active">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-graph-up"></i>
-                                <span>Commercial <br> Excellence</span>
-                            </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
-                                    <a href="commercial-bid-analysis.html">Bid Analysis</a>
-                                </li>
-                                <li class="submenu-item active">
-                                    <a href="contract-risk.html">Contract Risk Screening</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="pricing-optimization.html">Pricing Optimization</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-building"></i>
-                                <span>Site <br> Mobilization</span>
-                            </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
-                                    <a href="mobilization-dashboard.html">Mobilization Dashboard</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="checklist-management.html">Checklist Management</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="progress-tracking.html">Progress Tracking</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-gear-fill"></i>
-                                <span>Operational <br> Excellence</span>
-                            </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
-                                    <a href="performance-monitoring.html">Performance Monitoring</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="account-recovery.html">Account Recovery</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="kpi-analytics.html">KPI Analytics</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="sidebar-title">Tools & Analytics</li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-bar-chart-fill"></i>
-                                <span>Reports</span>
-                            </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
-                                    <a href="financial-performance.html">Financial Performance</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="operational-metrics.html">Operational Metrics</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="client-retention.html">Client Retention</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="sidebar-item  ">
-                            <a href="ai-assistants.html" class='sidebar-link'>
-                                <i class="bi bi-robot"></i>
-                                <span>AI Assistants</span>
-                            </a>
-                        </li>
-
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i class="bi bi-sliders"></i>
-                                <span>Settings</span>
-                            </a>
-                            <ul class="submenu ">
-                                <li class="submenu-item ">
-                                    <a href="user-management.html">User Management</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="system-configuration.html">System Configuration</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+      <div id="sidebar" class="active">
+        <div class="sidebar-wrapper active">
+          <div class="sidebar-header">
+            <div class="d-flex justify-content-between">
+              <div class="logo">
+                <a href="dasboard.html"
+                  ><img
+                    src="assets/images/logo/logo.png"
+                    alt="Sodexo Logo"
+                    srcset=""
+                /></a>
+              </div>
+              <div class="toggler">
+                <a href="#" class="sidebar-hide d-xl-none d-block"
+                  ><i class="bi bi-x bi-middle"></i
+                ></a>
+              </div>
             </div>
-        </div>
-        <div id="main">
-            <header class="mb-3">
-                <a href="#" class="burger-btn d-block d-xl-none">
-                    <i class="bi bi-justify fs-3"></i>
-                </a>
-            </header>
+          </div>
+          <div class="sidebar-menu">
+            <ul class="menu">
+              <li class="sidebar-title">Virtual OPEX</li>
 
-            <div class="page-heading">
-                <div class="row">
+              <li class="sidebar-item">
+                <a href="dasboard.html" class="sidebar-link">
+                  <i class="bi bi-grid-fill"></i>
+                  <span>Dashboard</span>
+                </a>
+              </li>
+
+              <li class="sidebar-item has-sub active">
+                <a href="#" class="sidebar-link">
+                  <i class="bi bi-graph-up"></i>
+                  <span
+                    >Commercial <br />
+                    Excellence</span
+                  >
+                </a>
+                <ul class="submenu">
+                  <li class="submenu-item">
+                    <a href="commercial-bid-analysis.html">Dashboard</a>
+                  </li>
+                  <li class="submenu-item active">
+                    <a href="contract-risk.html"
+                      >Contract Risk Agent and Bid Advisor</a
+                    >
+                  </li>
+                  <li class="submenu-item">
+                    <a href="pricing-optimization.html">Pricing Optimization</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="sidebar-item has-sub">
+                <a href="#" class="sidebar-link">
+                  <i class="bi bi-building"></i>
+                  <span
+                    >Site <br />
+                    Mobilization</span
+                  >
+                </a>
+                <ul class="submenu">
+                  <li class="submenu-item">
+                    <a href="mobilization-dashboard.html"
+                      >Mobilization Dashboard</a
+                    >
+                  </li>
+                  <li class="submenu-item">
+                    <a href="checklist-management.html">Checklist Management</a>
+                  </li>
+                  <li class="submenu-item">
+                    <a href="progress-tracking.html">Progress Tracking</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="sidebar-item has-sub">
+                <a href="#" class="sidebar-link">
+                  <i class="bi bi-gear-fill"></i>
+                  <span
+                    >Operational <br />
+                    Excellence</span
+                  >
+                </a>
+                <ul class="submenu">
+                  <li class="submenu-item">
+                    <a href="performance-monitoring.html"
+                      >Performance Monitoring</a
+                    >
+                  </li>
+                  <li class="submenu-item">
+                    <a href="account-recovery.html">Account Recovery</a>
+                  </li>
+                  <li class="submenu-item">
+                    <a href="kpi-analytics.html">KPI Analytics</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="sidebar-title">Tools & Analytics</li>
+
+              <li class="sidebar-item has-sub">
+                <a href="#" class="sidebar-link">
+                  <i class="bi bi-bar-chart-fill"></i>
+                  <span>Reports</span>
+                </a>
+                <ul class="submenu">
+                  <li class="submenu-item">
+                    <a href="financial-performance.html"
+                      >Financial Performance</a
+                    >
+                  </li>
+                  <li class="submenu-item">
+                    <a href="operational-metrics.html">Operational Metrics</a>
+                  </li>
+                  <li class="submenu-item">
+                    <a href="client-retention.html">Client Retention</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="sidebar-item">
+                <a href="ai-assistants.html" class="sidebar-link">
+                  <i class="bi bi-robot"></i>
+                  <span>AI Assistants</span>
+                </a>
+              </li>
+
+              <li class="sidebar-item has-sub">
+                <a href="#" class="sidebar-link">
+                  <i class="bi bi-sliders"></i>
+                  <span>Settings</span>
+                </a>
+                <ul class="submenu">
+                  <li class="submenu-item">
+                    <a href="user-management.html">User Management</a>
+                  </li>
+                  <li class="submenu-item">
+                    <a href="system-configuration.html">System Configuration</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <button class="sidebar-toggler btn x">
+            <i data-feather="x"></i>
+          </button>
+        </div>
+      </div>
+      <div id="main">
+        <header class="mb-3">
+          <a href="#" class="burger-btn d-block d-xl-none">
+            <i class="bi bi-justify fs-3"></i>
+          </a>
+        </header>
+
+        <div class="page-heading">
+          <div class="row">
+            <div class="col-8">
+              <h3>Contract Risk Screening Agent and Bid Advisor</h3>
+              <p class="text-subtitle text-muted">
+                AI-powered margin protection before contract signing
+              </p>
+            </div>
+            <div class="col-4 text-end">
+              <!--               <button class="btn btn-primary">
+                <i class="bi bi-upload"></i> Upload Contract
+              </button> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="page-content">
+          <section class="row">
+            <!-- Main Content Area -->
+            <div class="col-12 col-lg-8">
+              <!-- Current Contract Analysis -->
+              <div class="card">
+                <div class="card-header">
+                  <div class="row">
                     <div class="col-8">
-                        <h3>Virtual OPEX Contract Risk Screening</h3>
-                        <p class="text-subtitle text-muted">AI-powered margin protection before contract signing</p>
+                      <h4>Corporate Campus Agreement - Risk Analysis</h4>
+                      <p class="text-muted mb-0">
+                        Global Tech Solutions | $12.3M (5 years)
+                      </p>
                     </div>
                     <div class="col-4 text-end">
-                        <button class="btn btn-primary">
-                            <i class="bi bi-upload"></i> Upload Contract
-                        </button>
+                      <div class="badge bg-danger">Critical Risk</div>
                     </div>
+                  </div>
                 </div>
+                <div class="card-body">
+                  <!-- Text Area con Contrato y Riesgos Resaltados -->
+                  <div class="row mb-4">
+                    <div class="col-12">
+                      <h6>Contract Text with Risk Highlighting</h6>
+                      <div class="contract-text-container">
+                        <div class="contract-text" id="contractText">
+                          CORPORATE CAMPUS AGREEMENT This Agreement is made
+                          between Global Tech Solutions ("Client") and Service
+                          Provider ("Vendor"). ARTICLE 1: TERM AND VALUE
+                          Contract Term:
+                          <span class="risk-high">5 years</span> Total Contract
+                          Value:
+                          <span class="risk-high">$12,300,000</span> Proposed
+                          Margin:
+                          <span class="risk-critical"
+                            >11.8% (Below target of 15%)</span
+                          >
+
+                          ARTICLE 2: STAFFING REQUIREMENTS FTE Count:
+                          <span class="risk-critical"
+                            >18 employees (22% below industry standard)</span
+                          >
+                          Historical data indicates this will lead to
+                          <span class="risk-critical">18% overtime costs</span>
+                          and potential service level penalties. ARTICLE 3:
+                          PRICING AND ADJUSTMENTS Base Year Pricing: Fixed Years
+                          2-5:
+                          <span class="risk-medium"
+                            >No annual inflation adjustment specified</span
+                          >
+                          Food cost inflation averages 3.8% annually, creating
+                          <span class="risk-medium"
+                            >4-6% margin erosion risk</span
+                          >
+                          each year. ARTICLE 4: SCOPE OF SERVICES Core Services:
+                          Daily cafeteria operations, cleaning services Special
+                          Events:
+                          <span class="risk-medium"
+                            >"As requested by client" (Vague language)</span
+                          >
+                          This creates potential for
+                          <span class="risk-medium">15-20% scope creep</span>.
+                          ARTICLE 5: PAYMENT TERMS Payment Schedule:
+                          <span class="risk-low"
+                            >Net 30 days (Standard terms)</span
+                          >
+
+                          ARTICLE 6: PERFORMANCE METRICS Service Level
+                          Agreements: Standard corporate requirements Penalty
+                          Structure:
+                          <span class="risk-high"
+                            >2% of monthly fee for missed KPIs</span
+                          >
+
+                          RISK SUMMARY: -
+                          <span class="risk-critical"
+                            >Labor assumptions: $1.4M financial impact
+                            risk</span
+                          >
+                          -
+                          <span class="risk-medium"
+                            >Inflation protection gap: $450K potential
+                            impact</span
+                          >
+                          -
+                          <span class="risk-medium"
+                            >Scope definition issues: $250K potential
+                            impact</span
+                          >
+                          -
+                          <span class="risk-low">Payment terms: Low risk</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Leyenda de Colores -->
+                  <div class="row mb-4">
+                    <div class="col-12">
+                      <h6>Risk Color Legend</h6>
+                      <div class="d-flex flex-wrap gap-2">
+                        <span class="badge bg-danger">Critical Risk</span>
+                        <span class="badge bg-warning">High Risk</span>
+                        <span class="badge bg-info">Medium Risk</span>
+                        <span class="badge bg-success">Low Risk</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <style>
+                .contract-text-container {
+                  border: 1px solid #dee2e6;
+                  border-radius: 0.375rem;
+                  background-color: #f8f9fa;
+                  padding: 1rem;
+                  max-height: 400px;
+                  overflow-y: auto;
+                }
+
+                .contract-text {
+                  font-family: "Courier New", monospace;
+                  font-size: 14px;
+                  line-height: 1.5;
+                  white-space: pre-wrap;
+                  margin: 0;
+                }
+
+                .risk-critical {
+                  background-color: #f8d7da;
+                  color: #721c24;
+                  padding: 2px 4px;
+                  border-radius: 3px;
+                  font-weight: bold;
+                }
+
+                .risk-high {
+                  background-color: #fff3cd;
+                  color: #856404;
+                  padding: 2px 4px;
+                  border-radius: 3px;
+                  font-weight: bold;
+                }
+
+                .risk-medium {
+                  background-color: #d1ecf1;
+                  color: #0c5460;
+                  padding: 2px 4px;
+                  border-radius: 3px;
+                  font-weight: bold;
+                }
+
+                .risk-low {
+                  background-color: #d4edda;
+                  color: #155724;
+                  padding: 2px 4px;
+                  border-radius: 3px;
+                  font-weight: bold;
+                }
+              </style>
+
+              <!-- Virtual OPEX Mitigation Recommendations -->
+              <div class="card">
+                <div class="card-header">
+                  <div class="row">
+                    <div class="col-8">
+                      <h4>Corporate Campus Agreement - Risk Analysis</h4>
+                      <p class="text-muted mb-0">
+                        Global Tech Solutions | $12.3M (5 years)
+                      </p>
+                    </div>
+                    <div class="col-4 text-end">
+                      <div class="badge bg-danger">Critical Risk</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <!-- Text Area con Contrato y Riesgos Resaltados -->
+                  <div class="row mb-4">
+                    <div class="col-12">
+                      <h6>Contract Text with AI recomendations</h6>
+                      <div class="contract-text-container">
+                        <div class="contract-text" id="contractText">
+                          CORPORATE CAMPUS AGREEMENT This Agreement is made
+                          between Global Tech Solutions ("Client") and Service
+                          Provider ("Vendor").
+
+                          <div class="ai-recommendation">
+                            <strong>AI Recommendation:</strong> Consider adding
+                            a clear dispute resolution clause specifying
+                            mediation before arbitration.
+                          </div>
+
+                          ARTICLE 1: TERM AND VALUE Contract Term:
+                          <span class="risk-high">5 years</span>
+                          Total Contract Value:
+                          <span class="risk-high">$12,300,000</span>
+                          Proposed Margin:
+                          <span class="risk-critical"
+                            >11.8% (Below target of 15%)</span
+                          >
+
+                          <div class="ai-recommendation">
+                            <strong>AI Recommendation:</strong> Negotiate for a
+                            3-year term with two 1-year renewal options to
+                            reduce long-term commitment risk.
+                          </div>
+
+                          ARTICLE 2: STAFFING REQUIREMENTS FTE Count:
+                          <span class="risk-critical"
+                            >18 employees (22% below industry standard)</span
+                          >
+                          Historical data indicates this will lead to
+                          <span class="risk-critical">18% overtime costs</span>
+                          and potential service level penalties.
+
+                          <div class="ai-recommendation">
+                            <strong>AI Recommendation:</strong> Increase FTE
+                            count to 22 and include a staffing adjustment clause
+                            tied to actual service demand metrics.
+                          </div>
+
+                          ARTICLE 3: PRICING AND ADJUSTMENTS Base Year Pricing:
+                          Fixed Years 2-5:
+                          <span class="risk-medium"
+                            >No annual inflation adjustment specified</span
+                          >
+                          Food cost inflation averages 3.8% annually, creating
+                          <span class="risk-medium"
+                            >4-6% margin erosion risk</span
+                          >
+                          each year.
+
+                          <div class="ai-recommendation">
+                            <strong>AI Recommendation:</strong> Add annual price
+                            adjustment clause tied to Consumer Price Index (CPI)
+                            with a 3% cap.
+                          </div>
+
+                          ARTICLE 4: SCOPE OF SERVICES Core Services: Daily
+                          cafeteria operations, cleaning services Special
+                          Events:
+                          <span class="risk-medium"
+                            >"As requested by client" (Vague language)</span
+                          >
+                          This creates potential for
+                          <span class="risk-medium">15-20% scope creep</span>.
+
+                          <div class="ai-recommendation">
+                            <strong>AI Recommendation:</strong> Define special
+                            events scope explicitly with volume limits and
+                            separate pricing schedule.
+                          </div>
+
+                          ARTICLE 5: PAYMENT TERMS Payment Schedule:
+                          <span class="risk-low"
+                            >Net 30 days (Standard terms)</span
+                          >
+
+                          <div class="ai-recommendation">
+                            <strong>AI Recommendation:</strong> Consider
+                            requesting 50% advance payment for special events to
+                            improve cash flow.
+                          </div>
+
+                          ARTICLE 6: PERFORMANCE METRICS Service Level
+                          Agreements: Standard corporate requirements Penalty
+                          Structure:
+                          <span class="risk-high"
+                            >2% of monthly fee for missed KPIs</span
+                          >
+
+                          <div class="ai-recommendation">
+                            <strong>AI Recommendation:</strong> Add performance
+                            bonus clause for exceeding KPIs by 10% or more to
+                            balance penalty structure.
+                          </div>
+
+                          RISK SUMMARY: -
+                          <span class="risk-critical"
+                            >Labor assumptions: $1.4M financial impact
+                            risk</span
+                          >
+                          -
+                          <span class="risk-medium"
+                            >Inflation protection gap: $450K potential
+                            impact</span
+                          >
+                          -
+                          <span class="risk-medium"
+                            >Scope definition issues: $250K potential
+                            impact</span
+                          >
+                          -
+                          <span class="risk-low">Payment terms: Low risk</span>
+
+                          <div class="ai-recommendation">
+                            <strong>AI Recommendation Summary:</strong>
+                            Implement these changes to reduce overall risk by
+                            approximately 65% and improve projected margin to
+                            14.2%.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Leyenda de Colores -->
+                  <div class="row mb-4">
+                    <div class="col-12">
+                      <h6>Risk Color Legend</h6>
+                      <div class="d-flex flex-wrap gap-2">
+                        <span class="badge bg-danger">Critical Risk</span>
+                        <span class="badge bg-warning">High Risk</span>
+                        <span class="badge bg-info">Medium Risk</span>
+                        <span class="badge bg-success">Low Risk</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <style>
+                .ai-recommendation {
+                  background-color: #e8f4fd;
+                  border-left: 4px solid #2196f3;
+                  padding: 10px 15px;
+                  margin: 10px 0;
+                  border-radius: 0 4px 4px 0;
+                  font-size: 0.9em;
+                }
+              </style>
             </div>
 
-            <div class="page-content">
-                <section class="row">
-                    <!-- Main Content Area -->
-                    <div class="col-12 col-lg-8">
-                        <!-- Current Contract Analysis -->
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <h4>Corporate Campus Agreement - Risk Analysis</h4>
-                                        <p class="text-muted mb-0">Global Tech Solutions | $12.3M (5 years)</p>
-                                    </div>
-                                    <div class="col-4 text-end">
-                                        <div class="badge bg-danger">Critical Risk</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <!-- Virtual OPEX Risk Alerts -->
-                                <div class="row mb-4">
-                                    <div class="col-12">
-                                        <div class="alert alert-danger">
-                                            <i class="bi bi-exclamation-triangle-fill"></i>
-                                            <strong>Virtual OPEX Critical Alert:</strong> Potential $2.1M margin erosion detected over contract term
-                                        </div>
-                                        <div class="alert alert-warning">
-                                            <i class="bi bi-exclamation-triangle-fill"></i>
-                                            <strong>Virtual OPEX Warning:</strong> No inflation protection - 4-6% annual margin erosion risk
-                                        </div>
-                                    </div>
-                                </div>
+            <!-- Sidebar - Quick Actions & Analytics -->
+            <div class="col-12 col-lg-4">
+              <!-- Virtual OPEX Quick Screen -->
+              <div class="card">
+                <div class="card-header">
+                  <h4>Virtual OPEX Quick Screen</h4>
+                </div>
+                <div class="card-body">
+                  <div class="mb-3">
+                    <label class="form-label">Contract Type</label>
+                    <select class="form-select">
+                      <option>Corporate Services</option>
+                      <option>Healthcare</option>
+                      <option>Education</option>
+                      <option>Government</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Contract Value</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="$ Amount"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Contract Duration</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Years"
+                    />
+                  </div>
+                  <button class="btn btn-primary w-100">
+                    <i class="bi bi-lightning-charge"></i> Run Virtual OPEX
+                    Screen
+                  </button>
+                  <div class="mt-3 text-center">
+                    <small class="text-muted"
+                      >Average screening time: 2-4 minutes</small
+                    >
+                  </div>
+                </div>
+              </div>
 
-                                <!-- Contract Risk Overview -->
-                                <div class="row mb-4">
-                                    <div class="col-md-6">
-                                        <h6>Contract Overview</h6>
-                                        <table class="table table-sm">
-                                            <tr>
-                                                <td><strong>Client:</strong></td>
-                                                <td>Global Tech Solutions</td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Contract Value:</strong></td>
-                                                <td>$12.3M (5 years)</td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Proposed Margin:</strong></td>
-                                                <td>11.8%</td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Virtual OPEX Risk Score:</strong></td>
-                                                <td><span class="badge bg-danger">84/100</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Potential Erosion:</strong></td>
-                                                <td><span class="badge bg-danger">$2.1M</span></td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <h6>Risk Indicators</h6>
-                                        <div class="risk-indicators">
-                                            <div class="d-flex justify-content-between align-items-center mb-2 p-2 bg-light rounded">
-                                                <span>Labor Cost Risk</span>
-                                                <span class="badge bg-danger">$1.4M impact</span>
-                                            </div>
-                                            <div class="d-flex justify-content-between align-items-center mb-2 p-2 bg-light rounded">
-                                                <span>Inflation Risk</span>
-                                                <span class="badge bg-warning">$450K impact</span>
-                                            </div>
-                                            <div class="d-flex justify-content-between align-items-center mb-2 p-2 bg-light rounded">
-                                                <span>Scope Creep Risk</span>
-                                                <span class="badge bg-warning">$250K impact</span>
-                                            </div>
-                                            <div class="d-flex justify-content-between align-items-center p-2 bg-light rounded">
-                                                <span>Payment Terms</span>
-                                                <span class="badge bg-success">Low Risk</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Detailed Risk Analysis -->
-                                <div class="row">
-                                    <div class="col-12">
-                                        <h6>Virtual OPEX Detailed Risk Analysis</h6>
-                                        <div class="risk-details">
-                                            <div class="risk-category mb-3 p-3 border-start border-4 border-danger">
-                                                <div class="d-flex justify-content-between align-items-start">
-                                                    <h6 class="text-danger mb-1">Labor Assumptions - Critical Risk</h6>
-                                                    <span class="badge bg-danger">$1.4M Impact</span>
-                                                </div>
-                                                <p class="mb-1">FTE count is 22% below similar corporate campus contracts</p>
-                                                <small class="text-muted">Based on analysis of 42 similar contracts. Historical data shows this staffing level leads to 18% overtime costs and service level penalties.</small>
-                                            </div>
-                                            <div class="risk-category mb-3 p-3 border-start border-4 border-warning">
-                                                <div class="d-flex justify-content-between align-items-start">
-                                                    <h6 class="text-warning mb-1">Inflation Protection - High Risk</h6>
-                                                    <span class="badge bg-warning">$450K Impact</span>
-                                                </div>
-                                                <p class="mb-1">No annual inflation adjustment for years 2-5</p>
-                                                <small class="text-muted">Food cost inflation averages 3.8% annually. Without adjustment, margin erodes 4-6% each year. 92% of similar contracts include CPI-based adjustments.</small>
-                                            </div>
-                                            <div class="risk-category p-3 border-start border-4 border-warning">
-                                                <div class="d-flex justify-content-between align-items-start">
-                                                    <h6 class="text-warning mb-1">Scope Definition - Medium Risk</h6>
-                                                    <span class="badge bg-warning">$250K Impact</span>
-                                                </div>
-                                                <p class="mb-1">Vague language around special event services</p>
-                                                <small class="text-muted">Creates potential for 15-20% scope creep. Similar contracts show average of 12 special events monthly requiring clear pricing tiers.</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Virtual OPEX Mitigation Recommendations -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>Virtual OPEX Mitigation Plan</h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="recommendation-item mb-3 p-3 border-start border-4 border-success">
-                                    <div class="d-flex justify-content-between align-items-start">
-                                        <div>
-                                            <h6 class="text-success mb-1">Adjust Labor Model</h6>
-                                            <p class="mb-1">Increase FTE count by 8 to meet service level requirements</p>
-                                        </div>
-                                        <span class="badge bg-success">+3.2% Margin</span>
-                                    </div>
-                                    <small class="text-muted">Impact: Prevents $1.4M in losses. Aligns with service level requirements for corporate campus of this size.</small>
-                                    <div class="mt-2">
-                                        <button class="btn btn-sm btn-outline-success">Apply This Fix</button>
-                                    </div>
-                                </div>
-                                <div class="recommendation-item mb-3 p-3 border-start border-4 border-warning">
-                                    <div class="d-flex justify-content-between align-items-start">
-                                        <div>
-                                            <h6 class="text-warning mb-1">Add Inflation Protection</h6>
-                                            <p class="mb-1">Include CPI-based inflation adjustment clause for years 2-5</p>
-                                        </div>
-                                        <span class="badge bg-success">Risk Mitigation</span>
-                                    </div>
-                                    <small class="text-muted">Impact: Protects against $450K in margin erosion. Standard practice in 92% of multi-year contracts.</small>
-                                    <div class="mt-2">
-                                        <button class="btn btn-sm btn-outline-warning">Add to Contract</button>
-                                    </div>
-                                </div>
-                                <div class="recommendation-item p-3 border-start border-4 border-info">
-                                    <div class="d-flex justify-content-between align-items-start">
-                                        <div>
-                                            <h6 class="text-info mb-1">Clarify Scope & Pricing</h6>
-                                            <p class="mb-1">Define special event services with tiered pricing structure</p>
-                                        </div>
-                                        <span class="badge bg-success">+$120K Revenue</span>
-                                    </div>
-                                    <small class="text-muted">Impact: Prevents $250K in scope creep while adding $120K in incremental revenue opportunity.</small>
-                                    <div class="mt-2">
-                                        <button class="btn btn-sm btn-outline-info">Review Pricing Tiers</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+              <!-- Recent Virtual OPEX Assessments -->
+              <div class="card">
+                <div class="card-header">
+                  <h4>Recent Virtual OPEX Screens</h4>
+                </div>
+                <div class="card-content pb-4">
+                  <div class="recent-risk d-flex px-4 py-3 border-bottom">
+                    <div class="risk-icon me-3">
+                      <i
+                        class="bi bi-exclamation-triangle-fill text-danger"
+                      ></i>
                     </div>
-
-                    <!-- Sidebar - Quick Actions & Analytics -->
-                    <div class="col-12 col-lg-4">
-                        <!-- Virtual OPEX Quick Screen -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>Virtual OPEX Quick Screen</h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="mb-3">
-                                    <label class="form-label">Contract Type</label>
-                                    <select class="form-select">
-                                        <option>Corporate Services</option>
-                                        <option>Healthcare</option>
-                                        <option>Education</option>
-                                        <option>Government</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Contract Value</label>
-                                    <input type="text" class="form-control" placeholder="$ Amount">
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Contract Duration</label>
-                                    <input type="text" class="form-control" placeholder="Years">
-                                </div>
-                                <button class="btn btn-primary w-100">
-                                    <i class="bi bi-lightning-charge"></i> Run Virtual OPEX Screen
-                                </button>
-                                <div class="mt-3 text-center">
-                                    <small class="text-muted">Average screening time: 2-4 minutes</small>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Recent Virtual OPEX Assessments -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>Recent Virtual OPEX Screens</h4>
-                            </div>
-                            <div class="card-content pb-4">
-                                <div class="recent-risk d-flex px-4 py-3 border-bottom">
-                                    <div class="risk-icon me-3">
-                                        <i class="bi bi-exclamation-triangle-fill text-danger"></i>
-                                    </div>
-                                    <div class="risk-info">
-                                        <h6 class="mb-1">University Dining</h6>
-                                        <p class="text-muted mb-0">Risk Score: 76/100 | $680K protected</p>
-                                        <small class="text-muted">2 hours ago</small>
-                                    </div>
-                                </div>
-                                <div class="recent-risk d-flex px-4 py-3 border-bottom">
-                                    <div class="risk-icon me-3">
-                                        <i class="bi bi-exclamation-triangle-fill text-warning"></i>
-                                    </div>
-                                    <div class="risk-info">
-                                        <h6 class="mb-1">Hospital Cafeteria</h6>
-                                        <p class="text-muted mb-0">Risk Score: 58/100 | $320K protected</p>
-                                        <small class="text-muted">5 hours ago</small>
-                                    </div>
-                                </div>
-                                <div class="recent-risk d-flex px-4 py-3">
-                                    <div class="risk-icon me-3">
-                                        <i class="bi bi-check-circle-fill text-success"></i>
-                                    </div>
-                                    <div class="risk-info">
-                                        <h6 class="mb-1">Office Park</h6>
-                                        <p class="text-muted mb-0">Risk Score: 32/100 | $150K protected</p>
-                                        <small class="text-muted">1 day ago</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Virtual OPEX Impact Statistics -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>Virtual OPEX Impact</h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="impact-stats mb-3">
-                                    <div class="d-flex justify-content-between align-items-center mb-2">
-                                        <span>Margin Protected YTD</span>
-                                        <span class="fw-bold text-success">$8.7M</span>
-                                    </div>
-                                    <div class="d-flex justify-content-between align-items-center mb-2">
-                                        <span>Contracts Screened</span>
-                                        <span class="fw-bold text-primary">156</span>
-                                    </div>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <span>Risk Detection Accuracy</span>
-                                        <span class="fw-bold text-success">94%</span>
-                                    </div>
-                                </div>
-                                <div class="progress mt-3">
-                                    <div class="progress-bar bg-success" style="width: 94%"></div>
-                                </div>
-                                <small class="text-muted mt-2 d-block">Virtual OPEX prediction accuracy based on 245 contract validations</small>
-                            </div>
-                        </div>
+                    <div class="risk-info">
+                      <h6 class="mb-1">University Dining</h6>
+                      <p class="text-muted mb-0">
+                        Risk Score: 76/100 | $680K protected
+                      </p>
+                      <small class="text-muted">2 hours ago</small>
                     </div>
-                </section>
+                  </div>
+                  <div class="recent-risk d-flex px-4 py-3 border-bottom">
+                    <div class="risk-icon me-3">
+                      <i
+                        class="bi bi-exclamation-triangle-fill text-warning"
+                      ></i>
+                    </div>
+                    <div class="risk-info">
+                      <h6 class="mb-1">Hospital Cafeteria</h6>
+                      <p class="text-muted mb-0">
+                        Risk Score: 58/100 | $320K protected
+                      </p>
+                      <small class="text-muted">5 hours ago</small>
+                    </div>
+                  </div>
+                  <div class="recent-risk d-flex px-4 py-3">
+                    <div class="risk-icon me-3">
+                      <i class="bi bi-check-circle-fill text-success"></i>
+                    </div>
+                    <div class="risk-info">
+                      <h6 class="mb-1">Office Park</h6>
+                      <p class="text-muted mb-0">
+                        Risk Score: 32/100 | $150K protected
+                      </p>
+                      <small class="text-muted">1 day ago</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Virtual OPEX Impact Statistics -->
+              <div class="card">
+                <div class="card-header">
+                  <h4>Virtual OPEX Impact</h4>
+                </div>
+                <br /><br /><br /><br />
+                <div class="card-body">
+                  <div class="impact-stats mb-3">
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-2"
+                    >
+                      <span>Margin Protected YTD</span>
+                      <span class="fw-bold text-success">$8.7M</span>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-2"
+                    >
+                      <span>Contracts Screened</span>
+                      <span class="fw-bold text-primary">156</span>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span>Risk Detection Accuracy</span>
+                      <span class="fw-bold text-success">94%</span>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span>Risk Detection Accuracy</span>
+                      <span class="fw-bold text-success">92%</span>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span>Risk Detection Accuracy</span>
+                      <span class="fw-bold text-success">98%</span>
+                    </div>
+                  </div>
+                  <div class="progress mt-3">
+                    <div
+                      class="progress-bar bg-success"
+                      style="width: 94%"
+                    ></div>
+                  </div>
+                  <small class="text-muted mt-2 d-block"
+                    >Virtual OPEX prediction accuracy based on 245 contract
+                    validations</small
+                  >
+                </div>
+              </div>
             </div>
 
-            <footer>
-                <div class="footer clearfix mb-0 text-muted">
-                    <div class="float-start">
-                        <p>2025 &copy; Virtual OPEX - Sodexo</p>
-                    </div>
-                    <div class="float-end">
-                        <p>Powered by <span class="text-danger"><i class="bi bi-heart"></i></span> <a
-                                href="http://thirdwishfs.com" target="_blank">Thirdwish Food Services</a></p>
-                    </div>
+            <div class="col-12 col-lg-12">
+              <!-- Chat con IA para Análisis de Contratos -->
+              <div class="card h-100">
+                <div
+                  class="card-header text-white d-flex justify-content-between align-items-center"
+                >
+                  <div>
+                    <h4 class="mb-0">
+                      <i class="bi bi-robot me-2"></i>Contract Analysis AI
+                      Assistant
+                    </h4>
+                    <small class="opacity-75">Powered by Virtual OPEX AI</small>
+                  </div>
+                  <div class="badge bg-light text-primary">Online</div>
                 </div>
-            </footer>
+
+                <div class="card-body p-0 d-flex flex-column">
+                  <!-- Área de Mensajes del Chat -->
+                  <div
+                    class="chat-messages p-3 flex-grow-1"
+                    style="max-height: 400px; overflow-y: auto"
+                  >
+                    <!-- Mensaje de la IA -->
+                    <div class="message ai-message mb-3">
+                      <div class="d-flex align-items-start">
+                        <div class="ai-avatar me-2">
+                          <i class="bi bi-robot fs-4 text-primary"></i>
+                        </div>
+                        <div class="message-content bg-light rounded p-3">
+                          <h6 class="mb-1">Contract Analysis AI</h6>
+                          <p class="mb-0">
+                            Hello! I'm your contract analysis assistant. I can
+                            help you identify risks, suggest improvements, and
+                            analyze contract terms. Please upload a contract or
+                            describe what you need analyzed.
+                          </p>
+                          <small class="text-muted">2:30 PM</small>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Mensaje del Usuario -->
+                    <div class="message user-message mb-3">
+                      <div class="d-flex align-items-start justify-content-end">
+                        <div
+                          class="message-content bg-primary text-white rounded p-3"
+                        >
+                          <h6 class="mb-1">You</h6>
+                          <p class="mb-0">
+                            I need to analyze a corporate services contract for
+                            a 5-year, $12.3M agreement. Can you help identify
+                            potential risks?
+                          </p>
+                          <small class="opacity-75">2:32 PM</small>
+                        </div>
+                        <div class="user-avatar ms-2">
+                          <i class="bi bi-person-circle fs-4 text-muted"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Respuesta de la IA -->
+                    <div class="message ai-message mb-3">
+                      <div class="d-flex align-items-start">
+                        <div class="ai-avatar me-2">
+                          <i class="bi bi-robot fs-4 text-primary"></i>
+                        </div>
+                        <div class="message-content bg-light rounded p-3">
+                          <h6 class="mb-1">Contract Analysis AI</h6>
+                          <p class="mb-2">
+                            I've analyzed similar corporate services contracts.
+                            Here are the key risk areas I've identified:
+                          </p>
+
+                          <div class="risk-analysis mb-2">
+                            <div class="alert alert-warning py-2 mb-2">
+                              <i class="bi bi-exclamation-triangle me-2"></i>
+                              <strong>Critical Risk:</strong> Staffing levels
+                              22% below industry standard
+                            </div>
+                            <div class="alert alert-info py-2 mb-2">
+                              <i class="bi bi-info-circle me-2"></i>
+                              <strong>Medium Risk:</strong> No inflation
+                              adjustment clause
+                            </div>
+                            <div class="alert alert-secondary py-2">
+                              <i class="bi bi-arrow-left-right me-2"></i>
+                              <strong>Scope Risk:</strong> Vague special events
+                              language
+                            </div>
+                          </div>
+
+                          <p class="mb-0 mt-2">
+                            Would you like me to provide specific
+                            recommendations for these risk areas?
+                          </p>
+                          <small class="text-muted">2:33 PM</small>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Mensaje del Usuario -->
+                    <div class="message user-message mb-3">
+                      <div class="d-flex align-items-start justify-content-end">
+                        <div
+                          class="message-content bg-primary text-white rounded p-3"
+                        >
+                          <h6 class="mb-1">You</h6>
+                          <p class="mb-0">
+                            Yes, please provide specific recommendations for the
+                            staffing issue and inflation adjustment.
+                          </p>
+                          <small class="opacity-75">2:34 PM</small>
+                        </div>
+                        <div class="user-avatar ms-2">
+                          <i class="bi bi-person-circle fs-4 text-muted"></i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Respuesta de la IA con Recomendaciones -->
+                    <div class="message ai-message mb-3">
+                      <div class="d-flex align-items-start">
+                        <div class="ai-avatar me-2">
+                          <i class="bi bi-robot fs-4 text-primary"></i>
+                        </div>
+                        <div class="message-content bg-light rounded p-3">
+                          <h6 class="mb-1">Contract Analysis AI</h6>
+                          <p class="mb-2">
+                            Here are my specific recommendations:
+                          </p>
+
+                          <div class="recommendations">
+                            <div
+                              class="recommendation-item mb-3 p-2 border-start border-3 border-warning"
+                            >
+                              <h6 class="mb-1">Staffing Levels</h6>
+                              <p class="mb-1 small">
+                                Increase FTE count from 18 to 22 and add a
+                                staffing adjustment clause tied to actual
+                                service demand metrics.
+                              </p>
+                              <span class="badge bg-warning text-dark"
+                                >High Priority</span
+                              >
+                            </div>
+
+                            <div
+                              class="recommendation-item mb-3 p-2 border-start border-3 border-info"
+                            >
+                              <h6 class="mb-1">Inflation Protection</h6>
+                              <p class="mb-1 small">
+                                Add annual price adjustment clause tied to
+                                Consumer Price Index (CPI) with a 3% annual cap.
+                              </p>
+                              <span class="badge bg-info">Medium Priority</span>
+                            </div>
+
+                            <div
+                              class="recommendation-item p-2 border-start border-3 border-success"
+                            >
+                              <h6 class="mb-1">Contract Structure</h6>
+                              <p class="mb-1 small">
+                                Consider negotiating a 3-year term with two
+                                1-year renewal options to reduce long-term
+                                commitment risk.
+                              </p>
+                              <span class="badge bg-success">Recommended</span>
+                            </div>
+                          </div>
+
+                          <p class="mb-0 mt-2">
+                            These changes could reduce your overall risk
+                            exposure by approximately 65%.
+                          </p>
+                          <small class="text-muted">2:35 PM</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Área de Entrada de Mensajes -->
+                  <div class="chat-input border-top p-3">
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Type your message or question about contract analysis..."
+                        id="chatInput"
+                      />
+                      <button
+                        class="btn btn-outline-secondary"
+                        type="button"
+                        id="attachButton"
+                      >
+                        <i class="bi bi-paperclip"></i>
+                      </button>
+                      <button
+                        class="btn btn-primary"
+                        type="button"
+                        id="sendButton"
+                      >
+                        Send
+                        <i class="bi bi-send"></i>
+                      </button>
+                    </div>
+                    <div class="mt-2">
+                      <small class="text-muted">
+                        <i class="bi bi-lightbulb me-1"></i>
+                        Try: "Analyze payment terms" or "Review termination
+                        clauses"
+                      </small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <style>
+              .chat-messages {
+                background-color: #f8f9fa;
+              }
+
+              .message-content {
+                max-width: 85%;
+              }
+
+              .ai-avatar,
+              .user-avatar {
+                flex-shrink: 0;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background-color: #f8f9fa;
+              }
+
+              .user-avatar {
+                background-color: #e9ecef;
+              }
+
+              .recommendation-item {
+                background-color: rgba(255, 255, 255, 0.7);
+                border-radius: 0.375rem;
+              }
+
+              .risk-analysis .alert {
+                border: none;
+                border-radius: 0.5rem;
+              }
+
+              /* Scrollbar personalizado */
+              .chat-messages::-webkit-scrollbar {
+                width: 6px;
+              }
+
+              .chat-messages::-webkit-scrollbar-track {
+                background: #f1f1f1;
+              }
+
+              .chat-messages::-webkit-scrollbar-thumb {
+                background: #c1c1c1;
+                border-radius: 3px;
+              }
+
+              .chat-messages::-webkit-scrollbar-thumb:hover {
+                background: #a8a8a8;
+              }
+            </style>
+
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                const chatInput = document.getElementById("chatInput");
+                const sendButton = document.getElementById("sendButton");
+                const chatMessages = document.querySelector(".chat-messages");
+
+                // Función para enviar mensaje
+                function sendMessage() {
+                  const message = chatInput.value.trim();
+                  if (message === "") return;
+
+                  // Aquí iría la lógica para enviar el mensaje a la IA
+                  // Por ahora, solo limpiamos el input
+                  chatInput.value = "";
+
+                  // Scroll al final del chat
+                  chatMessages.scrollTop = chatMessages.scrollHeight;
+                }
+
+                // Event listeners
+                sendButton.addEventListener("click", sendMessage);
+
+                chatInput.addEventListener("keypress", function (e) {
+                  if (e.key === "Enter") {
+                    sendMessage();
+                  }
+                });
+              });
+            </script>
+          </section>
         </div>
+        <br /><br /><br /><br />
+        <footer>
+          <div class="footer clearfix mb-0 text-muted">
+            <div class="float-start">
+              <p>2025 &copy; Virtual OPEX - Sodexo</p>
+            </div>
+            <div class="float-end">
+              <p>
+                Powered by
+                <span class="text-danger"><i class="bi bi-heart"></i></span>
+                <a href="http://thirdwishfs.com" target="_blank"
+                  >Thirdwish Food Services</a
+                >
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
     <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendors/apexcharts/apexcharts.js"></script>
     <script src="assets/js/main.js"></script>
-</body>
-
+  </body>
 </html>

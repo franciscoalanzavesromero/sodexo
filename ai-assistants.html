@@ -355,7 +355,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="assistant-item p-3 border rounded" data-assistant="financial">
+                                    <div class="assistant-item p-3 border rounded mb-3" data-assistant="financial">
                                         <div class="d-flex align-items-center">
                                             <div class="assistant-avatar me-3 ai-avatar">
                                                 <i class="bi bi-currency-dollar text-info fs-4"></i>
@@ -363,6 +363,18 @@
                                             <div>
                                                 <h6 class="mb-1">Financial Analyst</h6>
                                                 <p class="text-muted mb-0 small">Provides financial insights and margin optimization</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- New Negotiation Coach Assistant -->
+                                    <div class="assistant-item p-3 border rounded" data-assistant="negotiation">
+                                        <div class="d-flex align-items-center">
+                                            <div class="assistant-avatar me-3 ai-avatar">
+                                                <i class="bi bi-handshake text-secondary fs-4"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="mb-1">Negotiation Coach</h6>
+                                                <p class="text-muted mb-0 small">Provides training and coaching for client negotiations</p>
                                             </div>
                                         </div>
                                     </div>
@@ -641,7 +653,7 @@
                                 <div class="chat-input border-top p-3">
                                     <div class="input-group">
                                         <input type="text" class="form-control" placeholder="Type your message..." id="messageInput">
-                                        <button class="btn btn-primary" type="button" id="sendMessageBtn">
+                                        <button class="btn btn-primary" type="button" id="sendMessageBtn">Send
                                             <i class="bi bi-send"></i>
                                         </button>
                                     </div>
@@ -755,6 +767,12 @@
                     description: 'Provides financial insights and margin optimization',
                     welcomeMessage: "Hello! I'm your Financial Analyst. I can help you with financial performance analysis, margin optimization, cost control strategies, and profitability insights. What financial aspect would you like to explore?",
                     color: 'info'
+                },
+                'negotiation': {
+                    name: 'Negotiation Coach',
+                    description: 'Provides training and coaching for client negotiations',
+                    welcomeMessage: "Hello! I'm your Negotiation Coach. I can help you prepare for client negotiations, develop effective negotiation strategies, analyze counterpart behavior, and improve your negotiation outcomes. What negotiation scenario would you like to work on today?",
+                    color: 'secondary'
                 }
             };
 
@@ -873,6 +891,13 @@
                         "Based on the cost structure analysis, there's an opportunity to reduce overhead by 2.1% without impacting service quality.",
                         "I've compared your financial performance against industry benchmarks. The results are strong, but there are 3 areas for improvement.",
                         "The cash flow projection indicates a potential shortfall in month 6. Let me suggest some mitigation strategies."
+                    ],
+                    'negotiation': [
+                        "Based on the negotiation scenario you've described, I recommend focusing on creating value through bundling services rather than competing on price alone.",
+                        "I've analyzed your counterpart's likely interests and positions. They seem to prioritize long-term partnership over short-term gains.",
+                        "Your BATNA (Best Alternative to a Negotiated Agreement) appears strong, which gives you leverage in these negotiations.",
+                        "I suggest using the 'if-then' concession strategy, where you make conditional offers that require reciprocal concessions.",
+                        "The power dynamics in this negotiation favor you due to your market position. Consider using that to secure favorable terms on key issues."
                     ]
                 };
                 
@@ -897,6 +922,18 @@
                         "Based on my analysis, I recommend: 1) Adjusting the labor model, 2) Implementing tiered pricing, and 3) Adding inflation adjustment clauses.",
                         "Here are my top three recommendations: Optimize staffing during peak hours, renegotiate with key suppliers, and implement predictive maintenance scheduling.",
                         "I suggest focusing on these areas: labor efficiency improvements, supply chain optimization, and enhanced customer engagement strategies."
+                    ];
+                } else if (assistantType === 'negotiation' && (message.includes('strategy') || message.includes('approach'))) {
+                    responsePool = [
+                        "For this negotiation, I recommend a collaborative approach focused on creating mutual value rather than a competitive stance.",
+                        "Your strategy should emphasize your unique value proposition while acknowledging the client's key concerns about cost control.",
+                        "Consider using a principled negotiation approach, focusing on interests rather than positions to find creative solutions."
+                    ];
+                } else if (assistantType === 'negotiation' && (message.includes('concession') || message.includes('compromise'))) {
+                    responsePool = [
+                        "When making concessions, always get something in return. Consider trading flexibility on implementation timelines for better pricing terms.",
+                        "Prioritize your concession items from least to most valuable. Start with low-cost items that have high perceived value to the other party.",
+                        "Use the 'if-then' approach for concessions: 'If you can agree to X, then we can offer Y.' This creates reciprocity in the negotiation."
                     ];
                 }
                 

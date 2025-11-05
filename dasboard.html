@@ -26,7 +26,8 @@
                 <div class="sidebar-header">
                     <div class="d-flex justify-content-between">
                         <div class="logo">
-                            <a href="dasboard.html"><img src="assets/images/logo/logo2.png" alt="Sodexo Logo" srcset=""></a>
+                            <a href="dasboard.html"><img src="assets/images/logo/logo2.png" alt="Sodexo Logo"
+                                    srcset=""></a>
                         </div>
                         <div class="toggler">
                             <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
@@ -51,10 +52,10 @@
                             </a>
                             <ul class="submenu ">
                                 <li class="submenu-item ">
-                                    <a href="commercial-bid-analysis.html">Bid Analysis</a>
+                                    <a href="commercial-bid-analysis.html">Dashboard</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="contract-risk.html">Contract Risk Screening</a>
+                                    <a href="contract-risk.html">Contract Risk Agent and Bid Advisor</a>
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="pricing-optimization.html">Pricing Optimization</a>
@@ -171,7 +172,31 @@
                                             <div class="col-md-8">
                                                 <h6 class="text-muted font-semibold">Margin Erosion Prevented</h6>
                                                 <h6 class="font-extrabold mb-0">$2.8M</h6>
-                                                <small class="text-success"><i class="bi bi-arrow-up"></i> 5.2% vs target</small>
+                                                <small class="text-success"><i class="bi bi-arrow-up"></i> 5.2% vs
+                                                    target</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- KPI 4: Enfoque en Cuentas en Riesgo -->
+                            <div class="col-6 col-lg-3 col-md-6">
+                                <div class="card">
+                                    <div class="card-body px-3 py-4-5">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="stats-icon yellow">
+                                                    <i class="bi bi-graph-down"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h6 class="text-muted font-semibold">Gross Profit Impact
+                                                </h6>
+                                                <h6 class="font-extrabold mb-0">$5.3M
+                                                </h6>
+                                                <br>
+                                                <small class="text-warning">7% vs target
+                                                </small>
                                             </div>
                                         </div>
                                     </div>
@@ -209,32 +234,14 @@
                                             <div class="col-md-8">
                                                 <h6 class="text-muted font-semibold">Avg. Mobilization Time</h6>
                                                 <h6 class="font-extrabold mb-0">14 days</h6>
-                                                <small class="text-success"><i class="bi bi-arrow-down"></i> 22% faster</small>
+                                                <small class="text-success"><i class="bi bi-arrow-down"></i> 22%
+                                                    faster</small>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- KPI 4: Enfoque en Cuentas en Riesgo -->
-                            <div class="col-6 col-lg-3 col-md-6">
-                                <div class="card">
-                                    <div class="card-body px-3 py-4-5">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="stats-icon yellow">
-                                                    <i class="bi bi-graph-down"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <h6 class="text-muted font-semibold">At-Risk Accounts</h6>
-                                                <h6 class="font-extrabold mb-0">12</h6>
-                                                <br>
-                                                <small class="text-warning">$1.4M revenue at risk</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                         <div class="row">
                             <div class="col-12">
@@ -243,6 +250,36 @@
                                         <h4>Margin Performance & Erosion Prevention</h4>
                                     </div>
                                     <div class="card-body">
+                                        <!-- Añadido: Filtros de Segmento y Cliente -->
+                                        <div class="row mb-4">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="segment-filter" class="form-label">Filter by Segment</label>
+                                                    <select class="form-select" id="segment-filter">
+                                                        <option value="all" selected>All Segments</option>
+                                                        <option value="healthcare">Healthcare</option>
+                                                        <option value="education">Education</option>
+                                                        <option value="corporate">Corporate</option>
+                                                        <option value="government">Government</option>
+                                                        <option value="industrial">Industrial</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="client-filter" class="form-label">Filter by Client</label>
+                                                    <select class="form-select" id="client-filter">
+                                                        <option value="all" selected>All Clients</option>
+                                                        <option value="tech-campus">Tech Campus</option>
+                                                        <option value="corporate-hq">Corporate HQ</option>
+                                                        <option value="healthcare-account">Healthcare Account</option>
+                                                        <option value="education-account">Education Account</option>
+                                                        <option value="government-facility">Government Facility</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Fin de los filtros añadidos -->
                                         <div id="chart-profile-visit"></div>
                                     </div>
                                 </div>
@@ -337,24 +374,32 @@
                                                             </div>
                                                         </td>
                                                         <td class="col-7">
-                                                            <p class="mb-0"><strong>Optimize peak hour staffing:</strong> Projected 12% labor cost reduction. <em>Based on 34% idle time between 2-4 PM.</em></p>
+                                                            <p class="mb-0"><strong>Optimize peak hour
+                                                                    staffing:</strong> Projected 12% labor cost
+                                                                reduction. <em>Based on 34% idle time between 2-4
+                                                                    PM.</em></p>
                                                         </td>
                                                         <td class="col-2">
-                                                            <button class="btn btn-outline-primary btn-sm">Review Plan</button>
+                                                            <button class="btn btn-outline-primary btn-sm">Review
+                                                                Plan</button>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="col-1"><span class="badge bg-warning">Medium</span></td>
+                                                        <td class="col-1"><span class="badge bg-warning">Medium</span>
+                                                        </td>
                                                         <td class="col-2">
                                                             <div class="d-flex align-items-center">
                                                                 <p class="font-bold mb-0">Corporate HQ</p>
                                                             </div>
                                                         </td>
                                                         <td class="col-7">
-                                                            <p class="mb-0"><strong>Renegotiate dairy supplier:</strong> Save ~$4,200/month. <em>Current price 8% above market avg.</em></p>
+                                                            <p class="mb-0"><strong>Renegotiate dairy supplier:</strong>
+                                                                Save ~$4,200/month. <em>Current price 8% above market
+                                                                    avg.</em></p>
                                                         </td>
                                                         <td class="col-2">
-                                                            <button class="btn btn-outline-primary btn-sm">Contact Procurement</button>
+                                                            <button class="btn btn-outline-primary btn-sm">Contact
+                                                                Procurement</button>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -365,10 +410,14 @@
                                                             </div>
                                                         </td>
                                                         <td class="col-7">
-                                                            <p class="mb-0"><strong>High risk detected in labor assumptions:</strong> Potential 3.2% margin erosion. <em>Overtime projections 22% below historical benchmark.</em></p>
+                                                            <p class="mb-0"><strong>High risk detected in labor
+                                                                    assumptions:</strong> Potential 3.2% margin erosion.
+                                                                <em>Overtime projections 22% below historical
+                                                                    benchmark.</em></p>
                                                         </td>
                                                         <td class="col-2">
-                                                            <button class="btn btn-outline-primary btn-sm">Screen Contract</button>
+                                                            <button class="btn btn-outline-primary btn-sm">Screen
+                                                                Contract</button>
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -429,7 +478,8 @@
                                     </div>
                                 </div>
                                 <div class="px-4">
-                                    <button class='btn btn-block btn-xl btn-light-primary font-bold mt-3'>View All Actions</button>
+                                    <button class='btn btn-block btn-xl btn-light-primary font-bold mt-3'>View All
+                                        Actions</button>
                                 </div>
                             </div>
                         </div>
