@@ -542,42 +542,70 @@
               <!-- Virtual OPEX Quick Screen -->
               <div class="card">
                 <div class="card-header">
-                  <h4>Virtual OPEX Quick Screen</h4>
+                  <h4>Contract Overview</h4>
                 </div>
                 <div class="card-body">
-                  <div class="mb-3">
-                    <label class="form-label">Contract Type</label>
-                    <select class="form-select">
-                      <option>Corporate Services</option>
-                      <option>Healthcare</option>
-                      <option>Education</option>
-                      <option>Government</option>
-                    </select>
-                  </div>
-                  <div class="mb-3">
-                    <label class="form-label">Contract Value</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="$ Amount"
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <label class="form-label">Contract Duration</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Years"
-                    />
-                  </div>
-                  <button class="btn btn-primary w-100">
-                    <i class="bi bi-lightning-charge"></i> Run Virtual OPEX
-                    Screen
-                  </button>
-                  <div class="mt-3 text-center">
-                    <small class="text-muted"
-                      >Average screening time: 2-4 minutes</small
-                    >
+                  <div class="contract-overview">
+                    <div class="contract-section mb-4">
+                      <h6 class="text-muted mb-3">Corporate Campus</h6>
+                      <hr />
+                      <div class="contract-item mb-3">
+                        <div
+                          class="d-flex justify-content-between align-items-start"
+                        >
+                          <span class="text-muted">Client:</span>
+                          <span class="fw-bold text-end"
+                            >Global Tech Solutions</span
+                          >
+                        </div>
+                      </div>
+                      <hr />
+                      <div class="contract-item mb-3">
+                        <div
+                          class="d-flex justify-content-between align-items-start"
+                        >
+                          <span class="text-muted">Contract Value:</span>
+                          <span class="fw-bold text-end">$12.3M (5 years)</span>
+                        </div>
+                      </div>
+                    </div>
+                    <hr />
+                    <div class="contract-section">
+                      <div class="contract-item mb-3">
+                        <div
+                          class="d-flex justify-content-between align-items-start"
+                        >
+                          <span class="text-muted">Proposed Margin:</span>
+                          <span class="fw-bold text-danger text-end"
+                            >11.8%</span
+                          >
+                        </div>
+                      </div>
+                      <hr />
+                      <div class="contract-item mb-3">
+                        <div
+                          class="d-flex justify-content-between align-items-start"
+                        >
+                          <span class="text-muted"
+                            >Virtual OPEX Risk Score:</span
+                          >
+                          <span class="fw-bold text-warning text-end"
+                            >84/100</span
+                          >
+                        </div>
+                      </div>
+                      <hr />
+                      <div class="contract-item mb-3">
+                        <div
+                          class="d-flex justify-content-between align-items-start"
+                        >
+                          <span class="text-muted">Potential Erosion:</span>
+                          <span class="fw-bold text-danger text-end"
+                            >$2.1M</span
+                          >
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -585,48 +613,55 @@
               <!-- Recent Virtual OPEX Assessments -->
               <div class="card">
                 <div class="card-header">
-                  <h4>Recent Virtual OPEX Screens</h4>
+                  <h4>Risk Identified – Corporate Campus</h4>
                 </div>
                 <div class="card-content pb-4">
-                  <div class="recent-risk d-flex px-4 py-3 border-bottom">
-                    <div class="risk-icon me-3">
-                      <i
-                        class="bi bi-exclamation-triangle-fill text-danger"
-                      ></i>
-                    </div>
-                    <div class="risk-info">
-                      <h6 class="mb-1">University Dining</h6>
-                      <p class="text-muted mb-0">
-                        Risk Score: 76/100 | $680K protected
-                      </p>
-                      <small class="text-muted">2 hours ago</small>
-                    </div>
-                  </div>
-                  <div class="recent-risk d-flex px-4 py-3 border-bottom">
-                    <div class="risk-icon me-3">
-                      <i
-                        class="bi bi-exclamation-triangle-fill text-warning"
-                      ></i>
-                    </div>
-                    <div class="risk-info">
-                      <h6 class="mb-1">Hospital Cafeteria</h6>
-                      <p class="text-muted mb-0">
-                        Risk Score: 58/100 | $320K protected
-                      </p>
-                      <small class="text-muted">5 hours ago</small>
-                    </div>
-                  </div>
-                  <div class="recent-risk d-flex px-4 py-3">
-                    <div class="risk-icon me-3">
-                      <i class="bi bi-check-circle-fill text-success"></i>
-                    </div>
-                    <div class="risk-info">
-                      <h6 class="mb-1">Office Park</h6>
-                      <p class="text-muted mb-0">
-                        Risk Score: 32/100 | $150K protected
-                      </p>
-                      <small class="text-muted">1 day ago</small>
-                    </div>
+                  <div class="table-responsive">
+                    <table class="table table-borderless mb-0">
+                      <thead>
+                        <tr>
+                          <th class="text-muted fw-normal">Risk Type</th>
+                          <th class="text-muted fw-normal text-center">
+                            Number
+                          </th>
+                          <th class="text-muted fw-normal text-end">Impact</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <span class="badge bg-danger me-2">●</span>
+                            Critical Risk
+                          </td>
+                          <td class="text-center fw-bold">4</td>
+                          <td class="text-end fw-bold text-danger">$0.5M</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="badge bg-warning me-2">●</span>
+                            High Risk
+                          </td>
+                          <td class="text-center fw-bold">7</td>
+                          <td class="text-end fw-bold text-warning">$1.2M</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="badge bg-info me-2">●</span>
+                            Medium Risk
+                          </td>
+                          <td class="text-center fw-bold">3</td>
+                          <td class="text-end fw-bold text-info">$0.3M</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span class="badge bg-success me-2">●</span>
+                            Low Risk
+                          </td>
+                          <td class="text-center fw-bold">2</td>
+                          <td class="text-end fw-bold text-success">$0.1M</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
@@ -634,52 +669,82 @@
               <!-- Virtual OPEX Impact Statistics -->
               <div class="card">
                 <div class="card-header">
-                  <h4>Virtual OPEX Impact</h4>
+                  <h4>Virtual OPEX Detailed Risk Analysis</h4>
                 </div>
-                <br /><br /><br /><br />
                 <div class="card-body">
-                  <div class="impact-stats mb-3">
+                  <!-- Labor Assumptions Risk -->
+                  <div class="risk-item mb-4">
                     <div
-                      class="d-flex justify-content-between align-items-center mb-2"
+                      class="d-flex justify-content-between align-items-start mb-2"
                     >
-                      <span>Margin Protected YTD</span>
-                      <span class="fw-bold text-success">$8.7M</span>
+                      <div>
+                        <span class="badge bg-danger me-2">Critical Risk</span>
+                        <h6 class="d-inline-block mb-0">Labor Assumptions</h6>
+                      </div>
+                      <div class="text-end">
+                        <div class="fw-bold text-danger">54%</div>
+                        <small class="text-muted">Impact</small>
+                      </div>
                     </div>
-                    <div
-                      class="d-flex justify-content-between align-items-center mb-2"
-                    >
-                      <span>Contracts Screened</span>
-                      <span class="fw-bold text-primary">156</span>
-                    </div>
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <span>Risk Detection Accuracy</span>
-                      <span class="fw-bold text-success">94%</span>
-                    </div>
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <span>Risk Detection Accuracy</span>
-                      <span class="fw-bold text-success">92%</span>
-                    </div>
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <span>Risk Detection Accuracy</span>
-                      <span class="fw-bold text-success">98%</span>
-                    </div>
+                    <p class="fw-bold mb-2">
+                      FTE count is 22% below similar corporate campus contracts
+                    </p>
+                    <p class="text-muted small mb-0">
+                      Based on analysis of 42 similar contracts, Historical data
+                      shows this staffing level leads to 18% overtime costs and
+                      services level penalties.
+                    </p>
                   </div>
-                  <div class="progress mt-3">
+
+                  <!-- Inflation Protection Risk -->
+                  <div class="risk-item mb-4">
                     <div
-                      class="progress-bar bg-success"
-                      style="width: 94%"
-                    ></div>
+                      class="d-flex justify-content-between align-items-start mb-2"
+                    >
+                      <div>
+                        <span class="badge bg-warning me-2">High Risk</span>
+                        <h6 class="d-inline-block mb-0">
+                          Inflation Protection
+                        </h6>
+                      </div>
+                      <div class="text-end">
+                        <div class="fw-bold text-warning">95%</div>
+                        <small class="text-muted">Impact</small>
+                      </div>
+                    </div>
+                    <p class="fw-bold mb-2">
+                      No annual inflation adjustment for years 2-5
+                    </p>
+                    <p class="text-muted small mb-0">
+                      Food cost inflation averages 3.8% annually. Without
+                      adjustment, margin erodes 4-6% each year. 92% of similar
+                      contracts include CPI-based adjustments.
+                    </p>
                   </div>
-                  <small class="text-muted mt-2 d-block"
-                    >Virtual OPEX prediction accuracy based on 245 contract
-                    validations</small
-                  >
+
+                  <!-- Scope Definition Risk -->
+                  <div class="risk-item">
+                    <div
+                      class="d-flex justify-content-between align-items-start mb-2"
+                    >
+                      <div>
+                        <span class="badge bg-info me-2">Medium Risk</span>
+                        <h6 class="d-inline-block mb-0">Scope Definition</h6>
+                      </div>
+                      <div class="text-end">
+                        <div class="fw-bold text-info">92%</div>
+                        <small class="text-muted">Impact</small>
+                      </div>
+                    </div>
+                    <p class="fw-bold mb-2">
+                      Vague language around special event services
+                    </p>
+                    <p class="text-muted small mb-0">
+                      Creates potential for 15-20% scope creep. Similar
+                      contracts show average of 12 special events monthly
+                      requiring clear pricing fees.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
